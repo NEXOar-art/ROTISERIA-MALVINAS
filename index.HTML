@@ -897,6 +897,49 @@
   </div>
 </div>
 
+<!-- Admin Modal -->
+<div id="adminModal" class="modal">
+  <div class="modal-content">
+    <h3>Acceso Administrador</h3>
+    <input type="password" id="adminPassword" placeholder="Clave de acceso">
+    <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
+  </div>
+</div>
+
+<!-- Admin Panel -->
+<div id="adminPanel" class="admin-panel">
+  <button class="close-admin" onclick="closeAdmin()">&times;</button>
+  <h3>Panel Administrador</h3>
+  <form id="productForm" class="admin-form">
+    <label for="categorySelect">Categoría</label>
+    <select id="categorySelect">
+      <option value="Sándwiches">Sándwiches</option>
+      <option value="Hamburguesas">Hamburguesas</option>
+      <option value="Pizzas">Pizzas</option>
+      <option value="Pizzas Individuales">Pizzas Individuales</option>
+      <option value="Pastas">Pastas</option>
+      <option value="Acompañamientos">Acompañamientos</option>
+      <option value="Empanadas">Empanadas</option>
+      <option value="Postres">Postres</option>
+      <option value="Al Plato">Al Plato</option>
+    </select>
+    <label for="productName">Nombre</label>
+    <input type="text" id="productName" required>
+    <label for="productPrice">Precio</label>
+    <input type="number" id="productPrice" required>
+    <label for="productDescription">Descripción</label>
+    <textarea id="productDescription" required></textarea>
+    <label for="productImage">Imagen (archivo)</label>
+    <input type="file" id="productImage" accept="image/*">
+    <label for="productImageUrl">O URL de Imagen</label>
+    <input type="url" id="productImageUrl">
+    <img id="previewImage" class="image-preview" style="display:none;" alt="Vista previa de la imagen">
+    <button type="submit">Guardar Producto</button>
+  </form>
+  <div class="product-list" id="productList"></div>
+  <button id="saveChanges" class="btn">Guardar Cambios</button>
+</div>
+
 <footer>
   <div class="footer-content">
     <div class="footer-section">
@@ -961,7 +1004,12 @@
   
     </div>
     <div class="cart-actions">
-      <button class="btn" onclick="closeCart()" type="button">Cerrar
+      <button class="btn" onclick="closeCart()" type="button">Cerrar</button>
+      <button class="btn" id="sendOrder" type="button">Enviar Pedido</button>
+    </div>
+  </div>
+</div>
+
 <script>
   const defaultProducts = [
     { id: 1, category: "Sándwiches", name: "Bondiola", price: 9000, description: "Delicioso sándwich de bondiola casera c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/BONDIOLA.jpeg", stock: 1000},
@@ -1631,8 +1679,8 @@
 </script>
 
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970d6bdb2faa9ae2',t:'MTc1NTQ3ODI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970dc0e25deab03f',t:'MTc1NTQ4MTc1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9715f44c0faddd2e',t:'MTc1NTU2Nzc0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'971783bb8c2eb27d',t:'MTc1NTU4NDEwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'972036aa8ad9f3fe',t:'MTc1NTY3NTMyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97206f6bb905c1a0',t:'MTc1NTY3NzY0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
-"commit"
+</html>"commit"
+
 
 
 
