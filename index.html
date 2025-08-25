@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -805,39 +804,36 @@
 
 <section class="section" id="menu">
   <h2 class="section-title">Nuestro Menú</h2>
- 
+
   <div class="offer-banner" id="offerBanner">
     <h3>¡Ofertas Especiales!</h3>
     <p id="offerText"></p>
   </div>
 
   <!-- Combos Section -->
-  <section id="combos" class="mb-12">
+  <div id="combos" class="mb-12">
     <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">🍔🍕Combos Deliciosos para 2 a 6 personas🍔🍕</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Combo 1 -->
-      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 text-center">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">🍔 Combo Hamburguesa Zapping con Fritas + Pizza Especial</h3>
-        <p class="text-gray-600 mb-4 animate-text" style="animation-delay: 0.2s;">35.500 pesos</p>
+      <!-- Combo Cards -->
+      <div class="combo-card">
+        <h3>🍔 Combo Hamburguesa Zapping con Fritas + Pizza Especial</h3>
+        <p>35.500 pesos</p>
       </div>
-      <!-- Combo 2 -->
-      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 text-center">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">🍔 Combo de 2 Hamburguesas</h3>
-        <p class="text-gray-600 mb-4 animate-text" style="animation-delay: 0.4s;">16.000 pesos</p>
+      <div class="combo-card">
+        <h3>🍔 Combo de 2 Hamburguesas</h3>
+        <p>16.000 pesos</p>
       </div>
-      <!-- Combo 3 -->
-      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 text-center">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">🍕 Combo Pizza Muzzarella + 2 Hamburguesas Completas</h3>
-        <p class="text-gray-600 mb-4 animate-text" style="animation-delay: 0.6s;">25.500 pesos</p>
+      <div class="combo-card">
+        <h3>🍕 Combo Pizza Muzzarella + 2 Hamburguesas Completas</h3>
+        <p>25.500 pesos</p>
       </div>
-      <!-- Combo 4 -->
-      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 text-center">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">🍟 Combo Pizza Especial + Porción de Fritas</h3>
-        <p class="text-gray-600 mb-4 animate-text" style="animation-delay: 0.8s;">15.000 pesos</p>
+      <div class="combo-card">
+        <h3>🍟 Combo Pizza Especial + Porción de Fritas</h3>
+        <p>15.000 pesos</p>
       </div>
     </div>
-  </section>
- 
+  </div>
+
   <div class="menu-section">
     <div id="categoriesContainer"></div>
   </div>
@@ -845,22 +841,19 @@
 
 <section class="section" id="pedidos">
   <h2 class="section-title">Cómo Hacer tu Pedido</h2>
- 
   <div class="info-cards">
     <div class="info-card">
-      <i class="fas fa-utensils"></i>
+      <i class="fas fa-utensils" aria-hidden="true"></i>
       <h3>Elige tu comida</h3>
       <p>Selecciona entre nuestra variedad de sándwiches, pizzas, pastas y más.</p>
     </div>
-   
     <div class="info-card">
-      <i class="fas fa-comment"></i>
+      <i class="fas fa-comment" aria-hidden="true"></i>
       <h3>Haz tu pedido</h3>
       <p>Chatea con nuestra asistente María por WhatsApp al +54 348 9358998.</p>
     </div>
-   
     <div class="info-card">
-      <i class="fas fa-store"></i>
+      <i class="fas fa-store" aria-hidden="true"></i>
       <h3>Recoge en local</h3>
       <p>Retira tu pedido en nuestro local en el horario acordado.</p>
     </div>
@@ -869,41 +862,82 @@
 
 <section class="section" id="contacto">
   <h2 class="section-title">Contacto</h2>
- 
   <div class="info-cards">
     <div class="info-card">
-      <i class="fas fa-map-marker-alt"></i>
+      <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
       <h3>Ubicación</h3>
       <p>Campana, Buenos Aires</p>
     </div>
-   
     <div class="info-card">
-      <i class="fas fa-clock"></i>
+      <i class="fas fa-clock" aria-hidden="true"></i>
       <h3>Horario</h3>
       <p>Lunes a Domingo<br>19:30 - 23:45</p>
     </div>
-   
     <div class="info-card">
-      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
       <h3>Teléfono</h3>
       <p>+54 348 9358998</p>
-      <a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" class="btn btn-whatsapp" style="margin-top: 1rem;">
-        <i class="fab fa-whatsapp"></i> Chatear con María
+      <a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> Chatear con María
       </a>
     </div>
   </div>
 </section>
 
-<div id="chatWidget" class="chat-widget">
+<div id="chatWidget" class="chat-widget" role="dialog" aria-label="Chat con María">
   <div class="chat-header">
     <span>Chat con María de Todo Casero</span>
-    <button onclick="toggleChat()">×</button>
+    <button onclick="toggleChat()" aria-label="Cerrar chat"></button>
   </div>
   <div class="chat-body" id="chatBody"></div>
   <div class="chat-input">
+    <label for="chatInput" class="sr-only">Escribe tu consulta</label>
     <input type="text" id="chatInput" placeholder="Escribe tu consulta...">
-    <button onclick="sendChatMessage()">Enviar</button>
+    <button onclick="sendChatMessage()" type="button">Enviar</button>
   </div>
+</div>
+
+<!-- Admin Modal -->
+<div id="adminModal" class="modal">
+  <div class="modal-content">
+    <h3>Acceso Administrador</h3>
+    <input type="password" id="adminPassword" placeholder="Clave de acceso">
+    <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
+  </div>
+</div>
+
+<!-- Admin Panel -->
+<div id="adminPanel" class="admin-panel">
+  <button class="close-admin" onclick="closeAdmin()">&times;</button>
+  <h3>Panel Administrador</h3>
+  <form id="productForm" class="admin-form">
+    <label for="categorySelect">Categoría</label>
+    <select id="categorySelect">
+      <option value="Sándwiches">Sándwiches</option>
+      <option value="Hamburguesas">Hamburguesas</option>
+      <option value="Pizzas">Pizzas</option>
+      <option value="Pizzas Individuales">Pizzas Individuales</option>
+      <option value="Pastas">Pastas</option>
+      <option value="Acompañamientos">Acompañamientos</option>
+      <option value="Empanadas">Empanadas</option>
+      <option value="Postres">Postres</option>
+      <option value="Al Plato">Al Plato</option>
+    </select>
+    <label for="productName">Nombre</label>
+    <input type="text" id="productName" required>
+    <label for="productPrice">Precio</label>
+    <input type="number" id="productPrice" required>
+    <label for="productDescription">Descripción</label>
+    <textarea id="productDescription" required></textarea>
+    <label for="productImage">Imagen (archivo)</label>
+    <input type="file" id="productImage" accept="image/*">
+    <label for="productImageUrl">O URL de Imagen</label>
+    <input type="url" id="productImageUrl">
+   
+    <button type="submit">Guardar Producto</button>
+  </form>
+  <div class="product-list" id="productList"></div>
+  <button id="saveChanges" class="btn">Guardar Cambios</button>
 </div>
 
 <footer>
@@ -912,7 +946,6 @@
       <h3>Todo Casero</h3>
       <p>Auténtica comida casera preparada con los mejores ingredientes y mucho amor.</p>
     </div>
-   
     <div class="footer-section">
       <h3>Menú</h3>
       <ul>
@@ -922,7 +955,6 @@
         <li><a href="#menu">Hamburguesas</a></li>
       </ul>
     </div>
-   
     <div class="footer-section">
       <h3>Contacto</h3>
       <ul>
@@ -932,26 +964,28 @@
       </ul>
     </div>
   </div>
- 
   <div class="copyright">
     © 2025 Todo Casero - Todos los derechos reservados |
-    <span id="adminLink" style="cursor:pointer; text-decoration:underline;">Acceso Administrador</span>
+    <span id="adminLink" role="button" tabindex="0">Acceso Administrador</span>
   </div>
 </footer>
 
-<a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" class="whatsapp-float">
-  <i class="fab fa-whatsapp"></i>
+<a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" class="whatsapp-float" aria-label="Abrir WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
 
-<div id="cartModal" class="cart-modal">
+<!-- Cart Modal -->
+<div id="cartModal" class="cart-modal" role="dialog" aria-label="Tu Carrito">
   <div class="cart-content">
     <h3>Tu Carrito</h3>
     <div id="cartItems"></div>
     <div class="cart-total" id="cartTotal"></div>
     <div class="customer-info">
       <h4>Datos del Cliente</h4>
-      <input type="text" id="customerName" placeholder="Nombre" required>
-      <input type="tel" id="customerPhone" placeholder="Celular" required>
+      <label for="customerName">Nombre</label>
+      <input type="text" id="customerName" required>
+      <label for="customerPhone">Celular</label>
+      <input type="tel" id="customerPhone" required>
     </div>
     <div class="payment-info">
       <h4>Métodos de Pago</h4>
@@ -963,79 +997,12 @@
         <input type="radio" id="cartTransferencia" name="payment" value="Transferencia">
         <label for="cartTransferencia">Transferencia bancaria</label>
       </div>
-      <p id="cartTransferenciaInfo" style="display:none; background-color: white; padding: 1rem; border-radius: 4px; margin-top: 1rem;">
-        <strong>Alias:</strong> Adri.roti<br>
-        <strong>Titular:</strong> Adriana Basilia Enrique
-      </p>
+     
     </div>
     <div class="cart-actions">
-      <button class="btn" onclick="closeCart()">Cerrar</button>
-      <button class="btn btn-whatsapp" id="sendOrder">Enviar Pedido por WhatsApp</button>
+      <button class="btn" onclick="closeCart()" type="button">Cerrar</button>
+      <button class="btn" id="sendOrder" type="button">Enviar Pedido</button>
     </div>
-  </div>
-</div>
-
-<div id="adminPanel" class="admin-panel">
-  <button class="close-admin" onclick="closeAdmin()">×</button>
-  <h3>Panel de Administración</h3>
-  <form id="productForm" class="admin-form">
-    <div>
-      <label for="categorySelect">Categoría</label>
-      <select id="categorySelect" required>
-        <option value="">Seleccione una categoría</option>
-        <option value="Sándwiches">Sándwiches</option>
-        <option value="Pizzas">Pizzas</option>
-        <option value="Pizzas Individuales">Pizzas Individuales</option>
-        <option value="Pastas">Pastas</option>
-        <option value="Hamburguesas">Hamburguesas</option>
-        <option value="Acompañamientos">Acompañamientos</option>
-        <option value="Empanadas">Empanadas</option>
-        <option value="Postres">Postres</option>
-        <option value="Al Plato">Al Plato</option>
-      </select>
-    </div>
-   
-    <div>
-      <label for="productName">Nombre del Producto</label>
-      <input type="text" id="productName" required placeholder="Ej: Sándwich de Bondiola">
-    </div>
-   
-    <div>
-      <label for="productPrice">Precio (ARS)</label>
-      <input type="number" id="productPrice" required placeholder="Ej: 9000">
-    </div>
-   
-    <div>
-      <label for="productDescription">Descripción</label>
-      <textarea id="productDescription" rows="3" placeholder="Descripción del producto"></textarea>
-    </div>
-   
-    <div>
-      <label for="productImage">Subir Imagen del Producto</label>
-      <input type="file" id="productImage" accept="image/*">
-    </div>
-   
-    <div>
-      <label for="productImageUrl">O ingrese URL de la Imagen</label>
-      <input type="url" id="productImageUrl" placeholder="Ej: https://example.com/image.jpg">
-    </div>
-   
-    <div>
-      <img id="previewImage" class="image-preview" style="display:none;">
-    </div>
-   
-    <button type="submit">Agregar/Editar Producto</button>
-    <button type="button" id="saveChanges" style="margin-top: 1rem;">Guardar Modificaciones</button>
-  </form>
-  <div class="product-list" id="productList"></div>
-</div>
-
-<div id="adminModal" class="modal">
-  <div class="modal-content">
-    <h3>Acceso Administrador</h3>
-    <p>Ingrese la clave de acceso:</p>
-    <input type="password" id="adminPassword" placeholder="Clave de acceso">
-    <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
   </div>
 </div>
 
@@ -1047,7 +1014,7 @@
     { id: 4, category: "Sándwiches", name: "Milanesa", price: 9500, description: "Clásico sándwich de milanesa con lechuga y tomate c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/milanesa.jpeg", stock: 1000 },
     { id: 5, category: "Sándwiches", name: "Milanesa Especial", price: 10500, description: "Milanesa con extras especiales c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/milanesa premium.jpeg", stock: 1000 },
     { id: 6, category: "Sándwiches", name: "Milanesa Completa", price: 11500, description: "Milanesa completa con todos los complementos c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/milanesa premium.jpeg", stock: 1000 },
-    { id: 7, category: "Sándwiches", name: "Tucumano", price: 14000, description: "Sándwich tucumano tradicional c/Fritas Doble.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/tucumano.jpeg", stock: 1000 },
+    { id: 7, category: "Sándwiches", name: "Tucumano", price: 14500, description: "Sándwich tucumano tradicional c/Fritas Doble.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/tucumano.jpeg", stock: 1000 },
     { id: 8, category: "Sándwiches", name: "Lomito Simple", price: 10000, description: "Lomito jugoso con tomate y lechuga c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 0 },
     { id: 9, category: "Sándwiches", name: "Lomito Especial", price: 10500, description: "Lomito con extras especiales c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 0 },
     { id: 10, category: "Sándwiches", name: "Lomito Premium", price: 11000, description: "Lomito premium con ingredientes selectos c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 0 },
@@ -1055,14 +1022,14 @@
     { id: 12, category: "Hamburguesas", name: "Hamburguesa Vegetariana", price: 8500, description: "Hamburguesa vegetariana deliciosa c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/hamburguesa vegetariana.jpeg", stock: 10000 },
     { id: 13, category: "Hamburguesas", name: "Hamburguesa Doble", price: 10500, description: "Doble carne y queso c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/hamburguesa doble.jpeg", stock: 10000 },
     { id: 14, category: "Hamburguesas", name: "Hamburguesa Zapping", price: 25000, description: "Hamburguesa especial Zapping c/Fritas Doble.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/hamburguesa zapping.jpeg", stock: 10000 },
-    { id: 15, category: "Pizzas", name: "Muzzarella", price: 10000, description: "Pizza clásica con queso muzzarella, oregano, aceitunas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella.jpeg", stock: 1000 },
-    { id: 16, category: "Pizzas", name: "Fugaza", price: 11000, description: "Pizza fugaza tradicional.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/fugaza.jpeg", stock: 1000 },
-    { id: 17, category: "Pizzas", name: "Napolitana", price: 11500, description: "Pizza napolitana con tomate, ajo y oregano.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/napolitana.jpeg", stock: 1000 },
-    { id: 18, category: "Pizzas", name: "Especial", price: 12000, description: "Pizza especial con jamon, morrones y aceitunas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/especial.jpeg", stock: 1000 },
-    { id: 19, category: "Pizzas Individuales", name: "Muzzarella Individual", price: 5500, description: "Individual con queso muzzarella.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
-    { id: 20, category: "Pizzas Individuales", name: "Fugaza Individual", price: 6000, description: "Individual fugaza tradicional.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
-    { id: 21, category: "Pizzas Individuales", name: "Napolitana Individual", price: 6500, description: "Individual napolitana con tomate y ajo.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/individual napolitana.jpeg", stock: 1000 },
-    { id: 22, category: "Pizzas Individuales", name: "Especial Individual", price: 7000, description: "Individual especial con jamon y morrones.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/logo.jpeg", stock: 1000 },
+    { id: 15, category: "Pizzas", name: "Muzzarella", price: 11000, description: "Pizza clásica con queso muzzarella, oregano, aceitunas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella.jpeg", stock: 1000 },
+    { id: 16, category: "Pizzas", name: "Fugaza", price: 12000, description: "Pizza fugaza tradicional.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/fugaza.jpeg", stock: 1000 },
+    { id: 17, category: "Pizzas", name: "Napolitana", price: 12500, description: "Pizza napolitana con tomate, ajo y oregano.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/napolitana.jpeg", stock: 1000 },
+    { id: 18, category: "Pizzas", name: "Especial", price: 13000, description: "Pizza especial con jamon, morrones y aceitunas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/especial.jpeg", stock: 1000 },
+    { id: 19, category: "Pizzas Individuales", name: "Muzzarella Individual", price: 6000, description: "Individual con queso muzzarella.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
+    { id: 20, category: "Pizzas Individuales", name: "Fugaza Individual", price: 6500, description: "Individual fugaza tradicional.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
+    { id: 21, category: "Pizzas Individuales", name: "Napolitana Individual", price: 7000, description: "Individual napolitana con tomate y ajo.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/individual napolitana.jpeg", stock: 1000 },
+    { id: 22, category: "Pizzas Individuales", name: "Especial Individual", price: 7500, description: "Individual especial con jamon y morrones.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/logo.jpeg", stock: 1000 },
     { id: 23, category: "Pastas", name: "Tallarines con Bolognesa", price: 8500, description: "Pasta fresca con salsa bolognesa casera.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/tallarines.jpeg", stock: 1 },
     { id: 24, category: "Pastas", name: "Ñoquis con Bolognesa", price: 8500, description: "Ñoquis frescos con salsa bolognesa.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/ñoquis con bolognesa.jpeg", stock: 0 },
     { id: 25, category: "Pastas", name: "Ravioles con Bolognesa", price: 9500, description: "Ravioles frescos con salsa bolognesa.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/ravioles con bolognesa.jpeg", stock: 10000 },
@@ -1523,21 +1490,31 @@
   }
 
   function renderProductList() {
-    const productList = document.getElementById("productList");
-    productList.innerHTML = "";
-    products.forEach(product => {
-      const div = document.createElement("div");
-      div.className = "product-item";
-      div.innerHTML = `
-        <span>${product.name} - $${product.price}</span>
-        <div>
-          <button class="btn" onclick="editProduct(${product.id})">Editar</button>
-          <button class="btn" style="background-color: #e74c3c;" onclick="deleteProduct(${product.id})">Eliminar</button>
-        </div>
-      `;
-      productList.appendChild(div);
-    });
+  const productList = document.getElementById("productList");
+  productList.innerHTML = "";
+
+  if (!Array.isArray(products) || products.length === 0) {
+    productList.innerHTML = "<p>No hay productos disponibles.</p>";
+    return;
   }
+
+  products.forEach(product => {
+    const div = document.createElement("div");
+    div.className = "product-item";
+
+    div.innerHTML = `
+      <div class="product-info">
+        <span><strong>${product.name}</strong> - $${product.price}</span>
+      </div>
+      <div class="product-actions">
+        <button class="btn" type="button" aria-label="Editar ${product.name}" onclick="editProduct(${product.id})">Editar</button>
+        <button class="btn" type="button" aria-label="Eliminar ${product.name}" style="background-color: #e74c3c;" onclick="deleteProduct(${product.id})">Eliminar</button>
+      </div>
+    `;
+
+    productList.appendChild(div);
+  });
+}
 
   function editProduct(id) {
     editingProductId = id;
@@ -1697,8 +1674,10 @@
   });
 </script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970d6bdb2faa9ae2',t:'MTc1NTQ3ODI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970dc0e25deab03f',t:'MTc1NTQ4MTc1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>"commit"
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970d6bdb2faa9ae2',t:'MTc1NTQ3ODI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970dc0e25deab03f',t:'MTc1NTQ4MTc1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9715f44c0faddd2e',t:'MTc1NTU2Nzc0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'971783bb8c2eb27d',t:'MTc1NTU4NDEwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'972036aa8ad9f3fe',t:'MTc1NTY3NTMyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97206f6bb905c1a0',t:'MTc1NTY3NzY0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+"commit"
+
 
 
 
