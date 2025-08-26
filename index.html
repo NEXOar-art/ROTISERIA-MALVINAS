@@ -413,6 +413,24 @@
       margin-top: 2rem;
       padding-top: 1rem;
       border-top: 1px solid #444;
+      font-size: 0.9rem;
+      color: #bbb;
+      transition: color 0.3s;
+    }
+   
+    .copyright:hover {
+      color: white;
+    }
+   
+    .copyright span {
+      cursor: pointer;
+      text-decoration: underline;
+      color: var(--accent-color);
+      transition: color 0.3s;
+    }
+   
+    .copyright span:hover {
+      color: var(--primary-color);
     }
    
     .whatsapp-float {
@@ -804,140 +822,122 @@
 
 <section class="section" id="menu">
   <h2 class="section-title">Nuestro Menú</h2>
-
+ 
   <div class="offer-banner" id="offerBanner">
     <h3>¡Ofertas Especiales!</h3>
     <p id="offerText"></p>
   </div>
 
   <!-- Combos Section -->
-  <div id="combos" class="mb-12">
-    <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">🍔🍕Combos Deliciosos para 2 a 6 personas🍔🍕</h2>
+  <section id="combos" class="mb-12 bg-gradient-to-b from-gray-50 to-white relative before:absolute before:inset-0 before:bg-[url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIxMCIgY3k9IjEwIiByPSIxIi8+PC9zdmc+')] before:bg-[length:10px_10px] before:opacity-5">
+    <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>🍔🍕Combos Deliciosos para 2 a 6 personas🍔🍕</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Combo Cards -->
-      <div class="combo-card">
-        <h3>🍔 Combo Hamburguesa Zapping con Fritas + Pizza Especial</h3>
-        <p>35.500 pesos</p>
+      <!-- Combo 1 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent relative opacity-0 translate-y-10" data-scroll-reveal data-delay="0.1s">
+        <div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">🔥 El Más Pedido</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">🍔 Combo Hamburguesa Zapping con Fritas + Pizza Especial</h3>
+        <p class="text-gray-600 mb-4">$35.500</p>
+        <button class="add-to-cart bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:brightness-110 group" data-id="36" data-name="Combo Hamburguesa Zapping con Fritas + Pizza Especial" data-price="35500">
+          Lo Quiero
+          <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </button>
       </div>
-      <div class="combo-card">
-        <h3>🍔 Combo de 2 Hamburguesas</h3>
-        <p>16.000 pesos</p>
+      <!-- Combo 2 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent opacity-0 translate-y-10" data-scroll-reveal data-delay="0.2s">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">🍔 Combo de 2 Hamburguesas</h3>
+        <p class="text-gray-600 mb-4">$16.000</p>
+        <button class="add-to-cart bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:brightness-110 group" data-id="37" data-name="Combo de 2 Hamburguesas" data-price="16000">
+          Lo Quiero
+          <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </button>
       </div>
-      <div class="combo-card">
-        <h3>🍕 Combo Pizza Muzzarella + 2 Hamburguesas Completas</h3>
-        <p>25.500 pesos</p>
+      <!-- Combo 3 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent opacity-0 translate-y-10" data-scroll-reveal data-delay="0.3s">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">🍕 Combo Pizza Muzzarella + 2 Hamburguesas Completas</h3>
+        <p class="text-gray-600 mb-4">$25.500</p>
+        <button class="add-to-cart bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:brightness-110 group" data-id="38" data-name="Combo Pizza Muzzarella + 2 Hamburguesas Completas" data-price="25500">
+          Lo Quiero
+          <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </button>
       </div>
-      <div class="combo-card">
-        <h3>🍟 Combo Pizza Especial + Porción de Fritas</h3>
-        <p>15.000 pesos</p>
+      <!-- Combo 4 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent opacity-0 translate-y-10" data-scroll-reveal data-delay="0.4s">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">🍟 Combo Pizza Especial + Porción de Fritas</h3>
+        <p class="text-gray-600 mb-4">$15.000</p>
+        <button class="add-to-cart bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:brightness-110 group" data-id="39" data-name="Combo Pizza Especial + Porción de Fritas" data-price="15000">
+          Lo Quiero
+          <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </button>
       </div>
     </div>
-  </div>
-
+  </section>
+ 
   <div class="menu-section">
     <div id="categoriesContainer"></div>
   </div>
 </section>
 
 <section class="section" id="pedidos">
-  <h2 class="section-title">Cómo Hacer tu Pedido</h2>
-  <div class="info-cards">
-    <div class="info-card">
-      <i class="fas fa-utensils" aria-hidden="true"></i>
-      <h3>Elige tu comida</h3>
-      <p>Selecciona entre nuestra variedad de sándwiches, pizzas, pastas y más.</p>
+  <h2 class="section-title text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>Cómo Hacer tu Pedido</h2>
+  <div class="relative overflow-hidden">
+    <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+      <div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.1s">
+        <i class="fas fa-utensils text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">1. Elige tu comida</h3>
+        <p class="text-gray-600 mb-4">Selecciona entre nuestra variedad de sándwiches, pizzas, pastas y más.</p>
+      </div>
+      <div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.2s">
+        <i class="fas fa-comment text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">2. Haz tu pedido</h3>
+        <p class="text-gray-600 mb-4">Chatea con nuestra asistente María por WhatsApp al +54 348 9358998.</p>
+      </div>
+      <div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.3s">
+        <i class="fas fa-store text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">3. Recoge en local</h3>
+        <p class="text-gray-600 mb-4">Retira tu pedido en nuestro local en el horario acordado.</p>
+      </div>
     </div>
-    <div class="info-card">
-      <i class="fas fa-comment" aria-hidden="true"></i>
-      <h3>Haz tu pedido</h3>
-      <p>Chatea con nuestra asistente María por WhatsApp al +54 348 9358998.</p>
-    </div>
-    <div class="info-card">
-      <i class="fas fa-store" aria-hidden="true"></i>
-      <h3>Recoge en local</h3>
-      <p>Retira tu pedido en nuestro local en el horario acordado.</p>
-    </div>
+    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="prevBtn">‹</button>
+    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="nextBtn">›</button>
   </div>
 </section>
 
 <section class="section" id="contacto">
-  <h2 class="section-title">Contacto</h2>
-  <div class="info-cards">
-    <div class="info-card">
-      <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-      <h3>Ubicación</h3>
-      <p>Campana, Buenos Aires</p>
+  <h2 class="section-title text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>Contacto</h2>
+  <div class="relative overflow-hidden">
+    <div class="flex transition-transform duration-500 ease-in-out" id="contactCarousel">
+      <div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.1s">
+        <i class="fas fa-map-marker-alt text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Ubicación</h3>
+        <p class="text-gray-600 mb-4">Campana, Buenos Aires</p>
+      </div>
+      <div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.2s">
+        <i class="fas fa-clock text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Horario</h3>
+        <p class="text-gray-600 mb-4">Lunes a Domingo<br>19:30 - 23:45</p>
+      </div>
+      <div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.3s">
+        <i class="fab fa-whatsapp text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Teléfono</h3>
+        <p class="text-gray-600 mb-4">+54 348 9358998</p>
+        
+      </div>
     </div>
-    <div class="info-card">
-      <i class="fas fa-clock" aria-hidden="true"></i>
-      <h3>Horario</h3>
-      <p>Lunes a Domingo<br>19:30 - 23:45</p>
-    </div>
-    <div class="info-card">
-      <i class="fab fa-whatsapp" aria-hidden="true"></i>
-      <h3>Teléfono</h3>
-      <p>+54 348 9358998</p>
-      <a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" class="btn btn-whatsapp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i> Chatear con María
-      </a>
-    </div>
+    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="prevBtnContact">‹</button>
+    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="nextBtnContact">›</button>
   </div>
 </section>
 
-<div id="chatWidget" class="chat-widget" role="dialog" aria-label="Chat con María">
+<div id="chatWidget" class="chat-widget">
   <div class="chat-header">
     <span>Chat con María de Todo Casero</span>
-    <button onclick="toggleChat()" aria-label="Cerrar chat"></button>
+    <button onclick="toggleChat()">×</button>
   </div>
   <div class="chat-body" id="chatBody"></div>
   <div class="chat-input">
-    <label for="chatInput" class="sr-only">Escribe tu consulta</label>
     <input type="text" id="chatInput" placeholder="Escribe tu consulta...">
-    <button onclick="sendChatMessage()" type="button">Enviar</button>
+    <button onclick="sendChatMessage()">Enviar</button>
   </div>
-</div>
-
-<!-- Admin Modal -->
-<div id="adminModal" class="modal">
-  <div class="modal-content">
-    <h3>Acceso Administrador</h3>
-    <input type="password" id="adminPassword" placeholder="Clave de acceso">
-    <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
-  </div>
-</div>
-
-<!-- Admin Panel -->
-<div id="adminPanel" class="admin-panel">
-  <button class="close-admin" onclick="closeAdmin()">&times;</button>
-  <h3>Panel Administrador</h3>
-  <form id="productForm" class="admin-form">
-    <label for="categorySelect">Categoría</label>
-    <select id="categorySelect">
-      <option value="Sándwiches">Sándwiches</option>
-      <option value="Hamburguesas">Hamburguesas</option>
-      <option value="Pizzas">Pizzas</option>
-      <option value="Pizzas Individuales">Pizzas Individuales</option>
-      <option value="Pastas">Pastas</option>
-      <option value="Acompañamientos">Acompañamientos</option>
-      <option value="Empanadas">Empanadas</option>
-      <option value="Postres">Postres</option>
-      <option value="Al Plato">Al Plato</option>
-    </select>
-    <label for="productName">Nombre</label>
-    <input type="text" id="productName" required>
-    <label for="productPrice">Precio</label>
-    <input type="number" id="productPrice" required>
-    <label for="productDescription">Descripción</label>
-    <textarea id="productDescription" required></textarea>
-    <label for="productImage">Imagen (archivo)</label>
-    <input type="file" id="productImage" accept="image/*">
-    <label for="productImageUrl">O URL de Imagen</label>
-    <input type="url" id="productImageUrl">
-   
-    <button type="submit">Guardar Producto</button>
-  </form>
-  <div class="product-list" id="productList"></div>
-  <button id="saveChanges" class="btn">Guardar Cambios</button>
 </div>
 
 <footer>
@@ -946,6 +946,7 @@
       <h3>Todo Casero</h3>
       <p>Auténtica comida casera preparada con los mejores ingredientes y mucho amor.</p>
     </div>
+   
     <div class="footer-section">
       <h3>Menú</h3>
       <ul>
@@ -955,6 +956,7 @@
         <li><a href="#menu">Hamburguesas</a></li>
       </ul>
     </div>
+   
     <div class="footer-section">
       <h3>Contacto</h3>
       <ul>
@@ -964,28 +966,23 @@
       </ul>
     </div>
   </div>
-  <div class="copyright">
+ 
+  <div class="copyright bg-gray-800 py-4 text-center rounded-t-lg shadow-md">
     © 2025 Todo Casero - Todos los derechos reservados |
-    <span id="adminLink" role="button" tabindex="0">Acceso Administrador</span>
+    <span id="adminLink" class="cursor-pointer text-underline text-accent-color hover:text-primary-color transition-colors">Acceso Administrador</span>
   </div>
 </footer>
 
-<a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" class="whatsapp-float" aria-label="Abrir WhatsApp">
-  <i class="fab fa-whatsapp" aria-hidden="true"></i>
-</a>
 
-<!-- Cart Modal -->
-<div id="cartModal" class="cart-modal" role="dialog" aria-label="Tu Carrito">
+<div id="cartModal" class="cart-modal">
   <div class="cart-content">
     <h3>Tu Carrito</h3>
     <div id="cartItems"></div>
     <div class="cart-total" id="cartTotal"></div>
     <div class="customer-info">
       <h4>Datos del Cliente</h4>
-      <label for="customerName">Nombre</label>
-      <input type="text" id="customerName" required>
-      <label for="customerPhone">Celular</label>
-      <input type="tel" id="customerPhone" required>
+      <input type="text" id="customerName" placeholder="Nombre" required>
+      <input type="tel" id="customerPhone" placeholder="Celular" required>
     </div>
     <div class="payment-info">
       <h4>Métodos de Pago</h4>
@@ -997,12 +994,73 @@
         <input type="radio" id="cartTransferencia" name="payment" value="Transferencia">
         <label for="cartTransferencia">Transferencia bancaria</label>
       </div>
-     
+      
     </div>
     <div class="cart-actions">
-      <button class="btn" onclick="closeCart()" type="button">Cerrar</button>
-      <button class="btn" id="sendOrder" type="button">Enviar Pedido</button>
+      <button class="btn" onclick="closeCart()">Cerrar</button>
+      <button class="btn btn-whatsapp" id="sendOrder">Enviar Pedido por WhatsApp</button>
     </div>
+  </div>
+</div>
+
+<div id="adminPanel" class="admin-panel">
+  <button class="close-admin" onclick="closeAdmin()">×</button>
+  <h3>Panel de Administración</h3>
+  <form id="productForm" class="admin-form">
+    <div>
+      <label for="categorySelect">Categoría</label>
+      <select id="categorySelect" required>
+        <option value="">Seleccione una categoría</option>
+        <option value="Sándwiches">Sándwiches</option>
+        <option value="Pizzas">Pizzas</option>
+        <option value="Pizzas Individuales">Pizzas Individuales</option>
+        <option value="Pastas">Pastas</option>
+        <option value="Hamburguesas">Hamburguesas</option>
+        <option value="Acompañamientos">Acompañamientos</option>
+        <option value="Empanadas">Empanadas</option>
+        <option value="Postres">Postres</option>
+        <option value="Al Plato">Al Plato</option>
+      </select>
+    </div>
+   
+    <div>
+      <label for="productName">Nombre del Producto</label>
+      <input type="text" id="productName" required placeholder="Ej: Sándwich de Bondiola">
+    </div>
+   
+    <div>
+      <label for="productPrice">Precio (ARS)</label>
+      <input type="number" id="productPrice" required placeholder="Ej: 9000">
+    </div>
+   
+    <div>
+      <label for="productDescription">Descripción</label>
+      <textarea id="productDescription" rows="3" placeholder="Descripción del producto"></textarea>
+    </div>
+   
+    <div>
+      <label for="productImage">Subir Imagen del Producto</label>
+      <input type="file" id="productImage" accept="image/*">
+    </div>
+   
+    <div>
+      <label for="productImageUrl">O ingrese URL de la Imagen</label>
+      <input type="url" id="productImageUrl" placeholder="Ej: https://example.com/image.jpg">
+    </div>
+   
+    
+    <button type="submit">Agregar/Editar Producto</button>
+    <button type="button" id="saveChanges"</button>
+  </form>
+  <div class="product-list" id="productList"></div>
+</div>
+
+<div id="adminModal" class="modal">
+  <div class="modal-content">
+    <h3>Acceso Administrador</h3>
+    <p>Ingrese la clave de acceso:</p>
+    <input type="password" id="adminPassword" placeholder="Clave de acceso">
+    <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
   </div>
 </div>
 
@@ -1026,10 +1084,10 @@
     { id: 16, category: "Pizzas", name: "Fugaza", price: 12000, description: "Pizza fugaza tradicional.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/fugaza.jpeg", stock: 1000 },
     { id: 17, category: "Pizzas", name: "Napolitana", price: 12500, description: "Pizza napolitana con tomate, ajo y oregano.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/napolitana.jpeg", stock: 1000 },
     { id: 18, category: "Pizzas", name: "Especial", price: 13000, description: "Pizza especial con jamon, morrones y aceitunas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/especial.jpeg", stock: 1000 },
-    { id: 19, category: "Pizzas Individuales", name: "Muzzarella Individual", price: 6000, description: "Individual con queso muzzarella.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
-    { id: 20, category: "Pizzas Individuales", name: "Fugaza Individual", price: 6500, description: "Individual fugaza tradicional.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
-    { id: 21, category: "Pizzas Individuales", name: "Napolitana Individual", price: 7000, description: "Individual napolitana con tomate y ajo.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/individual napolitana.jpeg", stock: 1000 },
-    { id: 22, category: "Pizzas Individuales", name: "Especial Individual", price: 7500, description: "Individual especial con jamon y morrones.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/logo.jpeg", stock: 1000 },
+    { id: 19, category: "Pizzas Individuales", name: "Muzzarella Individual", price: 5500, description: "Individual con queso muzzarella.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
+    { id: 20, category: "Pizzas Individuales", name: "Fugaza Individual", price: 6000, description: "Individual fugaza tradicional.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/muzzarella individual.jpeg", stock: 1000 },
+    { id: 21, category: "Pizzas Individuales", name: "Napolitana Individual", price: 6500, description: "Individual napolitana con tomate y ajo.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/individual napolitana.jpeg", stock: 1000 },
+    { id: 22, category: "Pizzas Individuales", name: "Especial Individual", price: 7000, description: "Individual especial con jamon y morrones.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/logo.jpeg", stock: 1000 },
     { id: 23, category: "Pastas", name: "Tallarines con Bolognesa", price: 8500, description: "Pasta fresca con salsa bolognesa casera.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/tallarines.jpeg", stock: 1 },
     { id: 24, category: "Pastas", name: "Ñoquis con Bolognesa", price: 8500, description: "Ñoquis frescos con salsa bolognesa.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/ñoquis con bolognesa.jpeg", stock: 0 },
     { id: 25, category: "Pastas", name: "Ravioles con Bolognesa", price: 9500, description: "Ravioles frescos con salsa bolognesa.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/ravioles con bolognesa.jpeg", stock: 10000 },
@@ -1042,7 +1100,11 @@
     { id: 32, category: "Postres", name: "Panqueque", price: 4500, description: "Dulce de Leche, Chocolate y canela.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/logo.jpeg", stock: 0 },
     { id: 33, category: "Al Plato", name: "Milanesa con Puré", price: 9500, description: "Milanesa acompañada de puré de papas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/logo.jpeg", stock: 1000 },
     { id: 34, category: "Al Plato", name: "Milanesa a Caballo", price: 10000, description: "Milanesa con huevos frito encima.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/logo.jpeg", stock: 1000 },
-    { id: 35, category: "Al Plato", name: "Milanesa Napolitana", price: 10500, description: "Milanesa con salsa anego.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/milanesa napolitana.jpeg", stock: 1000 }
+    { id: 35, category: "Al Plato", name: "Milanesa Napolitana", price: 10500, description: "Milanesa con salsa anego.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/milanesa napolitana.jpeg", stock: 1000 },
+    { id: 36, category: "Combos", name: "Combo Hamburguesa Zapping con Fritas + Pizza Especial", price: 35500, description: "Delicioso combo para compartir.", image: "", stock: 1000 },
+    { id: 37, category: "Combos", name: "Combo de 2 Hamburguesas", price: 16000, description: "Delicioso combo para compartir.", image: "", stock: 1000 },
+    { id: 38, category: "Combos", name: "Combo Pizza Muzzarella + 2 Hamburguesas Completas", price: 25500, description: "Delicioso combo para compartir.", image: "", stock: 1000 },
+    { id: 39, category: "Combos", name: "Combo Pizza Especial + Porción de Fritas", price: 15000, description: "Delicioso combo para compartir.", image: "", stock: 1000 }
   ];
 
   const defaultOffers = [
@@ -1490,31 +1552,21 @@
   }
 
   function renderProductList() {
-  const productList = document.getElementById("productList");
-  productList.innerHTML = "";
-
-  if (!Array.isArray(products) || products.length === 0) {
-    productList.innerHTML = "<p>No hay productos disponibles.</p>";
-    return;
+    const productList = document.getElementById("productList");
+    productList.innerHTML = "";
+    products.forEach(product => {
+      const div = document.createElement("div");
+      div.className = "product-item";
+      div.innerHTML = `
+        <span>${product.name} - $${product.price}</span>
+        <div>
+          <button class="btn" onclick="editProduct(${product.id})">Editar</button>
+          <button class="btn" style="background-color: #e74c3c;" onclick="deleteProduct(${product.id})">Eliminar</button>
+        </div>
+      `;
+      productList.appendChild(div);
+    });
   }
-
-  products.forEach(product => {
-    const div = document.createElement("div");
-    div.className = "product-item";
-
-    div.innerHTML = `
-      <div class="product-info">
-        <span><strong>${product.name}</strong> - $${product.price}</span>
-      </div>
-      <div class="product-actions">
-        <button class="btn" type="button" aria-label="Editar ${product.name}" onclick="editProduct(${product.id})">Editar</button>
-        <button class="btn" type="button" aria-label="Eliminar ${product.name}" style="background-color: #e74c3c;" onclick="deleteProduct(${product.id})">Eliminar</button>
-      </div>
-    `;
-
-    productList.appendChild(div);
-  });
-}
 
   function editProduct(id) {
     editingProductId = id;
@@ -1671,12 +1723,81 @@
     elements.forEach((el, index) => {
       el.style.animationDelay = `${index * 0.2}s`;
     });
+
+    // Scroll Reveal Logic
+    const scrollRevealElements = document.querySelectorAll('[data-scroll-reveal]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const delay = target.dataset.delay || '0s';
+          target.style.transitionDelay = delay;
+          target.classList.add('opacity-100', 'translate-y-0');
+          observer.unobserve(target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollRevealElements.forEach(el => observer.observe(el));
+
+    // Carousel Logic for "Cómo Hacer tu Pedido"
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+    const slides = carousel.children.length;
+
+    function showSlide(index) {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides - 1;
+      showSlide(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex < slides - 1) ? currentIndex + 1 : 0;
+      showSlide(currentIndex);
+    });
+
+    // Auto-advance carousel for pedidos
+    setInterval(() => {
+      nextBtn.click();
+    }, 5000);
+
+    // Carousel Logic for "Contacto"
+    const contactCarousel = document.getElementById('contactCarousel');
+    const prevBtnContact = document.getElementById('prevBtnContact');
+    const nextBtnContact = document.getElementById('nextBtnContact');
+    let currentContactIndex = 0;
+    const contactSlides = contactCarousel.children.length;
+
+    function showContactSlide(index) {
+      contactCarousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtnContact.addEventListener('click', () => {
+      currentContactIndex = (currentContactIndex > 0) ? currentContactIndex - 1 : contactSlides - 1;
+      showContactSlide(currentContactIndex);
+    });
+
+    nextBtnContact.addEventListener('click', () => {
+      currentContactIndex = (currentContactIndex < contactSlides - 1) ? currentContactIndex + 1 : 0;
+      showContactSlide(currentContactIndex);
+    });
+
+    // Auto-advance carousel for contacto
+    setInterval(() => {
+      nextBtnContact.click();
+    }, 5000);
   });
 </script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970d6bdb2faa9ae2',t:'MTc1NTQ3ODI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970dc0e25deab03f',t:'MTc1NTQ4MTc1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9715f44c0faddd2e',t:'MTc1NTU2Nzc0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'971783bb8c2eb27d',t:'MTc1NTU4NDEwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'972036aa8ad9f3fe',t:'MTc1NTY3NTMyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97206f6bb905c1a0',t:'MTc1NTY3NzY0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9751ff3b7afaee13',t:'MTc1NjE5NzMzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975208275aae203c',t:'MTc1NjE5NzcwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 "commit"
+
 
 
 
