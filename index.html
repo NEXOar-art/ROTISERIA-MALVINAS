@@ -272,6 +272,11 @@
       background-color: #e67e22;
     }
    
+    .add-to-cart.disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+   
     .quantity-controls {
       display: flex;
       align-items: center;
@@ -1037,6 +1042,11 @@
       <label for="productDescription">Descripción</label>
       <textarea id="productDescription" rows="3" placeholder="Descripción del producto"></textarea>
     </div>
+
+    <div>
+      <label for="productStock">Stock Inicial</label>
+      <input type="number" id="productStock" min="0" value="10" required>
+    </div>
    
     <div>
       <label for="productImage">Subir Imagen del Producto</label>
@@ -1047,10 +1057,11 @@
       <label for="productImageUrl">O ingrese URL de la Imagen</label>
       <input type="url" id="productImageUrl" placeholder="Ej: https://example.com/image.jpg">
     </div>
-   
+    <img id="previewImage" class="image-preview" alt="Preview";>
     
+
     <button type="submit">Agregar/Editar Producto</button>
-    <button type="button" id="saveChanges"</button>
+    <button type="button" id="saveChanges">Guardar Todos los Cambios</button>
   </form>
   <div class="product-list" id="productList"></div>
 </div>
@@ -1073,9 +1084,9 @@
     { id: 5, category: "Sándwiches", name: "Milanesa Especial", price: 10500, description: "Milanesa con extras especiales c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/milanesa premium.jpeg", stock: 1000 },
     { id: 6, category: "Sándwiches", name: "Milanesa Completa", price: 11500, description: "Milanesa completa con todos los complementos c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/milanesa premium.jpeg", stock: 1000 },
     { id: 7, category: "Sándwiches", name: "Tucumano", price: 14500, description: "Sándwich tucumano tradicional c/Fritas Doble.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/tucumano.jpeg", stock: 1000 },
-    { id: 8, category: "Sándwiches", name: "Lomito Simple", price: 10000, description: "Lomito jugoso con tomate y lechuga c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 0 },
-    { id: 9, category: "Sándwiches", name: "Lomito Especial", price: 10500, description: "Lomito con extras especiales c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 0 },
-    { id: 10, category: "Sándwiches", name: "Lomito Premium", price: 11000, description: "Lomito premium con ingredientes selectos c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 0 },
+    { id: 8, category: "Sándwiches", name: "Lomito Simple", price: 10000, description: "Lomito jugoso con tomate y lechuga c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 1000 },
+    { id: 9, category: "Sándwiches", name: "Lomito Especial", price: 10500, description: "Lomito con extras especiales c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 100 },
+    { id: 10, category: "Sándwiches", name: "Lomito Premium", price: 11000, description: "Lomito premium con ingredientes selectos c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/lomito premium.jpeg", stock: 100 },
     { id: 11, category: "Hamburguesas", name: "Hamburguesa Completa", price: 8500, description: "Con lechuga, tomate, queso y mayonesa c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/hamburguesa completa.jpeg", stock: 10000 },
     { id: 12, category: "Hamburguesas", name: "Hamburguesa Vegetariana", price: 8500, description: "Hamburguesa vegetariana deliciosa c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/hamburguesa vegetariana.jpeg", stock: 10000 },
     { id: 13, category: "Hamburguesas", name: "Hamburguesa Doble", price: 10500, description: "Doble carne y queso c/Fritas.", image: "https://raw.githubusercontent.com/NEXOar-art/Rotiseria-Todo-Casero/main/hamburguesa doble.jpeg", stock: 10000 },
@@ -1184,6 +1195,12 @@
           ${product.image ? `<img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">` : ""}
           <button class="add-to-cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">Añadir al Carrito</button>
         `;
+        const button = productDiv.querySelector(".add-to-cart");
+        if (product.stock === 0) {
+          button.disabled = true;
+          button.textContent = "Agotado";
+          button.classList.add("disabled");
+        }
         content.appendChild(productDiv);
       });
 
@@ -1558,7 +1575,7 @@
       const div = document.createElement("div");
       div.className = "product-item";
       div.innerHTML = `
-        <span>${product.name} - $${product.price}</span>
+        <span>${product.name} - $${product.price} (Stock: ${product.stock})</span>
         <div>
           <button class="btn" onclick="editProduct(${product.id})">Editar</button>
           <button class="btn" style="background-color: #e74c3c;" onclick="deleteProduct(${product.id})">Eliminar</button>
@@ -1575,6 +1592,7 @@
     document.getElementById("productName").value = product.name;
     document.getElementById("productPrice").value = product.price;
     document.getElementById("productDescription").value = product.description;
+    document.getElementById("productStock").value = product.stock;
     document.getElementById("productImageUrl").value = product.image || "";
     if (product.image) {
       document.getElementById("previewImage").src = product.image;
@@ -1673,20 +1691,21 @@
     const price = parseInt(document.getElementById("productPrice").value);
     const description = document.getElementById("productDescription").value.trim();
     const category = document.getElementById("categorySelect").value;
-    const imageInput = document.getElementById("productImage");
+    const stock = parseInt(document.getElementById("productStock").value) || 0;
     const imageUrl = document.getElementById("productImageUrl").value.trim();
-    const image = imageUrl || (imageInput.files.length > 0 ? URL.createObjectURL(imageInput.files[0]) : "");
+    const previewSrc = document.getElementById("previewImage").src;
+    const image = imageUrl || (previewSrc && previewSrc !== window.location.href ? previewSrc : "");
 
-    if (!name || isNaN(price)) {
+    if (!name || isNaN(price) || isNaN(stock)) {
       alert("Por favor completa todos los campos requeridos.");
       return;
     }
 
     if (editingProductId) {
-      products = products.map(p => p.id === editingProductId ? { ...p, category, name, price, description, image } : p);
+      products = products.map(p => p.id === editingProductId ? { ...p, category, name, price, description, stock, image } : p);
     } else {
       const id = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
-      products.push({ id, category, name, price, description, image, stock: 10 }); // Default stock for new products
+      products.push({ id, category, name, price, description, stock, image });
     }
 
     renderProductList();
@@ -1794,9 +1813,9 @@
   });
 </script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9751ff3b7afaee13',t:'MTc1NjE5NzMzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975208275aae203c',t:'MTc1NjE5NzcwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
-
+"commit"
 
 
 
