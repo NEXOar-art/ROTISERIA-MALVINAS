@@ -1037,7 +1037,7 @@
 
 <script>
   // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-  const currentVersion = '1.9'; // ¡Importante! Actualiza este número con cada cambio de precios.
+  const currentVersion = '2.0'; // ¡Importante! Actualiza este número con cada cambio de precios.
   if (localStorage.getItem('appVersion') !== currentVersion) {
     localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
     localStorage.setItem('appVersion', currentVersion);
@@ -1049,9 +1049,9 @@
     { id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 11500, description: "Bondiola con extras especiales c/Fritas.", image: "bondiola.jpeg", stock: 1000 },
     { id: 3, category: "Sándwiches", name: "Bondiola Premium", price: 12500, description: "Bondiola premium con ingredientes selectos c/Fritas.", image: "bondiola.jpeg", stock: 1000},
     { id: 4, category: "Sándwiches", name: "Sandwich Milanesa ", price: 11500, description: "Clásico sándwich de milanesa con lechuga y tomate c/Fritas.", image: "milanesa especial.jpeg", stock: 1000 },
-    { id: 5, category: "Sándwiches", name: "Milanesa Especial", price: 12500, description: "Milanesa con extras especiales c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
-    { id: 6, category: "Sándwiches", name: "Milanesa Completa", price: 13500, description: "Milanesa completa con todos los complementos c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
-    { id: 7, category: "Sándwiches", name: "Milanesa Premium", price: 14000, description: "Milanesa completa con todos los complementos c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
+    { id: 5, category: "Sándwiches", name: "Sandwich Milanesa Especial", price: 12500, description: "Milanesa con extras especiales c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
+    { id: 6, category: "Sándwiches", name: "Sandwich Milanesa Completa", price: 13500, description: "Milanesa completa con todos los complementos c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
+    { id: 7, category: "Sándwiches", name: "Sandwich Milanesa Premium", price: 14000, description: "Milanesa completa con todos los complementos c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
     { id: 8, category: "Sándwiches", name: "Tucumano", price: 17000, description: "Sándwich tucumano tradicional c/Fritas Doble.", image: "tucumano.jpeg", stock: 1000 },
     { id: 9, category: "Sándwiches", name: "Lomito Simple", price: 11500, description: "Lomito jugoso con tomate y lechuga c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
     { id: 10, category: "Sándwiches", name: "Lomito Especial", price: 12000, description: "Lomito con extras especiales c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
@@ -1079,9 +1079,9 @@
     { id: 32, category: "Postres", name: "Flan", price: 5500, description: "Con crema o mixto (Dulce de Leche y Crema).", image: "flan.jpeg", stock: 10000 },
     { id: 33, category: "Postres", name: "Torta Helada", price: 4500, description: "Crema Americana con Dulce de Leche.", image: "torta helada.jpeg", stock: 0},
     { id: 34, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de  Frutas Deliciosas.", image: "logo.jpeg", stock: 100 },
-    { id: 35, category: "Al Plato", name: "Milanesa con Puré", price: 11500, description: "Milanesa acompañada de puré de papas.", image: "logo.jpeg", stock: 1000 },
-    { id: 36, category: "Al Plato", name: "Milanesa a Caballo", price: 12000, description: "Milanesa con huevos frito por encima.", image:"logo.jpeg", stock: 1000 },
-    { id: 37, category: "Al Plato", name: "Milanesa Napolitana", price: 13000, description: "Milanesa con salsa anego.", image: "milanesa napolitana.jpeg", stock: 1000 },
+    { id: 35, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 11500, description: "Milanesa acompañada de puré de papas.", image: "logo.jpeg", stock: 1000 },
+    { id: 36, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 12000, description: "Milanesa con huevos frito por encima.", image:"logo.jpeg", stock: 1000 },
+    { id: 37, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 13000, description: "Milanesa con salsa anego.", image: "milanesa napolitana.jpeg", stock: 1000 },
     { id: 38, category: "Combos", name: "Combo Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 },
     { id: 39, category: "Combos", name: "Combo de 2 Hamburguesas", price: 18000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 },
     { id: 40, category: "Combos", name: "Combo Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 },
@@ -1815,6 +1815,7 @@
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9751ff3b7afaee13',t:'MTc1NjE5NzMzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975208275aae203c',t:'MTc1NjE5NzcwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 "commit" 
+
 
 
 
