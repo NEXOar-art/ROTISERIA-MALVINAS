@@ -15,20 +15,20 @@
       --accent-color: #25d366;
       --shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-   
+  
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-   
+  
     body {
       font-family: 'Segoe UI', 'Roboto', sans-serif;
       line-height: 1.6;
       background-color: var(--light-color);
       color: var(--dark-color);
     }
-   
+  
     header {
       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       padding: 1.5rem;
@@ -37,7 +37,7 @@
       position: relative;
       z-index: 100;
     }
-   
+  
     .logo {
       font-size: 2.5rem;
       font-weight: bold;
@@ -46,18 +46,18 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
       animation: microEffect 1s infinite alternate;
     }
-   
+  
     @keyframes microEffect {
       from { transform: scale(1); }
       to { transform: scale(1.05); }
     }
-   
+  
     .tagline {
       color: white;
       font-style: italic;
       margin-bottom: 1rem;
     }
-   
+  
     nav {
       display: flex;
       justify-content: center;
@@ -65,7 +65,7 @@
       margin: 1rem;
       flex-wrap: wrap;
     }
-   
+  
     nav a {
       text-decoration: none;
       color: white;
@@ -77,11 +77,11 @@
       align-items: center;
       gap: 0.5rem;
     }
-   
+  
     nav a:hover {
       background-color: rgba(255,255,255,0.2);
     }
-   
+  
     .hero {
       background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
       height: 60vh;
@@ -91,7 +91,7 @@
       text-align: center;
       position: relative;
     }
-   
+  
     .hero::before {
       content: '';
       position: absolute;
@@ -101,7 +101,7 @@
       height: 100%;
       background-color: rgba(0,0,0,0.5);
     }
-   
+  
     .hero-content {
       position: relative;
       z-index: 1;
@@ -109,17 +109,17 @@
       max-width: 800px;
       padding: 2rem;
     }
-   
+  
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-   
+  
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
-   
+  
     .btn {
       display: inline-block;
       background-color: var(--primary-color);
@@ -132,27 +132,27 @@
       border: none;
       cursor: pointer;
     }
-   
+  
     .btn:hover {
       background-color: #d35400;
       transform: translateY(-2px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
-   
+  
     .btn-whatsapp {
       background-color: var(--accent-color);
     }
-   
+  
     .btn-whatsapp:hover {
       background-color: #128C7E;
     }
-   
+  
     .section {
       padding: 4rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
-   
+  
     .section-title {
       text-align: center;
       margin-bottom: 3rem;
@@ -160,7 +160,7 @@
       color: var(--primary-color);
       position: relative;
     }
-   
+  
     .section-title::after {
       content: '';
       display: block;
@@ -169,7 +169,7 @@
       background-color: var(--secondary-color);
       margin: 0.5rem auto 0;
     }
-   
+  
     .menu-section {
       background-color: white;
       border-radius: 8px;
@@ -177,11 +177,11 @@
       padding: 2rem;
       margin-bottom: 2rem;
     }
-   
+  
     .category {
       margin-bottom: 2rem;
     }
-   
+  
     .category-header {
       background-color: var(--primary-color);
       color: white;
@@ -193,22 +193,22 @@
       align-items: center;
       transition: all 0.3s;
     }
-   
+  
     .category-header:hover {
       background-color: #d35400;
     }
-   
+  
     .category-header h3 {
       margin: 0;
     }
-   
+  
     .products {
       display: none;
       padding: 1rem;
       background-color: #f9f9f9;
       border-radius: 0 0 4px 4px;
     }
-   
+  
     .product {
       display: flex;
       justify-content: space-between;
@@ -217,30 +217,30 @@
       border-bottom: 1px solid #eee;
       transition: all 0.3s;
     }
-   
+  
     .product:last-child {
       border-bottom: none;
     }
-   
+  
     .product:hover {
       background-color: #f1f1f1;
     }
-   
+  
     .product-info {
       flex: 1;
     }
-   
+  
     .product-name {
       font-weight: bold;
       font-size: 1.1rem;
       margin-bottom: 0.3rem;
     }
-   
+  
     .product-description {
       color: #666;
       font-size: 0.9rem;
     }
-   
+  
     .product-price {
       font-weight: bold;
       color: var(--primary-color);
@@ -248,7 +248,7 @@
       margin-left: 1rem;
       white-space: nowrap;
     }
-   
+  
     .product-image {
       width: 80px;
       height: 80px;
@@ -256,7 +256,7 @@
       border-radius: 4px;
       margin-left: 1rem;
     }
-   
+  
     .add-to-cart {
       background-color: var(--secondary-color);
       color: white;
@@ -267,18 +267,18 @@
       margin-left: 1rem;
       transition: all 0.3s;
     }
-   
+  
     .add-to-cart:hover {
       background-color: #e67e22;
     }
-   
+  
     .quantity-controls {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       margin-left: 1rem;
     }
-   
+  
     .quantity-btn {
       background-color: var(--primary-color);
       color: white;
@@ -292,17 +292,17 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
-   
+  
     .quantity-btn:hover {
       background-color: #d35400;
     }
-   
+  
     .quantity-display {
       min-width: 30px;
       text-align: center;
       font-weight: bold;
     }
-   
+  
     .offer-banner {
       background: linear-gradient(135deg, #e74c3c, #c0392b);
       color: white;
@@ -312,20 +312,20 @@
       margin-bottom: 2rem;
       animation: pulse 2s infinite;
     }
-   
+  
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.02); }
       100% { transform: scale(1); }
     }
-   
+  
     .info-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       margin-top: 3rem;
     }
-   
+  
     .info-card {
       background-color: white;
       border-radius: 8px;
@@ -333,18 +333,18 @@
       padding: 2rem;
       text-align: center;
     }
-   
+  
     .info-card i {
       font-size: 2.5rem;
       color: var(--primary-color);
       margin-bottom: 1rem;
     }
-   
+  
     .info-card h3 {
       margin-bottom: 1rem;
       color: var(--primary-color);
     }
-   
+  
     .payment-info {
       background-color: #f8f9fa;
       padding: 1.5rem;
@@ -353,22 +353,22 @@
       border-left: 4px solid var(--accent-color);
       transition: all 0.3s;
     }
-   
+  
     .payment-info:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
-   
+  
     .payment-method {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
     }
-   
+  
     .payment-method input {
       margin-right: 1rem;
     }
-   
+  
     footer {
       background-color: var(--dark-color);
       color: white;
@@ -376,7 +376,7 @@
       padding: 2rem;
       margin-top: 3rem;
     }
-   
+  
     .footer-content {
       max-width: 1200px;
       margin: 0 auto;
@@ -385,30 +385,30 @@
       gap: 2rem;
       text-align: left;
     }
-   
+  
     .footer-section h3 {
       margin-bottom: 1rem;
       color: var(--secondary-color);
     }
-   
+  
     .footer-section ul {
       list-style: none;
     }
-   
+  
     .footer-section ul li {
       margin-bottom: 0.5rem;
     }
-   
+  
     .footer-section ul li a {
       color: #ddd;
       text-decoration: none;
       transition: color 0.3s;
     }
-   
+  
     .footer-section ul li a:hover {
       color: var(--secondary-color);
     }
-   
+  
     .copyright {
       margin-top: 2rem;
       padding-top: 1rem;
@@ -417,22 +417,22 @@
       color: #bbb;
       transition: color 0.3s;
     }
-   
+  
     .copyright:hover {
       color: white;
     }
-   
+  
     .copyright span {
       cursor: pointer;
       text-decoration: underline;
       color: var(--accent-color);
       transition: color 0.3s;
     }
-   
+  
     .copyright span:hover {
       color: var(--primary-color);
     }
-   
+  
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -451,13 +451,13 @@
       z-index: 99;
       text-decoration: none;
     }
-   
+  
     .whatsapp-float:hover {
       background-color: #128C7E;
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     }
-   
+  
     .cart-modal {
       display: none;
       position: fixed;
@@ -470,7 +470,7 @@
       justify-content: center;
       align-items: center;
     }
-   
+  
     .cart-content {
       background-color: white;
       padding: 2rem;
@@ -480,12 +480,12 @@
       max-height: 80vh;
       overflow-y: auto;
     }
-   
+  
     .cart-content h3 {
       margin-bottom: 1rem;
       color: var(--primary-color);
     }
-   
+  
     .cart-item {
       display: flex;
       justify-content: space-between;
@@ -493,15 +493,15 @@
       padding: 1rem 0;
       border-bottom: 1px solid #eee;
     }
-   
+  
     .cart-item:last-child {
       border-bottom: none;
     }
-   
+  
     .cart-item span {
       flex: 1;
     }
-   
+  
     .cart-item button {
       background-color: #e74c3c;
       color: white;
@@ -510,19 +510,19 @@
       border-radius: 4px;
       cursor: pointer;
     }
-   
+  
     .cart-total {
       margin-top: 1rem;
       font-weight: bold;
       text-align: right;
     }
-   
+  
     .cart-actions {
       margin-top: 1rem;
       display: flex;
       justify-content: space-between;
     }
-   
+  
     .customer-info input {
       width: 100%;
       padding: 0.8rem;
@@ -530,7 +530,7 @@
       border: 1px solid #ddd;
       border-radius: 4px;
     }
-   
+  
     .chat-widget {
       position: fixed;
       bottom: 90px;
@@ -542,7 +542,7 @@
       z-index: 100;
       display: none;
     }
-   
+  
     .chat-header {
       background: var(--primary-color);
       color: white;
@@ -552,42 +552,42 @@
       justify-content: space-between;
       align-items: center;
     }
-   
+  
     .chat-body {
       max-height: 300px;
       overflow-y: auto;
       padding: 1rem;
     }
-   
+  
     .chat-message {
       margin-bottom: 1rem;
       padding: 0.5rem;
       border-radius: 4px;
     }
-   
+  
     .chat-message.user {
       background-color: var(--light-color);
       text-align: right;
     }
-   
+  
     .chat-message.bot {
       background-color: #f1f1f1;
       text-align: left;
     }
-   
+  
     .chat-input {
       display: flex;
       padding: 1rem;
       border-top: 1px solid #eee;
     }
-   
+  
     .chat-input input {
       flex: 1;
       padding: 0.5rem;
       border: 1px solid #ddd;
       border-radius: 4px 0 0 4px;
     }
-   
+  
     .chat-input button {
       padding: 0.5rem 1rem;
       background-color: var(--primary-color);
@@ -596,7 +596,7 @@
       border-radius: 0 4px 4px 0;
       cursor: pointer;
     }
-   
+  
     .admin-panel {
       display: none;
       position: fixed;
@@ -613,23 +613,23 @@
       overflow-y: auto;
       border-radius: 8px;
     }
-   
+  
     .admin-panel h3 {
       color: var(--primary-color);
       margin-bottom: 1.5rem;
       text-align: center;
     }
-   
+  
     .admin-form {
       display: grid;
       gap: 1rem;
     }
-   
+  
     .admin-form label {
       font-weight: bold;
       color: var(--dark-color);
     }
-   
+  
     .admin-form input,
     .admin-form select,
     .admin-form textarea {
@@ -638,7 +638,7 @@
       border-radius: 4px;
       font-family: inherit;
     }
-   
+  
     .admin-form button {
       padding: 0.8rem;
       background-color: var(--primary-color);
@@ -649,11 +649,11 @@
       font-weight: bold;
       transition: background 0.3s;
     }
-   
+  
     .admin-form button:hover {
       background-color: #d35400;
     }
-   
+  
     .close-admin {
       position: absolute;
       top: 1rem;
@@ -664,18 +664,18 @@
       cursor: pointer;
       color: #666;
     }
-   
+  
     .image-preview {
       max-width: 150px;
       max-height: 150px;
       margin-top: 0.5rem;
       display: block;
     }
-   
+  
     .product-list {
       margin-top: 2rem;
     }
-   
+  
     .product-item {
       display: flex;
       justify-content: space-between;
@@ -683,65 +683,65 @@
       padding: 1rem;
       border-bottom: 1px solid #eee;
     }
-   
+  
     .product-item button {
       margin-left: 1rem;
     }
-   
+  
     .offer-form {
       margin-top: 2rem;
       border-top: 1px solid #eee;
       padding-top: 1rem;
     }
-   
+  
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
       }
-     
+    
       .hero p {
         font-size: 1rem;
       }
-     
+    
       .section {
         padding: 2rem 1rem;
       }
-     
+    
       .product {
         flex-direction: column;
         align-items: flex-start;
       }
-     
+    
       .product-price {
         margin-left: 0;
         margin-top: 0.5rem;
       }
-     
+    
       .product-image {
         margin-left: 0;
         margin-top: 1rem;
       }
-     
+    
       .add-to-cart {
         margin-left: 0;
         margin-top: 0.5rem;
       }
-     
+    
       .chat-widget {
         width: 90%;
         bottom: 90px;
         right: 10px;
       }
     }
-   
+  
     .category-arrow {
       transition: transform 0.3s;
     }
-   
+  
     .category-header.active .category-arrow {
       transform: rotate(90deg);
     }
-   
+  
     .modal {
       display: none;
       position: fixed;
@@ -754,7 +754,7 @@
       justify-content: center;
       align-items: center;
     }
-   
+  
     .modal-content {
       background-color: white;
       padding: 2rem;
@@ -763,12 +763,12 @@
       width: 90%;
       text-align: center;
     }
-   
+  
     .modal h3 {
       margin-bottom: 1rem;
       color: var(--primary-color);
     }
-   
+  
     .modal input {
       width: 100%;
       padding: 0.8rem;
@@ -776,11 +776,10 @@
       border: 1px solid #ddd;
       border-radius: 4px;
     }
-   
+  
     .modal button {
       margin-top: 1rem;
     }
-
     .animate-text {
       opacity: 0;
       transform: translateY(20px);
@@ -791,6 +790,61 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    /* Estilos adicionales para el modal de postre */
+    .dessert-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dessert-content {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .dessert-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .dessert-btn {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .dessert-btn:hover {
+      background-color: #d35400;
+    }
+
+    .no-thanks {
+      background-color: #ccc;
+      margin-top: 1rem;
+    }
+
+    .no-thanks:hover {
+      background-color: #aaa;
     }
   </style>
   <script>
@@ -805,7 +859,6 @@
   </script>
 </head>
 <body>
-
 <header>
   <div class="logo">Todo Casero</div>
   <div class="tagline">Auténtica comida casera en Campana</div>
@@ -817,7 +870,6 @@
     <a href="#" id="viewCart"><i class="fas fa-shopping-cart"></i> Carrito (<span id="cartCount">0</span>)</a>
   </nav>
 </header>
-
 <section class="hero" id="inicio">
   <div class="hero-content">
     <h1>Los sabores más caseros de Campana</h1>
@@ -826,15 +878,12 @@
     <a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" class="btn btn-whatsapp">Chatear con María</a>
   </div>
 </section>
-
 <section class="section" id="menu">
   <h2 class="section-title">Nuestro Menú</h2>
- 
   <div class="offer-banner" id="offerBanner">
     <h3>¡Ofertas Especiales!</h3>
     <p id="offerText"></p>
   </div>
-
   <!-- Combos Section -->
   <section id="combos" class="mb-12 bg-gradient-to-b from-gray-50 to-white relative before:absolute before:inset-0 before:bg-[url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIxMCIgY3k9IjEwIiByPSIxIi8+PC9zdmc+')] before:bg-[length:10px_10px] before:opacity-5">
     <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center">🍔🍕Combos Deliciosos para 2 a 6 personas🍔🍕</h2>
@@ -842,12 +891,10 @@
       <!-- Los combos se generarán aquí por JavaScript -->
     </div>
   </section>
- 
   <div class="menu-section">
     <div id="categoriesContainer"></div>
   </div>
 </section>
-
 <section class="section" id="pedidos">
   <h2 class="section-title text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>Cómo Hacer tu Pedido</h2>
   <div class="relative overflow-hidden">
@@ -872,7 +919,6 @@
     <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="nextBtn">›</button>
   </div>
 </section>
-
 <section class="section" id="contacto">
   <h2 class="section-title text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>Contacto</h2>
   <div class="relative overflow-hidden">
@@ -891,14 +937,12 @@
         <i class="fab fa-whatsapp text-4xl text-orange-500 mb-4"></i>
         <h3 class="text-xl font-bold text-gray-800 mb-2">Teléfono</h3>
         <p class="text-gray-600 mb-4">+54 348 9358998</p>
-        
       </div>
     </div>
     <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="prevBtnContact">‹</button>
     <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="nextBtnContact">›</button>
   </div>
 </section>
-
 <div id="chatWidget" class="chat-widget">
   <div class="chat-header">
     <span>Chat con María de Todo Casero</span>
@@ -910,14 +954,13 @@
     <button onclick="sendChatMessage()">Enviar</button>
   </div>
 </div>
-
 <footer>
   <div class="footer-content">
     <div class="footer-section">
       <h3>Todo Casero</h3>
       <p>Auténtica comida casera preparada con los mejores ingredientes y mucho amor.</p>
     </div>
-   
+  
     <div class="footer-section">
       <h3>Menú</h3>
       <ul>
@@ -927,7 +970,7 @@
         <li><a href="#menu">Hamburguesas</a></li>
       </ul>
     </div>
-   
+  
     <div class="footer-section">
       <h3>Contacto</h3>
       <ul>
@@ -937,14 +980,11 @@
       </ul>
     </div>
   </div>
- 
   <div class="copyright bg-gray-800 py-4 text-center rounded-t-lg shadow-md">
     © 2025 Todo Casero - Todos los derechos reservados |
     <span id="adminLink" class="cursor-pointer text-underline text-accent-color hover:text-primary-color transition-colors">Acceso Administrador</span>
   </div>
 </footer>
-
-
 <div id="cartModal" class="cart-modal">
   <div class="cart-content">
     <h3>Tu Carrito</h3>
@@ -965,12 +1005,23 @@
         <input type="radio" id="cartTransferencia" name="payment" value="Transferencia">
         <label for="cartTransferencia">Transferencia bancaria</label>
       </div>
-      
     </div>
     <div class="cart-actions">
       <button class="btn" onclick="closeCart()">Cerrar</button>
       <button class="btn btn-whatsapp" id="sendOrder">Enviar Pedido por WhatsApp</button>
     </div>
+  </div>
+</div>
+
+<!-- Nuevo modal para sugerir postre -->
+<div id="dessertModal" class="dessert-modal">
+  <div class="dessert-content">
+    <h3 class="text-2xl font-bold text-var(--primary-color) mb-4">¡Termina tu pedido con un dulce!</h3>
+    <p class="mb-6">¿Quieres agregar un postre casero?</p>
+    <div class="dessert-options" id="dessertOptions">
+      <!-- Se llenan dinámicamente -->
+    </div>
+    <button class="dessert-btn no-thanks mt-4" onclick="skipDessert()">No, gracias</button>
   </div>
 </div>
 
@@ -993,39 +1044,37 @@
         <option value="Al Plato">Al Plato</option>
       </select>
     </div>
-   
+  
     <div>
       <label for="productName">Nombre del Producto</label>
       <input type="text" id="productName" required placeholder="Ej: Sándwich de Bondiola">
     </div>
-   
+  
     <div>
       <label for="productPrice">Precio (ARS)</label>
       <input type="number" id="productPrice" required placeholder="Ej: 9000">
     </div>
-   
+  
     <div>
       <label for="productDescription">Descripción</label>
       <textarea id="productDescription" rows="3" placeholder="Descripción del producto"></textarea>
     </div>
-   
+  
     <div>
       <label for="productImage">Subir Imagen del Producto</label>
       <input type="file" id="productImage" accept="image/*">
     </div>
-   
+  
     <div>
       <label for="productImageUrl">O ingrese URL de la Imagen</label>
       <input type="url" id="productImageUrl" placeholder="Ej: https://example.com/image.jpg">
     </div>
-   
-    
+  
     <button type="submit">Agregar/Editar Producto</button>
     <button type="button" id="saveChanges">Guardar Todos los Cambios</button>
   </form>
   <div class="product-list" id="productList"></div>
 </div>
-
 <div id="adminModal" class="modal">
   <div class="modal-content">
     <h3>Acceso Administrador</h3>
@@ -1034,7 +1083,6 @@
     <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
   </div>
 </div>
-
 <script>
   // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
   const currentVersion = '2.0'; // ¡Importante! Actualiza este número con cada cambio de precios.
@@ -1043,7 +1091,6 @@
     localStorage.setItem('appVersion', currentVersion);
     console.log(`Cache local limpiada. Nueva versión: ${currentVersion}`);
   }
-
   const defaultProducts = [
     { id: 1, category: "Sándwiches", name: "Bondiola", price: 11000 , description: "Delicioso sándwich de bondiola casera c/Fritas.", image: "bondiola.jpeg", stock: 1000},
     { id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 11500, description: "Bondiola con extras especiales c/Fritas.", image: "bondiola.jpeg", stock: 1000 },
@@ -1073,12 +1120,12 @@
     { id: 26, category: "Pastas", name: "Ravioles con Bolognesa", price: 11500, description: "Ravioles frescos con salsa bolognesa.", image: "ravioles con bolognesa.jpeg", stock: 10000 },
     { id: 27, category: "Acompañamientos", name: "Porción de Fritas", price: 6000, description: "Porción grande de papas fritas.", image: "porcion de fritas.jpeg", stock: 10000 },
     { id: 28, category: "Acompañamientos", name: "Salchipapas", price: 9500, description: "Porción grande de Salchipapas.", image: "Sachipapa.jpeg", stock: 10000},
-    { id: 29, category: "Acompañamientos", name: "Cono de Fritas", price: 5000, description: "Cono mediano de papas fritas.", image: "cono de  fritas.jpeg", stock: 10000 },
+    { id: 29, category: "Acompañamientos", name: "Cono de Fritas", price: 5000, description: "Cono mediano de papas fritas.", image: "cono de fritas.jpeg", stock: 10000 },
     { id: 30, category: "Empanadas", name: "Empanadas", price: 20000, description: "Empanadas de Carne caseras x 12 unidades.", image: "empanadas.jpeg", stock: 0 },
     { id: 31, category: "Empanadas", name: "Empanadas", price: 10000, description: "Empanadas de Carne caseras x 6 unidades.", image: "empanadas.jpeg", stock: 0 },
     { id: 32, category: "Postres", name: "Flan", price: 5500, description: "Con crema o mixto (Dulce de Leche y Crema).", image: "flan.jpeg", stock: 10000 },
     { id: 33, category: "Postres", name: "Torta Helada", price: 4500, description: "Crema Americana con Dulce de Leche.", image: "torta helada.jpeg", stock: 0},
-    { id: 34, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de  Frutas Deliciosas.", image: "logo.jpeg", stock: 100 },
+    { id: 34, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de Frutas Deliciosas.", image: "logo.jpeg", stock: 100 },
     { id: 35, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 11500, description: "Milanesa acompañada de puré de papas.", image: "logo.jpeg", stock: 1000 },
     { id: 36, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 12000, description: "Milanesa con huevos frito por encima.", image:"logo.jpeg", stock: 1000 },
     { id: 37, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 13000, description: "Milanesa con salsa anego.", image: "milanesa napolitana.jpeg", stock: 1000 },
@@ -1087,24 +1134,20 @@
     { id: 40, category: "Combos", name: "Combo Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 },
     { id: 41, category: "Combos", name: "Combo Pizza Especial + Porción de Fritas", price: 17000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 }
   ];
-
   const defaultOffers = [
     { id: 1, day: "Lunes", description: "Pastas 10% off los Lunes", discount: 10 },
     { id: 2, day: "Martes", description: "Hamburguesa Zapping 10% off los Martes", discount: 10 },
     { id: 3, day: "Miércoles", description: "Sándwich de Bondiola 10% off los Miércoles", discount: 10 }
   ];
-
   let cart = [];
   let products = JSON.parse(localStorage.getItem("products")) || defaultProducts;
   let offers = JSON.parse(localStorage.getItem("offers")) || defaultOffers;
   let editingProductId = null;
   let userName = null;
-
   function saveData() {
     localStorage.setItem("products", JSON.stringify(products));
     localStorage.setItem("offers", JSON.stringify(offers));
   }
-
   function checkAdminPassword() {
     const pass = document.getElementById("adminPassword").value;
     const hashed = CryptoJS.SHA256(pass).toString();
@@ -1117,30 +1160,24 @@
     }
     document.getElementById("adminPassword").value = "";
   }
-
   function renderCategories() {
     const categoriesContainer = document.getElementById("categoriesContainer");
     const combosContainer = document.getElementById("combosContainer");
     categoriesContainer.innerHTML = "";
     combosContainer.innerHTML = "";
-
     const categories = [...new Set(products.map(p => p.category))];
-
     categories.forEach((category, index) => {
       if (category === 'Combos') {
         const comboProducts = products.filter(p => p.category === 'Combos');
         comboProducts.forEach((product, comboIndex) => {
           const comboDiv = document.createElement('div');
           comboDiv.className = "bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent relative";
-          // Para mantener las animaciones de entrada, las clases de animación se manejan en el observer
           comboDiv.setAttribute('data-scroll-reveal', '');
           comboDiv.setAttribute('data-delay', `${(comboIndex + 1) * 0.1}s`);
-
           let specialBadge = '';
-          if (product.id === 37) { // Asumiendo que el ID 37 es "El Más Pedido"
+          if (product.id === 37) { 
             specialBadge = `<div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">🔥 El Más Pedido</div>`;
           }
-
           comboDiv.innerHTML = `
             ${specialBadge}
             <h3 class="text-xl font-bold text-gray-800 mb-2">${product.name}</h3>
@@ -1151,9 +1188,8 @@
             </button>`;
           combosContainer.appendChild(comboDiv);
         });
-        return; // Continuar con la siguiente categoría
+        return;
       }
-
       const div = document.createElement("div");
       div.className = "category";
       div.innerHTML = `
@@ -1163,11 +1199,9 @@
         </div>
         <div class="products"></div>
       `;
-
       const header = div.querySelector(".category-header");
       const content = div.querySelector(".products");
       const arrow = div.querySelector(".category-arrow");
-
       header.addEventListener("click", () => {
         const isOpen = content.style.display === "block";
         document.querySelectorAll(".products").forEach(p => {
@@ -1179,9 +1213,8 @@
           header.classList.add("active");
         }
       });
-
       const filteredProducts = products.filter(p => p.category === category);
-     
+    
       filteredProducts.forEach(product => {
         const productDiv = document.createElement("div");
         productDiv.className = "product";
@@ -1196,16 +1229,13 @@
         `;
         content.appendChild(productDiv);
       });
-
       categoriesContainer.appendChild(div);
     });
-
     const firstCategory = categoriesContainer.querySelector(".category");
     if (firstCategory) {
       firstCategory.querySelector(".products").style.display = "block";
       firstCategory.querySelector(".category-header").classList.add("active");
     }
-
     document.querySelectorAll("#menu .add-to-cart").forEach(button => {
       button.addEventListener("click", () => {
         const id = button.getAttribute("data-id");
@@ -1214,20 +1244,16 @@
         addToCart(id, name, price);
       });
     });
-    
-    // Re-inicializar el observer para los nuevos combos
+   
     const scrollRevealElements = document.querySelectorAll('[data-scroll-reveal]');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('opacity-100', 'translate-y-0'); observer.unobserve(entry.target); } });
     }, { threshold: 0.1 });
     scrollRevealElements.forEach(el => { el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500'); observer.observe(el); });
-
-
     const today = new Date().toLocaleString('es-AR', { weekday: 'long' });
     const todayOffer = offers.find(offer => offer.day === today);
     document.getElementById('offerText').textContent = todayOffer ? todayOffer.description : '¡Consulta nuestras ofertas semanales!';
   }
-
   function addToCart(id, name, price) {
     const product = products.find(p => p.id === parseInt(id));
     if (product.stock <= 0) {
@@ -1258,15 +1284,13 @@
       behavior: 'smooth'
     });
   }
-
   function updateCartDisplay() {
     const cartItems = document.getElementById("cartItems");
     const cartTotal = document.getElementById("cartTotal");
     const cartCount = document.getElementById("cartCount");
-   
+  
     cartItems.innerHTML = "";
     let total = 0;
-
     cart.forEach(item => {
       const itemTotal = item.price * item.quantity;
       total += itemTotal;
@@ -1284,11 +1308,9 @@
       `;
       cartItems.appendChild(div);
     });
-
     cartTotal.textContent = `Total: $${total.toLocaleString('es-AR')}`;
     cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
   }
-
   function changeQuantity(id, change) {
     const product = products.find(p => p.id === parseInt(id));
     const item = cart.find(item => item.id === id);
@@ -1307,16 +1329,14 @@
       updateCartDisplay();
     }
   }
-
   function removeFromCart(id) {
     cart = cart.filter(item => item.id !== id);
     updateCartDisplay();
   }
-
   function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-   
+  
     doc.setFontSize(18);
     doc.text("Orden Todo Casero", 20, 20);
     doc.setFontSize(12);
@@ -1325,11 +1345,11 @@
     doc.text(`Celular: ${document.getElementById("customerPhone").value.trim()}`, 20, 50);
     doc.text("Dirección: Campana, Buenos Aires", 20, 60);
     doc.text("Teléfono: +543489358998", 20, 70);
-   
+  
     let y = 90;
     doc.text("Producto | Cantidad | Precio Unitario | Total", 20, y);
     y += 10;
-   
+  
     let total = 0;
     cart.forEach(item => {
       const itemTotal = item.price * item.quantity;
@@ -1337,9 +1357,9 @@
       doc.text(`${item.name} | ${item.quantity} | $${item.price} | $${itemTotal}`, 20, y);
       y += 10;
     });
-   
+  
     doc.text(`Total: $${total.toLocaleString('es-AR')}`, 20, y + 10);
-   
+  
     const payment = document.querySelector('input[name="payment"]:checked').value;
     y += 20;
     doc.text(`Método de Pago: ${payment}`, 20, y);
@@ -1347,10 +1367,9 @@
       doc.text("Alias: Adri.roti", 20, y + 10);
       doc.text("Titular: Adriana Basilia Enrique", 20, y + 20);
     }
-   
+  
     doc.save(`order_${new Date().toISOString().replace(/[:.]/g, '')}.pdf`);
   }
-
   function generateWhatsAppMessage(customerName, customerPhone) {
     let message = `🍔 *Pedido de Todo Casero* 🍔\n\n`;
     message += `👤 *Cliente*: ${customerName}\n`;
@@ -1368,7 +1387,6 @@
     message += `\n\n📌 *Nota*: Si tienes alguna consulta o problema con tu pedido, contáctanos por WhatsApp.`;
     return encodeURIComponent(message);
   }
-
   function toggleChat() {
     const chatWidget = document.getElementById("chatWidget");
     chatWidget.style.display = chatWidget.style.display === "block" ? "none" : "block";
@@ -1380,31 +1398,24 @@
       chatBody.appendChild(welcomeMessage);
     }
   }
-
   function sendChatMessage() {
     const input = document.getElementById("chatInput");
     const message = input.value.trim();
     if (!message) return;
-
     const chatBody = document.getElementById("chatBody");
     const userMessage = document.createElement("div");
     userMessage.className = "chat-message user";
     userMessage.textContent = message;
     chatBody.appendChild(userMessage);
-
     const lowerMessage = message.toLowerCase();
-
     const nameMatch = message.match(/mi nombre es (\w+)/i);
     if (nameMatch) {
       userName = nameMatch[1].charAt(0).toUpperCase() + nameMatch[1].slice(1);
     }
-
     const greeting = userName ? `¡Hola ${userName}!` : "¡Hola!";
     const closing = "¿Quieres agregar algo más? 😊";
     const paymentInfo = "Aceptamos efectivo al retirar 💵 o transferencia bancaria 🏦 (Alias: Adri.roti, Titular: Adriana Basilia Enrique).";
-
     let response = `${greeting} Gracias por elegir Todo Casero. `;
-
     if (lowerMessage.includes("generar pdf") || lowerMessage.includes("resumen pdf")) {
       if (cart.length > 0) {
         generatePDF();
@@ -1429,22 +1440,18 @@
         let unmatchedItems = [];
         let today = new Date().toLocaleString('es-AR', { weekday: 'long' });
         let todayOffer = offers.find(offer => offer.day === today);
-
         for (const match of orderMatches) {
           const quantity = parseInt(match[1]);
           const productName = match[2].trim();
           const product = products.find(p => p.name.toLowerCase() === productName.toLowerCase() || p.name.toLowerCase().includes(productName.toLowerCase()));
-
           if (product && product.price) {
             let price = product.price;
             let discountApplied = false;
-
             if (todayOffer && todayOffer.description.toLowerCase().includes(product.name.toLowerCase())) {
               const discount = todayOffer.discount / 100;
               price = Math.round(price * (1 - discount));
               discountApplied = true;
             }
-
             const itemTotal = price * quantity;
             total += itemTotal;
             orderDetails.push({
@@ -1458,7 +1465,6 @@
             unmatchedItems.push(productName);
           }
         }
-
         if (orderDetails.length > 0) {
           response += "¡Perfecto! Aquí está el detalle de tu pedido:\n";
           orderDetails.forEach(item => {
@@ -1470,11 +1476,9 @@
           });
           response += `\n💰 *Total*: $${total.toLocaleString('es-AR')}\n`;
           response += `${paymentInfo} ¿Quieres confirmar este pedido por WhatsApp o agregar algo más?`;
-
           if (unmatchedItems.length > 0) {
             response += `\n⚠️ No pude encontrar: ${unmatchedItems.join(', ')}. Por favor verifica los nombres en el menú (ejemplo: 'Sándwich de Bondiola', 'Muzzarella').`;
           }
-
           orderDetails.forEach(item => {
             const existingItem = cart.find(cartItem => cartItem.id === products.find(p => p.name === item.name).id);
             if (existingItem) {
@@ -1544,23 +1548,18 @@
         response += "Entiendo, pero no estoy segura de qué necesitas. 😔 ¿Puedes darme más detalles o preguntarme sobre el menú, horarios o algo específico? También puedes contactarnos por WhatsApp al +54 348 9358998.";
       }
     }
-
     response += ` ${closing}`;
-
     const botMessage = document.createElement("div");
     botMessage.className = "chat-message bot";
     botMessage.textContent = response;
     chatBody.appendChild(botMessage);
-
     input.value = "";
     chatBody.scrollTop = chatBody.scrollHeight;
   }
-
   function openAdmin() {
     document.getElementById("adminPanel").style.display = "block";
     renderProductList();
   }
-
   function closeAdmin() {
     document.getElementById("adminPanel").style.display = "none";
     document.getElementById("productForm").reset();
@@ -1568,7 +1567,6 @@
     document.getElementById("productImageUrl").value = "";
     editingProductId = null;
   }
-
   function renderProductList() {
     const productList = document.getElementById("productList");
     productList.innerHTML = "";
@@ -1585,7 +1583,6 @@
       productList.appendChild(div);
     });
   }
-
   function editProduct(id) {
     editingProductId = id;
     const product = products.find(p => p.id === id);
@@ -1599,7 +1596,6 @@
       document.getElementById("previewImage").style.display = "block";
     }
   }
-
   function deleteProduct(id) {
     if (confirm("¿Confirmar eliminación?")) {
       products = products.filter(p => p.id !== id);
@@ -1608,85 +1604,106 @@
       renderCategories();
     }
   }
-
   document.getElementById("viewCart").addEventListener("click", (e) => {
     e.preventDefault();
     document.getElementById("cartModal").style.display = "flex";
     updateCartDisplay();
   });
-
   function closeCart() {
     document.getElementById("cartModal").style.display = "none";
   }
-
   document.getElementById("cartTransferencia").addEventListener("change", function() {
-    document.getElementById("cartTransferenciaInfo").style.display = this.checked ? "block" : "none";
+    // Si agregas info de transferencia, puedes mostrar/ocultar aquí
   });
+  // Nuevas funciones para el modal de postre
+  function showDessertModal() {
+    const dessertOptionsDiv = document.getElementById("dessertOptions");
+    dessertOptionsDiv.innerHTML = '';
 
-  document.getElementById("sendOrder").addEventListener("click", () => {
+    const flan = products.find(p => p.name === "Flan");
+    const ensalada = products.find(p => p.name === "Ensalada de Frutas");
+
+    if (flan && flan.stock > 0) {
+      const btn = document.createElement("button");
+      btn.className = "dessert-btn";
+      btn.textContent = `Agregar Flan - $${flan.price.toLocaleString('es-AR')}`;
+      btn.onclick = () => addDessertToCart(flan);
+      dessertOptionsDiv.appendChild(btn);
+    }
+
+    if (ensalada && ensalada.stock > 0) {
+      const btn = document.createElement("button");
+      btn.className = "dessert-btn";
+      btn.textContent = `Agregar Ensalada de Frutas - $${ensalada.price.toLocaleString('es-AR')}`;
+      btn.onclick = () => addDessertToCart(ensalada);
+      dessertOptionsDiv.appendChild(btn);
+    }
+
+    if (dessertOptionsDiv.children.length > 0) {
+      document.getElementById("dessertModal").style.display = "flex";
+    } else {
+      sendOrderDirectly();
+    }
+  }
+
+  function addDessertToCart(dessert) {
+    addToCart(dessert.id, dessert.name, dessert.price);
+    updateCartDisplay();
+    document.getElementById("dessertModal").style.display = "none";
+    sendOrderDirectly();
+  }
+
+  function skipDessert() {
+    document.getElementById("dessertModal").style.display = "none";
+    sendOrderDirectly();
+  }
+
+  function sendOrderDirectly() {
     const customerName = document.getElementById("customerName").value.trim();
     const customerPhone = document.getElementById("customerPhone").value.trim();
-
     if (cart.length === 0) {
       alert("El carrito está vacío. Por favor agrega productos antes de enviar el pedido.");
       return;
     }
-
     if (!customerName || !customerPhone) {
       alert("Por favor completa tus datos (nombre y celular).");
       return;
     }
-
     cart.forEach(item => {
       const product = products.find(p => p.id === parseInt(item.id));
       product.stock -= item.quantity;
     });
-
     const phoneNumber = "+543489358998";
     const whatsappMessage = generateWhatsAppMessage(customerName, customerPhone);
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank');
-
     generatePDF();
     cart = [];
     updateCartDisplay();
     renderCategories();
     saveData();
     closeCart();
+  }
+
+  // Evento del botón "Enviar Pedido por WhatsApp"
+  document.getElementById("sendOrder").addEventListener("click", () => {
+    const hasDessertStock = products.some(p => 
+      (p.name === "Flan" || p.name === "Ensalada de Frutas") && p.stock > 0
+    );
+
+    if (hasDessertStock) {
+      showDessertModal();
+    } else {
+      sendOrderDirectly();
+    }
   });
 
   document.getElementById("adminLink").addEventListener("click", function(e) {
     e.preventDefault();
     document.getElementById("adminModal").style.display = "flex";
   });
-
-  document.getElementById("productImage").addEventListener("change", function(e) {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(ev) {
-        const preview = document.getElementById("previewImage");
-        preview.src = ev.target.result;
-        preview.style.display = "block";
-        document.getElementById("productImageUrl").value = "";
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-
-  document.getElementById("productImageUrl").addEventListener("input", function(e) {
-    const url = e.target.value.trim();
-    if (url) {
-      const preview = document.getElementById("previewImage");
-      preview.src = url;
-      preview.style.display = "block";
-      document.getElementById("productImage").value = "";
-    }
-  });
-
   document.getElementById("productForm").addEventListener("submit", function(e) {
     e.preventDefault();
-
     const name = document.getElementById("productName").value.trim();
     const price = parseInt(document.getElementById("productPrice").value);
     const description = document.getElementById("productDescription").value.trim();
@@ -1694,19 +1711,16 @@
     const imageInput = document.getElementById("productImage");
     const imageUrl = document.getElementById("productImageUrl").value.trim();
     const image = imageUrl || (imageInput.files.length > 0 ? URL.createObjectURL(imageInput.files[0]) : "");
-
     if (!name || isNaN(price)) {
       alert("Por favor completa todos los campos requeridos.");
       return;
     }
-
     if (editingProductId) {
       products = products.map(p => p.id === editingProductId ? { ...p, category, name, price, description, image } : p);
     } else {
       const id = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
-      products.push({ id, category, name, price, description, image, stock: 10 }); // Default stock for new products
+      products.push({ id, category, name, price, description, image, stock: 10 });
     }
-
     renderProductList();
     renderCategories();
     this.reset();
@@ -1715,34 +1729,31 @@
     editingProductId = null;
     saveData();
   });
-
   document.getElementById("saveChanges").addEventListener("click", function() {
     saveData();
     alert("¡Cambios guardados exitosamente!");
   });
-
   document.addEventListener("DOMContentLoaded", function() {
     renderCategories();
-
     document.getElementById("cartModal").addEventListener("click", function(e) {
       if (e.target === this) {
         closeCart();
       }
     });
-
     document.getElementById("adminModal").addEventListener("click", function(e) {
       if (e.target === this) {
         this.style.display = "none";
       }
     });
-
-    // JavaScript to ensure animation triggers on page load
+    document.getElementById("dessertModal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        skipDessert();
+      }
+    });
     const elements = document.querySelectorAll('.animate-text');
     elements.forEach((el, index) => {
       el.style.animationDelay = `${index * 0.2}s`;
     });
-
-    // Scroll Reveal Logic
     const scrollRevealElements = document.querySelectorAll('[data-scroll-reveal]');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -1755,66 +1766,51 @@
         }
       });
     }, { threshold: 0.1 });
-
     scrollRevealElements.forEach(el => observer.observe(el));
-
-    // Carousel Logic for "Cómo Hacer tu Pedido"
     const carousel = document.getElementById('carousel');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     let currentIndex = 0;
     const slides = carousel.children.length;
-
     function showSlide(index) {
       carousel.style.transform = `translateX(-${index * 100}%)`;
     }
-
     prevBtn.addEventListener('click', () => {
       currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides - 1;
       showSlide(currentIndex);
     });
-
     nextBtn.addEventListener('click', () => {
       currentIndex = (currentIndex < slides - 1) ? currentIndex + 1 : 0;
       showSlide(currentIndex);
     });
-
-    // Auto-advance carousel for pedidos
     setInterval(() => {
       nextBtn.click();
     }, 5000);
-
-    // Carousel Logic for "Contacto"
     const contactCarousel = document.getElementById('contactCarousel');
     const prevBtnContact = document.getElementById('prevBtnContact');
     const nextBtnContact = document.getElementById('nextBtnContact');
     let currentContactIndex = 0;
     const contactSlides = contactCarousel.children.length;
-
     function showContactSlide(index) {
       contactCarousel.style.transform = `translateX(-${index * 100}%)`;
     }
-
     prevBtnContact.addEventListener('click', () => {
       currentContactIndex = (currentContactIndex > 0) ? currentContactIndex - 1 : contactSlides - 1;
       showContactSlide(currentContactIndex);
     });
-
     nextBtnContact.addEventListener('click', () => {
       currentContactIndex = (currentContactIndex < contactSlides - 1) ? currentContactIndex + 1 : 0;
       showContactSlide(currentContactIndex);
     });
-
-    // Auto-advance carousel for contacto
     setInterval(() => {
       nextBtnContact.click();
     }, 5000);
   });
 </script>
-
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9751ff3b7afaee13',t:'MTc1NjE5NzMzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975208275aae203c',t:'MTc1NjE5NzcwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
 "commit" 
+
 
 
 
