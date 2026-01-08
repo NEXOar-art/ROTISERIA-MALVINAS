@@ -1085,28 +1085,28 @@
 </div>
 <script>
   // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-  const currentVersion = '2.6'; // ¡Importante! Actualiza este número con cada cambio de precios.
+  const currentVersion = '2.7'; // ¡Importante! Actualiza este número con cada cambio de precios.
   if (localStorage.getItem('appVersion') !== currentVersion) {
     localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
     localStorage.setItem('appVersion', currentVersion);
     console.log(`Cache local limpiada. Nueva versión: ${currentVersion}`);
   }
   const defaultProducts = [
-    { id: 1, category: "Sándwiches", name: "Bondiola", price: 11000 , description: "Delicioso sándwich de bondiola casera c/Fritas.", image: "bondiola.jpeg", stock: 0},
-    { id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 11500, description: "Bondiola con extras especiales c/Fritas.", image: "bondiola.jpeg", stock: 0 },
-    { id: 3, category: "Sándwiches", name: "Bondiola Premium", price: 12500, description: "Bondiola premium con ingredientes selectos c/Fritas.", image: "bondiola.jpeg", stock: 0},
-    { id: 4, category: "Sándwiches", name: "Sandwich Milanesa ", price: 11500, description: "Clásico sándwich de milanesa con lechuga y tomate c/Fritas.", image: "milanesa especial.jpeg", stock: 1000 },
-    { id: 5, category: "Sándwiches", name: "Sandwich Milanesa Especial", price: 12500, description: "Milanesa con extras especiales c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
-    { id: 6, category: "Sándwiches", name: "Sandwich Milanesa Completa", price: 13500, description: "Milanesa completa con todos los complementos c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
-    { id: 7, category: "Sándwiches", name: "Sandwich Milanesa Premium", price: 14000, description: "Milanesa completa con todos los complementos c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
-    { id: 8, category: "Sándwiches", name: "Tucumano", price: 17000, description: "Sándwich tucumano tradicional c/Fritas Doble.", image: "tucumano.jpeg", stock: 1000 },
-    { id: 9, category: "Sándwiches", name: "Lomito Simple", price: 11500, description: "Lomito jugoso con tomate y lechuga c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
-    { id: 10, category: "Sándwiches", name: "Lomito Especial", price: 12000, description: "Lomito con extras especiales c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
-    { id: 11, category: "Sándwiches", name: "Lomito Premium", price: 12500, description: "Lomito premium con ingredientes selectos c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
-    { id: 12, category: "Hamburguesas", name: "Hamburguesa Completa", price: 10000, description: "Con lechuga, tomate, queso y mayonesa c/Fritas.", image: "hamburguesa completa.jpeg", stock: 10000 },
-    { id: 13, category: "Hamburguesas", name: "Hamburguesa Vegetariana", price: 10000, description: "Hamburguesa vegetariana deliciosa c/Fritas.", image: "hamburguesa vegetariana.jpeg", stock: 10000 },
-    { id: 14, category: "Hamburguesas", name: "Hamburguesa Doble", price: 12000, description: "Doble carne y queso c/Fritas.", image: "hamburguesa doble.jpeg", stock: 10000 },
-    { id: 15, category: "Hamburguesas", name: "Hamburguesa Zapping", price: 26000, description: "Hamburguesa especial Zapping c/Fritas Doble.", image: "hamburguesa zapping.jpeg", stock: 10000 },
+    { id: 1, category: "Sándwiches", name: "Bondiola", price: 11000 , description: "Delicioso sándwich de bondiola con tomate, lechuga, morron, cebolla caramelizada c/Fritas.", image: "bondiola.jpeg", stock: 0},
+    { id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 11500, description: "Bondiola con queso, jamon y huevo c/Fritas.", image: "bondiola.jpeg", stock: 0 },
+    { id: 3, category: "Sándwiches", name: "Bondiola Premium", price: 12500, description: "Bondiola tomate, lechuga, morron, cebolla caramelizada, queso, huevo, jamon c/Fritas.", image: "bondiola.jpeg", stock: 0},
+    { id: 4, category: "Sándwiches", name: "Sandwich Milanesa ", price: 11500, description: "Milanesa con lechuga y tomate c/Fritas.", image: "milanesa especial.jpeg", stock: 1000 },
+    { id: 5, category: "Sándwiches", name: "Sandwich Milanesa Especial", price: 12500, description: "Sandwich de Milanesa, queso, jamon,huevo frito c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
+    { id: 6, category: "Sándwiches", name: "Sandwich Milanesa Completa", price: 13500, description: "Sandwich de Milanesa completo, lechuga, tomate, queso, jamon, huevo frito c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
+    { id: 7, category: "Sándwiches", name: "Sandwich Milanesa Premium", price: 14000, description: "Sandwich Milanesa, lechuga, tomate, huevo, queso, jamon, cebolla caramelizada, morron c/Fritas.", image: "milanesa completa.jpeg", stock: 1000 },
+    { id: 8, category: "Sándwiches", name: "Tucumano", price: 17000, description: "Sándwich de  Milanesa de 30 cm tucumano  c/Fritas Doble.", image: "tucumano.jpeg", stock: 1000 },
+    { id: 9, category: "Sándwiches", name: "Lomito Simple", price: 11500, description: "Sandwich de Lomito jugoso con tomate y lechuga c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
+    { id: 10, category: "Sándwiches", name: "Lomito Especial", price: 12000, description: "Sandwich de Lomito con jamon, queso, huevo c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
+    { id: 11, category: "Sándwiches", name: "Lomito Premium", price: 12500, description: "Sandwich de Lomito premium con lechuga, tomate, huevo frito, jamon , queso c/Fritas.", image: "lomito especial.jpeg", stock: 1000 },
+    { id: 12, category: "Hamburguesas", name: "Hamburguesa Completa", price: 10000, description: "Medallon de Carne Con lechuga, tomate, huevo frito c/Fritas.", image: "hamburguesa completa.jpeg", stock: 10000 },
+    { id: 13, category: "Hamburguesas", name: "Hamburguesa Vegetariana", price: 10000, description: "Medallon (Lenteja,zanahoria,cebolla), lechuga, tomate, huevo frito c/Fritas.", image: "hamburguesa vegetariana.jpeg", stock: 10000 },
+    { id: 14, category: "Hamburguesas", name: "Hamburguesa Doble", price: 12000, description: "Doble Medallon carne, cheddar, huevo frito, cebolla caramelizada  c/Fritas.", image: "hamburguesa doble.jpeg", stock: 10000 },
+    { id: 15, category: "Hamburguesas", name: "Hamburguesa Zapping", price: 26000, description: "Hamburguesa Gigante Zapping, lechuga tomate, huevo frito c/Fritas Doble.", image: "hamburguesa zapping.jpeg", stock: 10000 },
     { id: 16, category: "Pizzas", name: "Muzzarella", price: 12500, description: "Pizza clásica con queso muzzarella, oregano, aceitunas.", image: "muzzarella.jpeg", stock: 1000 },
     { id: 17, category: "Pizzas", name: "Fugaza", price: 13500, description: "Pizza fugaza tradicional.", image: "fugaza.jpeg", stock: 1000 },
     { id: 18, category: "Pizzas", name: "Napolitana", price: 14000, description: "Pizza napolitana con tomate, ajo y oregano.", image: "napolitana.jpeg", stock: 1000 },
@@ -1117,7 +1117,7 @@
     { id: 23, category: "Pizzas Individuales", name: "Especial Individual", price: 9000, description: "Individual especial con jamon y morrones.", image: "logo.jpeg", stock: 1000 },
     { id: 24, category: "Pastas", name: "Tallarines con Bolognesa", price: 10500, description: "Pasta fresca con salsa bolognesa casera.", image: "tallarines con bolognesa.jpeg", stock: 1 },
     { id: 25, category: "Pastas", name: "Ñoquis con Bolognesa", price: 10500, description: "Ñoquis frescos con salsa bolognesa.", image: "ñoquis con bolognesa.jpeg", stock: 100 },
-    { id: 26, category: "Pastas", name: "Ravioles con Bolognesa", price: 11500, description: "Ravioles frescos con salsa bolognesa.", image: "ravioles con bolognesa.jpeg", stock: 10000 },
+    { id: 26, category: "Pastas", name: "Ravioles con Bolognesa", price: 11500, description: "Ravioles de verdura con salsa bolognesa.", image: "ravioles con bolognesa.jpeg", stock: 10000 },
     { id: 27, category: "Acompañamientos", name: "Porción de Fritas", price: 6000, description: "Porción grande de papas fritas.", image: "porcion de fritas.jpeg", stock: 10000 },
     { id: 28, category: "Acompañamientos", name: "Salchipapas", price: 9500, description: "Porción grande de Salchipapas.", image: "Sachipapa.jpeg", stock: 10000},
     { id: 29, category: "Acompañamientos", name: "Cono de Fritas", price: 5000, description: "Cono mediano de papas fritas.", image: "cono de fritas.jpeg", stock: 10000 },
@@ -1128,11 +1128,11 @@
     { id: 34, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de Frutas Deliciosas.", image: "logo.jpeg", stock: 10 },
     { id: 35, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 11500, description: "Milanesa acompañada de puré de papas.", image: "logo.jpeg", stock: 1000 },
     { id: 36, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 12000, description: "Milanesa con huevos frito por encima.", image:"logo.jpeg", stock: 1000 },
-    { id: 37, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 13000, description: "Milanesa con salsa anego.", image: "milanesa napolitana.jpeg", stock: 1000 },
-    { id: 38, category: "Combos", name: "Combo Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 },
-    { id: 39, category: "Combos", name: "Combo de 2 Hamburguesas", price: 18000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 },
-    { id: 40, category: "Combos", name: "Combo Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 },
-    { id: 41, category: "Combos", name: "Combo Pizza Especial + Porción de Fritas", price: 17000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 }
+    { id: 37, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 13000, description: "Milanesa con salsa de tomate, jamon, queso, tomate c/fritas.", image: "milanesa napolitana.jpeg", stock: 1000 },
+    { id: 38, category: "Combos", name: "Combo (4) Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir entre 6 personas.", image: "logo.jpeg", stock: 1000 },
+    { id: 39, category: "Combos", name: "Combo (2) de 2 Hamburguesas", price: 18000, description: "Delicioso combo para compartir entre 2 personas.", image: "logo.jpeg", stock: 1000 },
+    { id: 40, category: "Combos", name: "Combo (3) Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir entre 6 personas.", image: "logo.jpeg", stock: 1000 },
+    { id: 41, category: "Combos", name: "Combo (1) Pizza Especial + porcion de Fritas", price: 17000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 }
   ];
   const defaultOffers = [
     { id: 1, day: "Lunes", description: "Pastas 10% off los Lunes", discount: 10 },
@@ -1810,6 +1810,7 @@
 </body>
 </html>
 "commit" 
+
 
 
 
