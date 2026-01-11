@@ -1085,14 +1085,14 @@
 </div>
 <script>
   // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-  const currentVersion = '2.9'; // ¡Importante! Actualiza este número con cada cambio de precios.
+  const currentVersion = '3.0'; // ¡Importante! Actualiza este número con cada cambio de precios.
   if (localStorage.getItem('appVersion') !== currentVersion) {
     localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
     localStorage.setItem('appVersion', currentVersion);
     console.log(`Cache local limpiada. Nueva versión: ${currentVersion}`);
   }
   const defaultProducts = [
-    { id: 1, category: "Sándwiches", name: "Bondiola", price: 11000 , description: "Delicioso sándwich de bondiola con tomate, lechuga, morron, cebolla caramelizada c/Fritas.", image: "bondiola.jpeg", stock: 0},
+    { id: 1, category: "Sándwiches", name: "Bondiola", price: 11000 , description: "Delicioso sándwich de bondiola con tomate, lechuga, morron, cebolla caramelizada c/Fritas.", image: "bondiola.jpeg", stock: 100},
     { id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 11500, description: "Bondiola con queso, jamon y huevo c/Fritas.", image: "bondiola.jpeg", stock: 0 },
     { id: 3, category: "Sándwiches", name: "Bondiola Premium", price: 12500, description: "Bondiola tomate, lechuga, morron, cebolla caramelizada, queso, huevo, jamon c/Fritas.", image: "bondiola.jpeg", stock: 0},
     { id: 4, category: "Sándwiches", name: "Sandwich Milanesa ", price: 11500, description: "Milanesa con lechuga y tomate c/Fritas.", image: "milanesa especial.jpeg", stock: 1000 },
@@ -1809,6 +1809,7 @@
 </script>
 </body>
 </html>
+
 
 
 
