@@ -1085,7 +1085,7 @@
 </div>
 <script>
   // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-  const currentVersion = '3.4'; // ¡Importante! Actualiza este número con cada cambio de precios.
+  const currentVersion = '3.5'; // ¡Importante! Actualiza este número con cada cambio de precios.
   if (localStorage.getItem('appVersion') !== currentVersion) {
     localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
     localStorage.setItem('appVersion', currentVersion);
@@ -1129,7 +1129,7 @@
     { id: 35, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 11500, description: "Milanesa acompañada de puré de papas.", image: "logo.jpeg", stock: 1000 },
     { id: 36, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 12000, description: "Milanesa con huevos frito por encima.", image:"logo.jpeg", stock: 1000 },
     { id: 37, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 13000, description: "Milanesa con salsa de tomate, jamon, queso, tomate c/fritas.", image: "milanesa napolitana.jpeg", stock: 1000 },
-    { id: 38, category: "Combos", name: "Combo (4) Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir entre 6 personas.", image: "logo.jpeg", stock: 1000 },
+    { id: 38, category: "Combos", name: "Combo (4) Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir entre 6 personas.", image: "logo.jpeg", stock: 0 },
     { id: 39, category: "Combos", name: "Combo (2) de 2 Hamburguesas", price: 18000, description: "Delicioso combo para compartir entre 2 personas.", image: "logo.jpeg", stock: 1000 },
     { id: 40, category: "Combos", name: "Combo (3) Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir entre 6 personas.", image: "logo.jpeg", stock: 1000 },
     { id: 41, category: "Combos", name: "Combo (1) Pizza Especial + porcion de Fritas", price: 17000, description: "Delicioso combo para compartir.", image: "logo.jpeg", stock: 1000 }
@@ -1809,6 +1809,7 @@
 </script>
 </body>
 </html>
+
 
 
 
