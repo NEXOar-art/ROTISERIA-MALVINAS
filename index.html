@@ -1085,7 +1085,7 @@
 </div>
 <script>
   // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-  const currentVersion = '3.4'; // ¡Importante! Actualiza este número con cada cambio de precios.
+  const currentVersion = '3.5'; // ¡Importante! Actualiza este número con cada cambio de precios.
   if (localStorage.getItem('appVersion') !== currentVersion) {
     localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
     localStorage.setItem('appVersion', currentVersion);
@@ -1125,7 +1125,7 @@
     { id: 31, category: "Empanadas", name: "Empanadas", price: 10000, description: "Empanadas de Carne caseras x 6 unidades.", image: "empanadas.jpeg", stock: 0 },
     { id: 32, category: "Postres", name: "Flan", price: 5500, description: "Con crema o mixto (Dulce de Leche y Crema).", image: "flan.jpeg", stock: 100 },
     { id: 33, category: "Postres", name: "Torta Helada", price: 4500, description: "Crema Americana con Dulce de Leche.", image: "torta helada.jpeg", stock: 0},
-    { id: 34, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de Frutas Deliciosas.", image: "logo.jpeg", stock: 10 },
+    { id: 34, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de Frutas Deliciosas.", image: "logo.jpeg", stock: 100 },
     { id: 35, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 11500, description: "Milanesa acompañada de puré de papas.", image: "logo.jpeg", stock: 1000 },
     { id: 36, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 12000, description: "Milanesa con huevos frito por encima.", image:"logo.jpeg", stock: 1000 },
     { id: 37, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 13000, description: "Milanesa con salsa de tomate, jamon, queso, tomate c/fritas.", image: "milanesa napolitana.jpeg", stock: 1000 },
@@ -1809,6 +1809,7 @@
 </script>
 </body>
 </html>
+
 
 
 
