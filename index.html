@@ -1065,7 +1065,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '3.9'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '4.0'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1125,9 +1125,9 @@ const defaultProducts = [
 { id: 17, category: "Pizzas", name: "Fugaza", price: 13500, description: "Pizza fugaza tradicional.", image: "pizza", stock: 1000 },
 { id: 18, category: "Pizzas", name: "Napolitana", price: 14000, description: "Pizza napolitana con tomate, ajo y oregano.", image: "pizza", stock: 1000 },
 { id: 19, category: "Pizzas", name: "Especial", price: 14500, description: "Pizza especial con jamon, morrones y aceitunas.", image: "pizza", stock: 1000 },
-{ id: 20, category: "Pizzas", name: "Huevo", price: 13500, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza", stock: 1000 },
+{ id: 20, category: "Pizzas", name: "Huevo", price: 13400, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza", stock: 1000 },
 { id: 21, category: "Pizzas", name: "Palmitos", price: 18000, description: "Pizza de Palmitos,jamon,morron, salsa golf y aceitunas.", image: "pizza", stock: 1000 },
-{ id: 22, category: "Pizzas", name: "Salchichas", price: 14500, description: "Pizza de Salchichas y aceitunas.", image: "pizza", stock: 1000 },
+{ id: 22, category: "Pizzas", name: "Salchichas", price: 14400, description: "Pizza de Salchichas y aceitunas.", image: "pizza", stock: 1000 },
 { id: 23, category: "Pizzas", name: "Choclo", price: 13500, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza", stock: 0 },
 { id: 24, category: "Pizzas", name: "Americana", price: 17500, description: "Pizza de Huevo frito papas fritas y aceitunas.", image: "pizza", stock: 0 },
 { id: 25, category: "Pizzas Individuales", name: "Muzzarella Individual", price: 7500, description: "Individual con queso muzzarella.", image: "pizza", stock: 1000 },
@@ -1145,9 +1145,9 @@ const defaultProducts = [
 { id: 37, category: "Postres", name: "Flan", price: 5500, description: "Con crema o mixto (Dulce de Leche y Crema).", image: "flan", stock: 100 },
 { id: 38, category: "Postres", name: "Torta Helada", price: 4500, description: "Crema Americana con Dulce de Leche.", image: "flan", stock: 0},
 { id: 39, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de Frutas Deliciosas.", image: "flan", stock: 100 },
-{ id: 40, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 13000, description: "Milanesa acompañada de puré de papas.", image: "milanesa", stock: 1000 },
-{ id: 41, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 13000, description: "Milanesa con huevos frito por encima.", image:"milanesa", stock: 1000 },
-{ id: 42, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 14000, description: "Milanesa con salsa de tomate, jamon, queso, tomate c/fritas.", image: "milanesa", stock: 1000 },
+{ id: 40, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 13000, description: "Milanesa acompañada de puré de papas + pan casero.", image: "milanesa", stock: 1000 },
+{ id: 41, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 13000, description: "Milanesa con huevos frito por encima + pan casero.", image:"milanesa", stock: 1000 },
+{ id: 42, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 14000, description: "Milanesa con salsa de tomate, jamon, queso, tomate c/fritas + pan casero.", image: "milanesa", stock: 1000 },
 { id: 43, category: "Combos", name: "Combo (4) Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir entre 6 personas.", image: "hamburguesa", stock: 0 },
 { id: 44, category: "Combos", name: "Combo (2) de 2 Hamburguesas", price: 18000, description: "Delicioso combo para compartir entre 2 personas.", image: "hamburguesa", stock: 1000 },
 { id: 45, category: "Combos", name: "Combo (3) Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir entre 6 personas.", image: "pizza", stock: 1000 },
@@ -1985,6 +1985,7 @@ console.log("✅ Todo Casero - Página cargada correctamente. Versión: " + curr
 </script>
 </body>
 </html>
+
 
 
 
