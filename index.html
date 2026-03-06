@@ -1065,7 +1065,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '4.0'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '4.1'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1997,6 +1997,7 @@ console.log("✅ Todo Casero - Página cargada correctamente. Versión: " + curr
 </script>
 </body>
 </html>
+
 
 
 
