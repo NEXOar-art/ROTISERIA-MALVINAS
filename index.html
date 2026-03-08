@@ -894,6 +894,29 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="prevBtn">‹</button>
 <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="nextBtn">›</button>
 </div>
+
+<!-- AQUÍ VA EL VIDEO TUTORIAL ESTRATÉGICO -->
+<div class="mt-12 bg-white p-6 rounded-xl shadow-md border border-orange-100 animate-fade-in-up">
+    <h3 class="text-xl font-bold text-center text-gray-800 mb-4">
+        🎬 ¿Prefieres ver cómo funciona? Mira nuestra guía rápida
+    </h3>
+    <div class="relative w-full max-w-4xl mx-auto aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <!-- REEMPLAZA 'URL_DEL_VIDEO_AQUI' CON TU LINK DE YOUTUBE O ARCHIVO LOCAL -->
+        <!-- Ejemplo: src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" -->
+        <iframe 
+            src="URL_DEL_VIDEO_AQUI" 
+            class="absolute top-0 left-0 w-full h-full"
+            title="Video Tutorial Todo Casero" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            loading="lazy">
+        </iframe>
+    </div>
+    <p class="text-center text-gray-500 mt-2 text-sm">Aprende a usar el carrito, chatear con María y retirar tu pedido.</p>
+</div>
+<!-- FIN VIDEO TUTORIAL -->
+
 </section>
 <section class="section" id="contacto">
 <h2 class="section-title text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>Contacto</h2>
@@ -1049,7 +1072,6 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
 </div>
 </div>
-
 <!-- 🔹 BOTÓN FLOTANTE DEL ASISTENTE INTELIGENTE (NotebookLM) -->
 <a href="https://notebooklm.google.com/notebook/bdef646b-85d8-4601-b523-3ebec3768093?authuser=2" target="_blank" class="assistant-float" title="Asistente Inteligente Todo Casero - Pregúntale sobre el menú, precios, horarios y más" aria-label="Asistente Inteligente de Todo Casero">
 <i class="fas fa-robot"></i>
@@ -1057,12 +1079,10 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <div class="assistant-tooltip" id="assistantTooltip">
 💡 ¿Tienes dudas? Pregúntale a nuestro Asistente Inteligente sobre menú, precios, horarios y promociones.
 </div>
-
 <!-- 🔹 Botón flotante de WhatsApp (ya existente) -->
 <a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" target="_blank" class="whatsapp-float" title="Chatear con María por WhatsApp" aria-label="WhatsApp">
 <i class="fab fa-whatsapp"></i>
 </a>
-
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
 const currentVersion = '4.3'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
@@ -1071,66 +1091,60 @@ localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
 console.log(`Cache local limpiada. Nueva versión: ${currentVersion}`);
 }
-
 // 🔹 Imágenes por defecto (placeholders de Unsplash) para productos sin imagen
 const defaultImages = {
-  "bondiola": "bondiola.jpeg",
-  "milanesa": "milanesa especial.jpeg",
-  "tucumano": "tucumano.jpeg",
-  "lomito": "lomito premium.jpeg",
-  "hamburguesa completa": "hamburguesa completa.jpeg",
-  "hamburguesa vegetariana": "hamburguesa vegetariana.jpeg",
-  "hamburguesa doble": "hamburguesa doble.jpeg",
-  "hamburguesa zapping": "hamburguesa zapping.jpeg",
-  "pizza": "muzzarella.jpeg",
-  "pizza fugaza": "fugaza.jpeg",
-  "pizza napolitana": "napolitana.jpeg",
-  "pizza especial": "especial.jpeg",
-  "pizza huevo": "logo.jpeg",
-  "pizza palmitos": "logo.jpeg",
-  "pizza salchichas": "logo.jpeg",
-  "pizza choclo": "logo.jpeg",
-  "pizza americana": "logo.jpeg",
-  "muzzarella individual": "muzzarella individual.jpeg",
-  "fugaza individual": "muzzarella individual.jpeg",
-  "napolitana individual": "milanesa napolitana.jpeg",
-  "especial individual": "logo.jpeg",
-  
-  "pasta": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=400&fit=crop",
-  "ñoquis con bolognesa": "ñoquis con bolognesa.jpeg",
-  "ravioles con bolognesa": "ravioles con bolognesa.jpeg",
-  "porcion de fritas": "porcion de fritas.jpeg",
-  "salchipapas": "salchipapa.jpeg",
-  "cono de fritas": "cono de fritas.jpeg",
-  "empanadas": "empanadas.jpeg",
-  "flan": "flan.jpeg",
-  "torta helada": "logo.jpeg",
-  "ensalada de fruta": "logo.jpeg",
-  "milanesa con pure": "logo.jpeg",
-  "milanesa a caballo": "Milanesa a caballo.jpeg",
-  "milanesa napolitana": "logo.jpeg",
-  "default": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=400&fit=crop"
+"bondiola": "bondiola.jpeg",
+"milanesa": "milanesa especial.jpeg",
+"tucumano": "tucumano.jpeg",
+"lomito": "lomito premium.jpeg",
+"hamburguesa completa": "hamburguesa completa.jpeg",
+"hamburguesa vegetariana": "hamburguesa vegetariana.jpeg",
+"hamburguesa doble": "hamburguesa doble.jpeg",
+"hamburguesa zapping": "hamburguesa zapping.jpeg",
+"pizza": "muzzarella.jpeg",
+"pizza fugaza": "fugaza.jpeg",
+"pizza napolitana": "napolitana.jpeg",
+"pizza especial": "especial.jpeg",
+"pizza huevo": "logo.jpeg",
+"pizza palmitos": "logo.jpeg",
+"pizza salchichas": "logo.jpeg",
+"pizza choclo": "logo.jpeg",
+"pizza americana": "logo.jpeg",
+"muzzarella individual": "muzzarella individual.jpeg",
+"fugaza individual": "muzzarella individual.jpeg",
+"napolitana individual": "milanesa napolitana.jpeg",
+"especial individual": "logo.jpeg",
+"pasta": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=400&fit=crop",
+"ñoquis con bolognesa": "ñoquis con bolognesa.jpeg",
+"ravioles con bolognesa": "ravioles con bolognesa.jpeg",
+"porcion de fritas": "porcion de fritas.jpeg",
+"salchipapas": "salchipapa.jpeg",
+"cono de fritas": "cono de fritas.jpeg",
+"empanadas": "empanadas.jpeg",
+"flan": "flan.jpeg",
+"torta helada": "logo.jpeg",
+"ensalada de fruta": "logo.jpeg",
+"milanesa con pure": "logo.jpeg",
+"milanesa a caballo": "Milanesa a caballo.jpeg",
+"milanesa napolitana": "logo.jpeg",
+"default": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=400&fit=crop"
 };
-
 // 🔹 Función para obtener URL de imagen válida
 function getImageUrl(productName, customImage) {
-  if (customImage && customImage.startsWith('http')) return customImage;
-  if (customImage && customImage in defaultImages) return defaultImages[customImage];
-  
-  const lowerName = productName.toLowerCase();
-  if (lowerName.includes('bondiola')) return defaultImages.bondiola;
-  if (lowerName.includes('milanesa')) return defaultImages.milanesa;
-  if (lowerName.includes('lomito')) return defaultImages.lomito;
-  if (lowerName.includes('hamburguesa')) return defaultImages.hamburguesa;
-  if (lowerName.includes('pizza')) return defaultImages.pizza;
-  if (lowerName.includes('tallarines') || lowerName.includes('ñoquis') || lowerName.includes('ravioles')) return defaultImages.pasta;
-  if (lowerName.includes('fritas') || lowerName.includes('salchipapa')) return defaultImages.fritas;
-  if (lowerName.includes('empanada')) return defaultImages.empanadas;
-  if (lowerName.includes('flan') || lowerName.includes('postre')) return defaultImages.flan;
-  
-  return defaultImages.default;
+if (customImage && customImage.startsWith('http')) return customImage;
+if (customImage && customImage in defaultImages) return defaultImages[customImage];
+const lowerName = productName.toLowerCase();
+if (lowerName.includes('bondiola')) return defaultImages.bondiola;
+if (lowerName.includes('milanesa')) return defaultImages.milanesa;
+if (lowerName.includes('lomito')) return defaultImages.lomito;
+if (lowerName.includes('hamburguesa')) return defaultImages.hamburguesa;
+if (lowerName.includes('pizza')) return defaultImages.pizza;
+if (lowerName.includes('tallarines') || lowerName.includes('ñoquis') || lowerName.includes('ravioles')) return defaultImages.pasta;
+if (lowerName.includes('fritas') || lowerName.includes('salchipapa')) return defaultImages.fritas;
+if (lowerName.includes('empanada')) return defaultImages.empanadas;
+if (lowerName.includes('flan') || lowerName.includes('postre')) return defaultImages.flan;
+return defaultImages.default;
 }
-
 const defaultProducts = [
 { id: 1, category: "Sándwiches", name: "Bondiola", price: 11000 , description: "Delicioso sándwich de bondiola con tomate, lechuga, morron, cebolla caramelizada c/Fritas.", image: "bondiola", stock: 100},
 { id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 11500, description: "Bondiola con queso, jamon y huevo c/Fritas.", image: "bondiola", stock: 100 },
@@ -1179,24 +1193,20 @@ const defaultProducts = [
 { id: 45, category: "Combos", name: "Combo (3) Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir entre 6 personas.", image: "pizza", stock: 1000 },
 { id: 46, category: "Combos", name: "Combo (1) Pizza Especial + porcion de Fritas", price: 17000, description: "Delicioso combo para compartir.", image: "pizza especial", stock: 1000 }
 ];
-
 const defaultOffers = [
 { id: 1, day: "lunes", description: "Pastas 10% off los Lunes", discount: 10 },
 { id: 2, day: "martes", description: "Hamburguesa Zapping 10% off los Martes", discount: 10 },
 { id: 3, day: "miércoles", description: "Sándwich de Bondiola 10% off los Miércoles", discount: 10 }
 ];
-
 let cart = [];
 let products = JSON.parse(localStorage.getItem("products")) || defaultProducts;
 let offers = JSON.parse(localStorage.getItem("offers")) || defaultOffers;
 let editingProductId = null;
 let userName = null;
-
 function saveData() {
 localStorage.setItem("products", JSON.stringify(products));
 localStorage.setItem("offers", JSON.stringify(offers));
 }
-
 function checkAdminPassword() {
 const pass = document.getElementById("adminPassword").value;
 const hashed = CryptoJS.SHA256(pass).toString();
@@ -1209,15 +1219,12 @@ alert("Clave incorrecta. Intente nuevamente.");
 }
 document.getElementById("adminPassword").value = "";
 }
-
 function renderCategories() {
 const categoriesContainer = document.getElementById("categoriesContainer");
 const combosContainer = document.getElementById("combosContainer");
 categoriesContainer.innerHTML = "";
 combosContainer.innerHTML = "";
-
 const categories = [...new Set(products.map(p => p.category))];
-
 categories.forEach((category, index) => {
 if (category === 'Combos') {
 const comboProducts = products.filter(p => p.category === 'Combos');
@@ -1226,14 +1233,12 @@ const comboDiv = document.createElement('div');
 comboDiv.className = "bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent relative";
 comboDiv.setAttribute('data-scroll-reveal', '');
 comboDiv.setAttribute('data-delay', `${(comboIndex + 1) * 0.1}s`);
-
 let specialBadge = '';
 if (product.stock > 0 && product.stock <= 10) {
 specialBadge = `<div class="absolute -top-3 -right-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">⚠️ Pocas unidades</div>`;
 } else if (product.stock === 0) {
 specialBadge = `<div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">❌ Agotado</div>`;
 }
-
 comboDiv.innerHTML = `
 ${specialBadge}
 <img src="${getImageUrl(product.name, product.image)}" alt="${product.name}" class="w-full h-40 object-cover rounded-lg mb-3" loading="lazy" onerror="this.src='${defaultImages.default}'">
@@ -1241,10 +1246,10 @@ ${specialBadge}
 <p class="text-gray-600 mb-2">${product.description}</p>
 <div class="flex justify-between items-center">
 <span class="text-2xl font-bold text-orange-500">$${product.price.toLocaleString('es-AR')}</span>
-${product.stock > 0 ? 
+${product.stock > 0 ?
 `<button class="add-to-cart bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:brightness-110 group" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">
 Lo Quiero <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-</button>` : 
+</button>` :
 `<span class="text-gray-400 font-semibold">No disponible</span>`
 }
 </div>
@@ -1253,7 +1258,6 @@ combosContainer.appendChild(comboDiv);
 });
 return;
 }
-
 const div = document.createElement("div");
 div.className = "category";
 div.innerHTML = `
@@ -1263,11 +1267,9 @@ div.innerHTML = `
 </div>
 <div class="products"></div>
 `;
-
 const header = div.querySelector(".category-header");
 const content = div.querySelector(".products");
 const arrow = div.querySelector(".category-arrow");
-
 header.addEventListener("click", () => {
 const isOpen = content.style.display === "block";
 document.querySelectorAll(".products").forEach(p => {
@@ -1279,12 +1281,10 @@ content.style.display = "block";
 header.classList.add("active");
 }
 });
-
 const filteredProducts = products.filter(p => p.category === category);
 filteredProducts.forEach(product => {
 const productDiv = document.createElement("div");
 productDiv.className = "product";
-
 // Badge de disponibilidad
 let stockBadge = '';
 if (product.stock === 0) {
@@ -1294,7 +1294,6 @@ stockBadge = '<span class="availability-badge low-stock">Pocas unidades</span>';
 } else {
 stockBadge = '<span class="availability-badge in-stock">Disponible</span>';
 }
-
 productDiv.innerHTML = `
 <div class="product-info">
 <div class="product-name">${product.name} ${stockBadge}</div>
@@ -1303,24 +1302,21 @@ ${product.stock <= 10 && product.stock > 0 ? `<div class="stock-low">⚠️ Solo
 </div>
 <div class="product-price">$${product.price.toLocaleString('es-AR')}</div>
 <img src="${getImageUrl(product.name, product.image)}" alt="${product.name}" class="product-image" loading="lazy" onerror="this.src='${defaultImages.default}'">
-${product.stock > 0 ? 
-`<button class="add-to-cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">Añadir</button>` : 
+${product.stock > 0 ?
+`<button class="add-to-cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">Añadir</button>` :
 `<button class="add-to-cart" disabled style="background-color:#ccc;cursor:not-allowed">Agotado</button>`
 }
 `;
 content.appendChild(productDiv);
 });
-
 categoriesContainer.appendChild(div);
 });
-
 // Abrir primera categoría por defecto
 const firstCategory = categoriesContainer.querySelector(".category");
 if (firstCategory) {
 firstCategory.querySelector(".products").style.display = "block";
 firstCategory.querySelector(".category-header").classList.add("active");
 }
-
 // Event listeners para botones de añadir al carrito
 document.querySelectorAll("#menu .add-to-cart:not([disabled])").forEach(button => {
 button.addEventListener("click", () => {
@@ -1330,39 +1326,33 @@ const price = parseInt(button.getAttribute("data-price"));
 addToCart(id, name, price);
 });
 });
-
 // Scroll reveal animations
 const scrollRevealElements = document.querySelectorAll('[data-scroll-reveal]');
 const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => { 
-if (entry.isIntersecting) { 
-entry.target.classList.add('opacity-100', 'translate-y-0'); 
-observer.unobserve(entry.target); 
-} 
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('opacity-100', 'translate-y-0');
+observer.unobserve(entry.target);
+}
 });
 }, { threshold: 0.1 });
-
-scrollRevealElements.forEach(el => { 
-el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500'); 
-observer.observe(el); 
+scrollRevealElements.forEach(el => {
+el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500');
+observer.observe(el);
 });
-
 // Mostrar oferta del día
 const today = new Date().toLocaleString('es-AR', { weekday: 'long' }).toLowerCase();
 const todayOffer = offers.find(offer => offer.day === today);
 document.getElementById('offerText').textContent = todayOffer ? todayOffer.description : '¡Consulta nuestras ofertas semanales en el menú!';
 }
-
 function addToCart(id, name, price) {
 const product = products.find(p => p.id === parseInt(id));
 if (!product) return;
-
 if (product.stock <= 0) {
 alert("Lo siento, este producto no está disponible en este momento. Contáctanos por WhatsApp para más información.");
 window.open("https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!%20No%20pude%20agregar%20" + encodeURIComponent(name) + "%20al%20carrito.", '_blank');
 return;
 }
-
 const existingItem = cart.find(item => item.id === id);
 if (existingItem) {
 if (product.stock < existingItem.quantity + 1) {
@@ -1377,11 +1367,9 @@ return;
 }
 cart.push({ id, name, price, quantity: 1 });
 }
-
 updateCartDisplay();
 document.getElementById("cartModal").style.display = "flex";
 window.scrollTo({ top: 0, behavior: 'smooth' });
-
 // Feedback visual
 const btn = event?.target;
 if (btn) {
@@ -1393,15 +1381,12 @@ btn.style.backgroundColor = "";
 }, 1500);
 }
 }
-
 function updateCartDisplay() {
 const cartItems = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");
 const cartCount = document.getElementById("cartCount");
-
 cartItems.innerHTML = "";
 let total = 0;
-
 if (cart.length === 0) {
 cartItems.innerHTML = "<p class='text-center text-gray-500 py-4'>Tu carrito está vacío 🛒</p>";
 } else {
@@ -1423,15 +1408,12 @@ div.innerHTML = `
 cartItems.appendChild(div);
 });
 }
-
 cartTotal.textContent = `Total: $${total.toLocaleString('es-AR')}`;
 cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
 }
-
 function changeQuantity(id, change) {
 const product = products.find(p => p.id === parseInt(id));
 const item = cart.find(item => item.id === id);
-
 if (item) {
 const newQuantity = item.quantity + change;
 if (newQuantity > product.stock) {
@@ -1446,12 +1428,10 @@ item.quantity = newQuantity;
 updateCartDisplay();
 }
 }
-
 function removeFromCart(id) {
 cart = cart.filter(item => item.id !== id);
 updateCartDisplay();
 }
-
 function generatePDF() {
 if (!window.jspdf) {
 alert("Generando tu pedido...");
@@ -1459,7 +1439,6 @@ return;
 }
 const { jsPDF } = window.jspdf;
 const doc = new jsPDF();
-
 doc.setFontSize(18);
 doc.text("🍔 Orden Todo Casero 🍔", 20, 20);
 doc.setFontSize(12);
@@ -1468,7 +1447,6 @@ doc.text(`Cliente: ${document.getElementById("customerName").value.trim() || "Si
 doc.text(`Celular: ${document.getElementById("customerPhone").value.trim() || "Sin teléfono"}`, 20, 50);
 doc.text("📍 Campana, Buenos Aires", 20, 60);
 doc.text("📞 +54 348 9358998", 20, 70);
-
 let y = 90;
 doc.text("═══════════════════════════════", 20, y);
 y += 10;
@@ -1476,7 +1454,6 @@ doc.text("Producto | Cantidad | Precio | Total", 20, y);
 y += 10;
 doc.text("───────────────────────────────", 20, y);
 y += 10;
-
 let total = 0;
 cart.forEach(item => {
 const itemTotal = item.price * item.quantity;
@@ -1485,12 +1462,10 @@ const line = `${item.name.substring(0,15)}... | ${item.quantity} | $${item.price
 doc.text(line, 20, y);
 y += 10;
 });
-
 doc.text("───────────────────────────────", 20, y);
 y += 10;
 doc.setFontSize(14);
 doc.text(`💰 TOTAL: $${total.toLocaleString('es-AR')}`, 20, y);
-
 const payment = document.querySelector('input[name="payment"]:checked').value;
 y += 15;
 doc.setFontSize(12);
@@ -1501,52 +1476,61 @@ doc.text("Alias: Adri.roti", 20, y);
 y += 10;
 doc.text("Titular: Adriana Basilia Enrique", 20, y);
 }
-
 y += 20;
 doc.text("📌 Nota: Retirar en local en el horario acordado.", 20, y);
 doc.text("¡Gracias por elegir Todo Casero! ❤️", 20, y + 10);
-
 doc.save(`pedido-todocasero-${new Date().toISOString().slice(0,10)}.pdf`);
 }
-
 function generateWhatsAppMessage(customerName, customerPhone) {
-let message = `🍔 *PEDIDO - TODO CASERO* 🍔\n`;
-message += `━━━━━━━━━━━━━━━━━━━━━\n`;
-message += `👤 *Cliente*: ${customerName}\n`;
-message += `📞 *Celular*: ${customerPhone}\n`;
-message += `📅 *Fecha*: ${new Date().toLocaleString('es-AR')}\n`;
-message += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
-message += `📋 *DETALLE DEL PEDIDO:*\n`;
-
+let message = `🍔 *PEDIDO - TODO CASERO* 🍔
+`;
+message += `━━━━━━━━━━━━━━━━━━━━━
+`;
+message += `👤 *Cliente*: ${customerName}
+`;
+message += `📞 *Celular*: ${customerPhone}
+`;
+message += `📅 *Fecha*: ${new Date().toLocaleString('es-AR')}
+`;
+message += `━━━━━━━━━━━━━━━━━━━━━
+`;
+message += `📋 *DETALLE DEL PEDIDO:*
+`;
 cart.forEach(item => {
-message += `• ${item.quantity}x ${item.name}\n`;
-message += `  💰 $${(item.price * item.quantity).toLocaleString('es-AR')}\n\n`;
+message += `• ${item.quantity}x ${item.name}
+`;
+message += `  💰 $${(item.price * item.quantity).toLocaleString('es-AR')}
+`;
 });
-
 const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-message += `━━━━━━━━━━━━━━━━━━━━━\n`;
-message += `💰 *TOTAL A PAGAR*: $${total.toLocaleString('es-AR')}\n`;
-message += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
-
+message += `━━━━━━━━━━━━━━━━━━━━━
+`;
+message += `💰 *TOTAL A PAGAR*: $${total.toLocaleString('es-AR')}
+`;
+message += `━━━━━━━━━━━━━━━━━━━━━
+`;
 const payment = document.querySelector('input[name="payment"]:checked').value;
-message += `💳 *Método de Pago*: ${payment}\n`;
+message += `💳 *Método de Pago*: ${payment}
+`;
 if (payment === "Transferencia") {
-message += `🏦 Alias: Adri.roti\n`;
-message += `👤 Titular: Adriana Basilia Enrique\n`;
+message += `🏦 Alias: Adri.roti
+`;
+message += `👤 Titular: Adriana Basilia Enrique
+`;
 }
-
-message += `\n📍 *Retiro*: Campana, Buenos Aires\n`;
-message += `🕐 *Horario*: 19:30 - 23:45\n`;
-message += `\n✅ Por favor confirmar mi pedido. ¡Gracias!`;
-
+message += `
+📍 *Retiro*: Campana, Buenos Aires
+`;
+message += `🕐 *Horario*: 19:30 - 23:45
+`;
+message += `
+✅ Por favor confirmar mi pedido. ¡Gracias!`;
 return encodeURIComponent(message);
 }
-
 function toggleChat() {
 const chatWidget = document.getElementById("chatWidget");
 const isVisible = chatWidget.style.display === "block";
 chatWidget.style.display = isVisible ? "none" : "block";
-
 if (!isVisible && !document.getElementById("chatBody").innerHTML) {
 const chatBody = document.getElementById("chatBody");
 const welcomeMessage = document.createElement("div");
@@ -1556,33 +1540,26 @@ chatBody.appendChild(welcomeMessage);
 chatBody.scrollTop = chatBody.scrollHeight;
 }
 }
-
 function sendChatMessage() {
 const input = document.getElementById("chatInput");
 const message = input.value.trim();
 if (!message) return;
-
 const chatBody = document.getElementById("chatBody");
-
 // Mensaje del usuario
 const userMessage = document.createElement("div");
 userMessage.className = "chat-message user";
 userMessage.textContent = message;
 chatBody.appendChild(userMessage);
-
 // Detectar nombre del usuario
 const nameMatch = message.match(/mi nombre es (\w+)/i) || message.match(/me llamo (\w+)/i);
 if (nameMatch) {
 userName = nameMatch[1].charAt(0).toUpperCase() + nameMatch[1].slice(1).toLowerCase();
 }
-
 const greeting = userName ? `¡Hola ${userName}! 👋` : "¡Hola! 👋";
 const closing = "¿En qué más puedo ayudarte? 😊";
 const paymentInfo = "💳 Aceptamos: Efectivo 💵 o Transferencia 🏦 (Alias: Adri.roti)";
-
 let response = `${greeting} Gracias por escribir a <strong>Todo Casero</strong>. `;
 const lowerMessage = message.toLowerCase();
-
 // 🔹 Lógica inteligente del asistente María
 if (lowerMessage.includes("menú") || lowerMessage.includes("menu") || lowerMessage.includes("carta") || lowerMessage.includes("que tienen")) {
 response += "🍽️ Nuestro menú incluye:<br><br>";
@@ -1595,22 +1572,18 @@ response += "🍟 <strong>Acompañamientos:</strong> Fritas, Salchipapas, Cono<b
 response += "🥟 <strong>Empanadas</strong> x6 o x12<br>";
 response += "🍮 <strong>Postres:</strong> Flan, Torta Helada, Ensalada de Frutas<br><br>";
 response += "¿Te gustaría que te diga el precio de algún plato en particular? 😊";
-
 } else if (lowerMessage.includes("precio") || lowerMessage.includes("cuánto cuesta") || lowerMessage.includes("valor") || lowerMessage.includes("precio de")) {
 const productName = lowerMessage.replace(/precio de|cuánto cuesta|el precio de|qué precio tiene|valor de/gi, "").trim();
 const product = products.find(p => p.name.toLowerCase().includes(productName) || productName.includes(p.name.toLowerCase()));
-
 if (product) {
 const today = new Date().toLocaleString('es-AR', { weekday: 'long' }).toLowerCase();
 const todayOffer = offers.find(o => o.day === today && o.description.toLowerCase().includes(product.name.toLowerCase()));
 let finalPrice = product.price;
 let discountText = '';
-
 if (todayOffer) {
 finalPrice = Math.round(product.price * (1 - todayOffer.discount/100));
 discountText = ` <span style="color:#27ae60">✨ ¡Hoy tiene ${todayOffer.discount}% OFF!</span>`;
 }
-
 response += `💰 <strong>${product.name}</strong>: $${finalPrice.toLocaleString('es-AR')}${discountText}<br>`;
 response += `<em>${product.description}</em><br><br>`;
 response += product.stock > 0 ? `✅ Disponible (${product.stock} unidades)` : `❌ Agotado por el momento`;
@@ -1620,24 +1593,20 @@ response += "🔍 No encontré ese producto exacto. Los nombres en nuestro menú
 response += "<em>Bondiola, Milanesa, Lomito, Hamburguesa Completa, Muzzarella, Tallarines con Bolognesa, etc.</em><br><br>";
 response += "¿Puedes decirme el nombre exacto o preguntarme por una categoría? 😊";
 }
-
 } else if (lowerMessage.includes("pedido") || lowerMessage.includes("comprar") || lowerMessage.includes("quiero") || lowerMessage.includes("agregar") || lowerMessage.includes("añadir")) {
 response += "¡Perfecto! 🎉 Para hacer tu pedido tienes dos opciones:<br><br>";
 response += "1️⃣ <strong>Desde la web:</strong> Ve a la sección 'Menú', elige tus platos y agrégalos al carrito 🛒<br>";
 response += "2️⃣ <strong>Por WhatsApp:</strong> Escríbeme directamente al <strong>+54 348 9358998</strong><br><br>";
 response += "💡 Tip: Puedes decirme algo como <em>'quiero 2 bondiolas y fritas'</em> y te ayudo a armar el pedido. ¿Qué te gustaría ordenar?";
-
 } else if (lowerMessage.includes("horario") || lowerMessage.includes("hora") || lowerMessage.includes("abierto") || lowerMessage.includes("cierra")) {
 response += "🕐 Estamos abiertos <strong>todos los días</strong> de <strong>19:30 a 23:45 hs</strong>.<br><br>";
 response += "📍 Te esperamos en <strong>Campana, Buenos Aires</strong>.<br><br>";
 response += "¿Quieres hacer tu pedido para hoy? 😊";
-
 } else if (lowerMessage.includes("ubicación") || lowerMessage.includes("donde están") || lowerMessage.includes("dirección") || lowerMessage.includes("campana")) {
 response += "📍 Estamos ubicados en <strong>Campana, Buenos Aires</strong>.<br><br>";
 response += "🚗 El pedido se retira en nuestro local.<br>";
 response += "📞 Para más detalles, escríbenos al +54 348 9358998.<br><br>";
 response += "¿Te ayudo a armar tu pedido? 🍔";
-
 } else if (lowerMessage.includes("pago") || lowerMessage.includes("pagar") || lowerMessage.includes("efectivo") || lowerMessage.includes("transferencia") || lowerMessage.includes("alias")) {
 response += `${paymentInfo}<br><br>`;
 response += "💵 <strong>Efectivo:</strong> Pagas al momento de retirar tu pedido.<br>";
@@ -1645,11 +1614,9 @@ response += "🏦 <strong>Transferencia:</strong><br>";
 response += "• Alias: <strong>Adri.roti</strong><br>";
 response += "• Titular: Adriana Basilia Enrique<br><br>";
 response += "¿Con qué método prefieres pagar? 😊";
-
 } else if (lowerMessage.includes("oferta") || lowerMessage.includes("promoción") || lowerMessage.includes("descuento") || lowerMessage.includes("descuentos")) {
 const today = new Date().toLocaleString('es-AR', { weekday: 'long' }).toLowerCase();
 const todayOffer = offers.find(o => o.day === today);
-
 if (todayOffer) {
 response += `🎉 ¡HOY ${today.toUpperCase()} TENEMOS OFERTA! ✨<br><br>`;
 response += `<strong>${todayOffer.description}</strong><br>`;
@@ -1662,7 +1629,6 @@ response += `• <strong>${offer.day.charAt(0).toUpperCase()+offer.day.slice(1)}
 });
 response += "<br>¿Quieres que te cuente más sobre alguna en particular?";
 }
-
 } else if (lowerMessage.includes("pdf") || lowerMessage.includes("resumen") || lowerMessage.includes("comprobante")) {
 if (cart.length > 0) {
 generatePDF();
@@ -1672,7 +1638,6 @@ response += "¿Quieres confirmar el pedido por WhatsApp ahora? 📲";
 response += "🛒 Tu carrito está vacío.<br><br>";
 response += "Primero agrega productos desde el menú y luego podré generar tu resumen. ¿Quieres ver el menú? 😊";
 }
-
 } else if (lowerMessage.includes("cancelar") || lowerMessage.includes("borrar") || lowerMessage.includes("vaciar")) {
 if (cart.length > 0) {
 cart = [];
@@ -1682,7 +1647,6 @@ response += "¿Quieres empezar un nuevo pedido? 😊";
 } else {
 response += "Tu carrito ya está vacío. ¿Te gustaría ver nuestro menú para elegir algo rico? 🍽️";
 }
-
 } else if (lowerMessage.includes("hola") || lowerMessage.includes("buenas") || lowerMessage.includes("saludos")) {
 response += "¡Bienvenido a <strong>Todo Casero</strong>! 🍔❤️<br><br>";
 response += "Somos una rotisería con corazón casero en Campana.<br><br>";
@@ -1691,22 +1655,18 @@ response += "• 📋 Ver menú y precios<br>";
 response += "• 🛒 Hacer un pedido<br>";
 response += "• 🕐 Consultar horarios<br>";
 response += "• 💳 Información de pagos";
-
 } else if (/\d+\s*[x×]\s*.+/i.test(lowerMessage) || /\d+\s+.+/.test(lowerMessage)) {
 // Detectar pedido con cantidad: "2 bondiolas", "1 pizza", etc.
 const orderRegex = /(\d+)\s*[x×]?\s*([a-záéíóúñ\s]+)/gi;
 const matches = [...lowerMessage.matchAll(orderRegex)];
-
 if (matches.length > 0) {
 response += "🎯 Entendí que quieres:<br><br>";
 let addedCount = 0;
 let notFound = [];
-
 matches.forEach(match => {
 const qty = parseInt(match[1]);
 const nameSearch = match[2].trim();
 const product = products.find(p => p.name.toLowerCase().includes(nameSearch));
-
 if (product && product.stock >= qty) {
 const existing = cart.find(c => c.id === product.id);
 if (existing) {
@@ -1722,7 +1682,6 @@ notFound.push(`${nameSearch} (solo hay ${product.stock} disponibles)`);
 notFound.push(nameSearch);
 }
 });
-
 if (addedCount > 0) {
 updateCartDisplay();
 response += `<br>🛒 ¡Agregado a tu carrito!`;
@@ -1745,24 +1704,19 @@ response += "• 🕐 Informarte sobre horarios<br>";
 response += "• 💳 Explicarte métodos de pago<br><br>";
 response += "¿Qué necesitas? También puedes escribirme directamente al <strong>+54 348 9358998</strong>. 📲";
 }
-
 response += `<br><br><em>${closing}</em>`;
-
 // Respuesta del bot
 const botMessage = document.createElement("div");
 botMessage.className = "chat-message bot";
 botMessage.innerHTML = response;
 chatBody.appendChild(botMessage);
-
 input.value = "";
 chatBody.scrollTop = chatBody.scrollHeight;
 }
-
 function openAdmin() {
 document.getElementById("adminPanel").style.display = "block";
 renderProductList();
 }
-
 function closeAdmin() {
 document.getElementById("adminPanel").style.display = "none";
 document.getElementById("productForm").reset();
@@ -1771,12 +1725,10 @@ if (preview) preview.style.display = "none";
 document.getElementById("productImageUrl").value = "";
 editingProductId = null;
 }
-
 function renderProductList() {
 const productList = document.getElementById("productList");
 if (!productList) return;
 productList.innerHTML = "";
-
 products.forEach(product => {
 const div = document.createElement("div");
 div.className = "product-item";
@@ -1790,18 +1742,15 @@ div.innerHTML = `
 productList.appendChild(div);
 });
 }
-
 function editProduct(id) {
 editingProductId = id;
 const product = products.find(p => p.id === id);
 if (!product) return;
-
 document.getElementById("categorySelect").value = product.category;
 document.getElementById("productName").value = product.name;
 document.getElementById("productPrice").value = product.price;
 document.getElementById("productDescription").value = product.description;
 document.getElementById("productImageUrl").value = product.image || "";
-
 const preview = document.getElementById("previewImage");
 if (preview && product.image) {
 preview.src = getImageUrl(product.name, product.image);
@@ -1809,7 +1758,6 @@ preview.style.display = "block";
 }
 window.scrollTo({ top: document.getElementById("adminPanel").offsetTop, behavior: 'smooth' });
 }
-
 function deleteProduct(id) {
 if (confirm("⚠️ ¿Estás seguro de eliminar este producto? Esta acción no se puede deshacer.")) {
 products = products.filter(p => p.id !== id);
@@ -1819,25 +1767,20 @@ renderCategories();
 alert("✅ Producto eliminado correctamente.");
 }
 }
-
 // Event Listeners principales
 document.getElementById("viewCart").addEventListener("click", (e) => {
 e.preventDefault();
 updateCartDisplay();
 document.getElementById("cartModal").style.display = "flex";
 });
-
 function closeCart() {
 document.getElementById("cartModal").style.display = "none";
 }
-
 // Modal de postre inteligente
 function showDessertModal() {
 const dessertOptionsDiv = document.getElementById("dessertOptions");
 dessertOptionsDiv.innerHTML = '';
-
 const desserts = products.filter(p => p.category === "Postres" && p.stock > 0);
-
 if (desserts.length > 0) {
 desserts.forEach(dessert => {
 const btn = document.createElement("button");
@@ -1855,16 +1798,13 @@ document.getElementById("dessertModal").style.display = "flex";
 sendOrderDirectly();
 }
 }
-
 function skipDessert() {
 document.getElementById("dessertModal").style.display = "none";
 sendOrderDirectly();
 }
-
 function sendOrderDirectly() {
 const customerName = document.getElementById("customerName").value.trim();
 const customerPhone = document.getElementById("customerPhone").value.trim();
-
 if (cart.length === 0) {
 alert("🛒 El carrito está vacío. Agrega productos antes de enviar.");
 return;
@@ -1873,17 +1813,14 @@ if (!customerName || !customerPhone) {
 alert("📝 Por favor completa tu nombre y celular.");
 return;
 }
-
 // Actualizar stock
 cart.forEach(item => {
 const product = products.find(p => p.id === parseInt(item.id));
 if (product) product.stock = Math.max(0, product.stock - item.quantity);
 });
-
 const phoneNumber = "543489358998";
 const whatsappMessage = generateWhatsAppMessage(customerName, customerPhone);
 window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${whatsappMessage}`, '_blank');
-
 // Generar PDF y limpiar
 generatePDF();
 cart = [];
@@ -1891,10 +1828,8 @@ updateCartDisplay();
 renderCategories();
 saveData();
 closeCart();
-
 alert("✅ ¡Pedido enviado! Revisa WhatsApp para confirmar con María. 📲");
 }
-
 document.getElementById("sendOrder").addEventListener("click", () => {
 const hasDessertStock = products.some(p => p.category === "Postres" && p.stock > 0);
 if (hasDessertStock) {
@@ -1903,12 +1838,10 @@ showDessertModal();
 sendOrderDirectly();
 }
 });
-
 document.getElementById("adminLink").addEventListener("click", function(e) {
 e.preventDefault();
 document.getElementById("adminModal").style.display = "flex";
 });
-
 document.getElementById("productForm").addEventListener("submit", function(e) {
 e.preventDefault();
 const name = document.getElementById("productName").value.trim();
@@ -1916,21 +1849,17 @@ const price = parseInt(document.getElementById("productPrice").value);
 const description = document.getElementById("productDescription").value.trim();
 const category = document.getElementById("categorySelect").value;
 const imageUrl = document.getElementById("productImageUrl").value.trim();
-
 if (!name || isNaN(price) || !category) {
 alert("⚠️ Por favor completa los campos obligatorios: Categoría, Nombre y Precio.");
 return;
 }
-
 const image = imageUrl || "default";
-
 if (editingProductId) {
 products = products.map(p => p.id === editingProductId ? { ...p, category, name, price, description, image, stock: p.stock } : p);
 } else {
 const id = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
 products.push({ id, category, name, price, description, image, stock: 50 });
 }
-
 renderProductList();
 renderCategories();
 this.reset();
@@ -1938,16 +1867,13 @@ editingProductId = null;
 saveData();
 alert("✅ Producto guardado correctamente.");
 });
-
 document.getElementById("saveChanges").addEventListener("click", function() {
 saveData();
 alert("💾 ¡Todos los cambios han sido guardados exitosamente!");
 });
-
 // Inicialización al cargar la página
 document.addEventListener("DOMContentLoaded", function() {
 renderCategories();
-
 // Cerrar modals al hacer clic fuera
 ["cartModal", "adminModal", "dessertModal"].forEach(id => {
 const modal = document.getElementById(id);
@@ -1960,41 +1886,35 @@ else this.style.display = "none";
 });
 }
 });
-
 // Animaciones de texto
 document.querySelectorAll('.animate-text').forEach((el, i) => {
 el.style.animationDelay = `${i * 0.2}s`;
 });
-
 // Carrusel de pasos
 const setupCarousel = (carouselId, prevBtnId, nextBtnId) => {
 const carousel = document.getElementById(carouselId);
 const prevBtn = document.getElementById(prevBtnId);
 const nextBtn = document.getElementById(nextBtnId);
 if (!carousel || !prevBtn || !nextBtn) return;
-
 let index = 0;
 const slides = carousel.children.length;
 const show = (i) => carousel.style.transform = `translateX(-${i * 100}%)`;
-
 prevBtn.onclick = () => { index = (index > 0) ? index - 1 : slides - 1; show(index); };
 nextBtn.onclick = () => { index = (index < slides - 1) ? index + 1 : 0; show(index); };
 setInterval(() => nextBtn.click(), 6000);
 };
 setupCarousel('carousel', 'prevBtn', 'nextBtn');
 setupCarousel('contactCarousel', 'prevBtnContact', 'nextBtnContact');
-
 // 🔹 Tooltip inteligente del asistente
 const tooltip = document.getElementById('assistantTooltip');
 if (tooltip) {
 setTimeout(() => { tooltip.style.opacity = '1'; }, 4000);
-setTimeout(() => { 
-tooltip.style.transition = 'opacity 0.5s'; 
+setTimeout(() => {
+tooltip.style.transition = 'opacity 0.5s';
 tooltip.style.opacity = '0';
 setTimeout(() => tooltip.style.display = 'none', 500);
 }, 10000);
 }
-
 // Prevenir comportamiento por defecto en enlaces de navegación
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
 link.addEventListener('click', function(e) {
@@ -2005,12 +1925,12 @@ target.scrollIntoView({ behavior: 'smooth' });
 }
 });
 });
-
 console.log("✅ Todo Casero - Página cargada correctamente. Versión: " + currentVersion);
 });
 </script>
 </body>
 </html>
+
 
 
 
