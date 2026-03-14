@@ -1107,7 +1107,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '4.6'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '4.7'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1190,7 +1190,7 @@ const defaultProducts = [
 { id: 20, category: "Pizzas", name: "Huevo", price: 13400, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza huevo", stock: 1000 },
 { id: 21, category: "Pizzas", name: "Palmitos", price: 18000, description: "Pizza de Palmitos,jamon,morron, salsa golf y aceitunas.", image: "pizza palmitos", stock: 1000 },
 { id: 22, category: "Pizzas", name: "Salchichas", price: 14400, description: "Pizza de Salchichas y aceitunas.", image: "pizza salchichas", stock: 1000 },
-{ id: 23, category: "Pizzas", name: "Choclo", price: 13500, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza choclo", stock: 0 },
+{ id: 23, category: "Pizzas", name: "Choclo", price: 13500, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza choclo", stock: 1000 },
 { id: 24, category: "Pizzas", name: "Americana", price: 17500, description: "Pizza de Huevo frito papas fritas y aceitunas.", image: "pizza americana", stock: 100 },
 { id: 25, category: "Pizzas Individuales", name: "Muzzarella Individual", price: 7500, description: "Individual con queso muzzarella.", image: "muzzarella individual", stock: 1000 },
 { id: 26, category: "Pizzas Individuales", name: "Fugaza Individual", price: 8000, description: "Individual fugaza tradicional.", image: "muzzarella individual", stock: 1000 },
