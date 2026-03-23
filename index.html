@@ -1107,7 +1107,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '4.8'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '4.9'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1176,9 +1176,9 @@ const defaultProducts = [
 { id: 6, category: "Sándwiches", name: "Sandwich Milanesa Completa", price: 14500, description: "Sandwich de Milanesa completo, lechuga, tomate, queso, jamon, huevo frito c/Fritas.", image: "milanesa", stock: 1000 },
 { id: 7, category: "Sándwiches", name: "Sandwich Milanesa Premium", price: 15000, description: "Sandwich Milanesa, lechuga, tomate, huevo, queso, jamon, cebolla caramelizada, morron c/Fritas.", image: "milanesa", stock: 1000 },
 { id: 8, category: "Sándwiches", name: "Tucumano", price: 18000, description: "Sándwich de  Milanesa de 30 cm tucumano  c/Fritas Doble.", image: "tucumano", stock: 1000 },
-{ id: 9, category: "Sándwiches", name: "Lomito Simple", price: 12500, description: "Sandwich de Lomito jugoso con tomate y lechuga c/Fritas.", image: "lomito", stock: 0 },
-{ id: 10, category: "Sándwiches", name: "Lomito Especial", price: 13000, description: "Sandwich de Lomito con jamon, queso, huevo c/Fritas.", image: "lomito", stock: 0 },
-{ id: 11, category: "Sándwiches", name: "Lomito Premium", price: 13500, description: "Sandwich de Lomito premium con lechuga, tomate, huevo frito, jamon , queso c/Fritas.", image: "lomito", stock: 0 },
+{ id: 9, category: "Sándwiches", name: "Lomito Simple", price: 12500, description: "Sandwich de Lomito jugoso con tomate y lechuga c/Fritas.", image: "lomito", stock: 10 },
+{ id: 10, category: "Sándwiches", name: "Lomito Especial", price: 13000, description: "Sandwich de Lomito con jamon, queso, huevo c/Fritas.", image: "lomito", stock: 10 },
+{ id: 11, category: "Sándwiches", name: "Lomito Premium", price: 13500, description: "Sandwich de Lomito premium con lechuga, tomate, huevo frito, jamon , queso c/Fritas.", image: "lomito", stock: 10 },
 { id: 12, category: "Hamburguesas", name: "Hamburguesa Completa", price: 10500, description: "Medallon de Carne Con lechuga, tomate, huevo frito c/Fritas.", image: "hamburguesa completa", stock: 10000 },
 { id: 13, category: "Hamburguesas", name: "Hamburguesa Vegetariana", price: 10000, description: "Medallon (Lenteja,zanahoria,cebolla), lechuga, tomate, huevo frito c/Fritas.", image: "hamburguesa vegetariana", stock: 10000 },
 { id: 14, category: "Hamburguesas", name: "Hamburguesa Doble", price: 12000, description: "Doble Medallon carne, cheddar, huevo frito, cebolla caramelizada  c/Fritas.", image: "hamburguesa doble", stock: 10000 },
