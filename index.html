@@ -1107,7 +1107,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '5.1'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '5.2'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1196,9 +1196,9 @@ const defaultProducts = [
 { id: 26, category: "Pizzas Individuales", name: "Fugaza Individual", price: 8000, description: "Individual fugaza tradicional.", image: "muzzarella individual", stock: 1000 },
 { id: 27, category: "Pizzas Individuales", name: "Napolitana Individual", price: 8500, description: "Individual napolitana con tomate y ajo.", image: "napolitana individual", stock: 1000 },
 { id: 28, category: "Pizzas Individuales", name: "Especial Individual", price: 9000, description: "Individual especial con jamon y morrones.", image: "piz", stock: 1000 },
-{ id: 29, category: "Pastas", name: "Tallarines con Bolognesa", price: 10500, description: "Pasta fresca con salsa bolognesa casera.", image: "pasta", stock: 0 },
-{ id: 30, category: "Pastas", name: "Ñoquis con Bolognesa", price: 11000, description: "Ñoquis frescos con salsa bolognesa.", image: "ñoquis con bolognesa", stock: 0 },
-{ id: 31, category: "Pastas", name: "Ravioles con Bolognesa", price: 11500, description: "Ravioles de verdura con salsa bolognesa.", image: "ravioles con bolognesa", stock: 0 },
+{ id: 29, category: "Pastas", name: "Tallarines con Bolognesa", price: 10500, description: "Pasta fresca con salsa bolognesa casera.", image: "pasta", stock: 1000 },
+{ id: 30, category: "Pastas", name: "Ñoquis con Bolognesa", price: 11000, description: "Ñoquis frescos con salsa bolognesa.", image: "ñoquis con bolognesa", stock: 1000 },
+{ id: 31, category: "Pastas", name: "Ravioles con Bolognesa", price: 11500, description: "Ravioles de verdura con salsa bolognesa.", image: "ravioles con bolognesa", stock: 1000 },
 { id: 32, category: "Acompañamientos", name: "Porción de Fritas", price: 6000, description: "Porción grande de papas fritas.", image: "porcion de fritas", stock: 10000 },
 { id: 33, category: "Acompañamientos", name: "Salchipapas", price: 9500, description: "Porción grande de Salchipapas.", image: "salchipapa", stock: 10000},
 { id: 34, category: "Acompañamientos", name: "Cono de Fritas", price: 5000, description: "Cono mediano de papas fritas.", image: "cono de fritas", stock: 10000 },
