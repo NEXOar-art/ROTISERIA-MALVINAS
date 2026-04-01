@@ -1107,7 +1107,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '5.4'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '5.5'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1168,9 +1168,9 @@ if (lowerName.includes('flan') || lowerName.includes('postre')) return defaultIm
 return defaultImages.default;
 }
 const defaultProducts = [
-{ id: 1, category: "Sándwiches", name: "Bondiola", price: 11000 , description: "Delicioso sándwich de bondiola con tomate, lechuga, morron, cebolla caramelizada c/Fritas.", image: "bondiola", stock: 1000},
-{ id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 11500, description: "Bondiola con queso, jamon y huevo c/Fritas.", image: "bondiola", stock: 1000 },
-{ id: 3, category: "Sándwiches", name: "Bondiola Premium", price: 12500, description: "Bondiola tomate, lechuga, morron, cebolla caramelizada, queso, huevo, jamon c/Fritas.", image: "bondiola", stock: 1000},
+{ id: 1, category: "Sándwiches", name: "Bondiola", price: 12000 , description: "Delicioso sándwich de bondiola con tomate, lechuga, morron, cebolla caramelizada c/Fritas.", image: "bondiola", stock: 1000},
+{ id: 2, category: "Sándwiches", name: "Bondiola Especial", price: 12500, description: "Bondiola con queso, jamon y huevo c/Fritas.", image: "bondiola", stock: 1000 },
+{ id: 3, category: "Sándwiches", name: "Bondiola Premium", price: 13500, description: "Bondiola tomate, lechuga, morron, cebolla caramelizada, queso, huevo, jamon c/Fritas.", image: "bondiola", stock: 1000},
 { id: 4, category: "Sándwiches", name: "Sandwich Milanesa ", price: 13000, description: "Milanesa con lechuga y tomate c/Fritas.", image: "milanesa", stock: 1000 },
 { id: 5, category: "Sándwiches", name: "Sandwich Milanesa Especial", price: 13500, description: "Sandwich de Milanesa, queso, jamon,huevo frito c/Fritas.", image: "milanesa", stock: 1000 },
 { id: 6, category: "Sándwiches", name: "Sandwich Milanesa Completa", price: 14500, description: "Sandwich de Milanesa completo, lechuga, tomate, queso, jamon, huevo frito c/Fritas.", image: "milanesa", stock: 1000 },
