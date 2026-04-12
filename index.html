@@ -1107,7 +1107,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '5.6'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '5.7'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1149,6 +1149,7 @@ const defaultImages = {
 "milanesa con pure": "logo.jpeg",
 "milanesa a caballo": "Milanesa a caballo.jpeg",
 "milanesa napolitana": "logo.jpeg",
+"tucumano+salchipapa": "tucumano+salchipapa.jpeg",    
 "default": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=400&fit=crop"
 };
 // 🔹 Función para obtener URL de imagen válida
@@ -1205,15 +1206,16 @@ const defaultProducts = [
 { id: 35, category: "Empanadas", name: "Empanadas", price: 20000, description: "Empanadas de Carne caseras x 12 unidades.", image: "empanadas", stock: 0 },
 { id: 36, category: "Empanadas", name: "Empanadas", price: 10000, description: "Empanadas de Carne caseras x 6 unidades.", image: "empanadas", stock: 0 },
 { id: 37, category: "Postres", name: "Flan", price: 5500, description: "Con crema o mixto (Dulce de Leche y Crema).", image: "flan", stock: 0 },
-{ id: 38, category: "Postres", name: "Torta Helada", price: 4500, description: "Crema Americana con Dulce de Leche.", image: "torta helada", stock: 0},
-{ id: 39, category: "Postres", name: "Ensalada de Frutas", price: 4000, description: "Variedades de Frutas Deliciosas.", image: "ensalada de fruta", stock: 0 },
+{ id: 38, category: "Postres", name: "Torta Helada", price: 0, description: "Crema Americana con Dulce de Leche.", image: "torta helada", stock: 0},
+{ id: 39, category: "Postres", name: "Ensalada de Frutas", price: 0, description: "Variedades de Frutas Deliciosas.", image: "ensalada de fruta", stock: 0 },
 { id: 40, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 13000, description: "Milanesa acompañada de puré de papas + pan casero.", image: "milanesa con pure", stock: 1000 },
 { id: 41, category: "Al Plato", name: "Milanesa a Caballo al Plato", price: 13500, description: "Milanesa con huevos frito por encima + pan casero.", image:"milanesa a caballo", stock: 1000 },
 { id: 42, category: "Al Plato", name: "Milanesa Napolitana al Plato", price: 14500, description: "Milanesa con salsa de tomate, jamon, queso, tomate c/fritas + pan casero.", image: "Milanesa napolitana", stock: 1000 },
-{ id: 43, category: "Combos", name: "Combo (4) Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir entre 6 personas.", image: "hamburguesa zapping", stock: 0 },
-{ id: 44, category: "Combos", name: "Combo (2) de 2 Hamburguesas", price: 18000, description: "Delicioso combo para compartir entre 2 personas.", image: "hamburguesa completa", stock: 1000 },
-{ id: 45, category: "Combos", name: "Combo (3) Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir entre 6 personas.", image: "pizza", stock: 1000 },
-{ id: 46, category: "Combos", name: "Combo (1) Pizza Especial + porcion de Fritas", price: 17000, description: "Delicioso combo para compartir.", image: "pizza especial", stock: 1000 }
+{ id: 43, category: "Combos", name: "Combo (5) 1 Sandwich Tucumano + 1 Salchipapa", price: 23000, description: "Delicioso combo para compartir entre 3 personas.", image: "tucumano+salchipapa", stock: 1000 },    
+{ id: 44, category: "Combos", name: "Combo (4) Hamburguesa Zapping con Fritas + Pizza Especial", price: 36500, description: "Delicioso combo para compartir entre 6 personas.", image: "hamburguesa zapping", stock: 0 },
+{ id: 45, category: "Combos", name: "Combo (2) de 2 Hamburguesas", price: 18000, description: "Delicioso combo para compartir entre 2 personas.", image: "hamburguesa completa", stock: 1000 },
+{ id: 46, category: "Combos", name: "Combo (3) Pizza Muzzarella + 2 Hamburguesas Completas", price: 28000, description: "Delicioso combo para compartir entre 6 personas.", image: "pizza", stock: 1000 },
+{ id: 47, category: "Combos", name: "Combo (1) Pizza Especial + porcion de Fritas", price: 17000, description: "Delicioso combo para compartir.", image: "pizza especial", stock: 1000 }
 ];
 const defaultOffers = [
 { id: 1, day: "lunes", description: "Pastas 10% off los Lunes", discount: 10 },
