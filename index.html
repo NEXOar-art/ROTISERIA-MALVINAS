@@ -1107,7 +1107,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '6.0'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '6.1'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1202,7 +1202,7 @@ const defaultProducts = [
 { id: 31, category: "Pastas", name: "Ravioles con Bolognesa", price: 12500, description: "Ravioles de verdura con salsa bolognesa.", image: "ravioles con bolognesa", stock: 0 },
 { id: 32, category: "Acompañamientos", name: "Porción de Fritas", price: 7000, description: "Porción grande de papas fritas.", image: "porcion de fritas", stock: 10000 },
 { id: 33, category: "Acompañamientos", name: "Salchipapas", price: 10500, description: "Porción grande de Salchipapas.", image: "salchipapa", stock: 10000},
-{ id: 34, category: "Acompañamientos", name: "Cono de Fritas", price: 6000, description: "Cono mediano de papas fritas.", image: "cono de fritas", stock: 10000 },
+{ id: 34, category: "Acompañamientos", name: "Cono de Fritas", price: 4000, description: "Cono mediano de papas fritas.", image: "cono de fritas", stock: 10000 },
 { id: 35, category: "Empanadas", name: "Empanadas", price: 21000, description: "Empanadas de Carne caseras x 12 unidades.", image: "empanadas", stock: 0 },
 { id: 36, category: "Empanadas", name: "Empanadas", price: 11000, description: "Empanadas de Carne caseras x 6 unidades.", image: "empanadas", stock: 0 },
 { id: 37, category: "Postres", name: "Flan", price: 6500, description: "Con crema o mixto (Dulce de Leche y Crema).", image: "flan", stock: 0 },
