@@ -27,6 +27,49 @@ line-height: 1.6;
 background-color: var(--light-color);
 color: var(--dark-color);
 }
+
+/* 🔹 NUEVO: Banner superior persuasivo de Instagram */
+.instagram-top-banner {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  z-index: 101;
+  position: relative;
+}
+.instagram-top-banner span {
+  font-weight: 500;
+}
+.btn-instagram-micro {
+  background: white;
+  color: #bc1888;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+  animation: microEffect 1s infinite alternate;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.btn-instagram-micro:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(188, 24, 136, 0.4);
+  color: #cc2366;
+}
+.btn-instagram-micro i {
+  font-size: 1.1rem;
+}
+
 header {
 background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 padding: 1.5rem;
@@ -657,6 +700,17 @@ border-top: 1px solid #eee;
 padding-top: 1rem;
 }
 @media (max-width: 768px) {
+.instagram-top-banner {
+  flex-direction: column;
+  padding: 0.6rem;
+}
+.instagram-top-banner span {
+  font-size: 0.9rem;
+}
+.btn-instagram-micro {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
 .hero h1 {
 font-size: 2rem;
 }
@@ -854,6 +908,15 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </script>
 </head>
 <body>
+
+<!-- 🔹 NUEVO: Banner superior persuasivo de Instagram con microefecto -->
+<div class="instagram-top-banner">
+  <span>📸 ¡Síguenos en Instagram para ver nuestras delicias caseras y promociones exclusivas! ✨</span>
+  <a href="https://www.instagram.com/todocasero.rotiseria_/" target="_blank" class="btn-instagram-micro" aria-label="Seguir en Instagram">
+    <i class="fab fa-instagram"></i> Ver Nuestro Instagram
+  </a>
+</div>
+
 <header>
 <div class="logo">Todo Casero</div>
 <div class="tagline">Auténtica comida casera en Campana</div>
@@ -1954,7 +2017,6 @@ console.log("✅ Todo Casero - Página cargada correctamente. Versión: " + curr
 </script>
 </body>
 </html>
-
 
 
 
