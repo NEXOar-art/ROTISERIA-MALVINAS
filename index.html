@@ -1170,7 +1170,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '6.9'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '7.0'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1270,7 +1270,7 @@ const defaultProducts = [
 { id: 35, category: "Acompañamientos", name: "Cono de Fritas", price: 4000, description: "Cono mediano de papas fritas.", image: "cono de fritas", stock: 10000 },
 { id: 36, category: "Empanadas", name: "Empanadas", price: 24000, description: "Empanadas de Carne caseras x 12 unidades.", image: "empanadas", stock: 0 },
 { id: 37, category: "Empanadas", name: "Empanadas", price: 12000, description: "Empanadas de Carne caseras x 6 unidades.", image: "empanadas", stock: 0 },
-{ id: 38, category: "Postres", name: "Flan", price: 6500, description: "C/Crema).", image: "flan", stock: 1000 },
+{ id: 38, category: "Postres", name: "Flan", price: 6500, description: "C/Crema).", image: "flan", stock: 0 },
 { id: 39, category: "Postres", name: "Torta Helada", price: 0, description: "Crema Americana con Dulce de Leche.", image: "torta helada", stock: 0},
 { id: 40, category: "Postres", name: "Ensalada de Frutas", price: 0, description: "Variedades de Frutas Deliciosas.", image: "ensalada de fruta", stock: 0 },
 { id: 41, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 14000, description: "Milanesa acompañada de puré de papas + pan casero.", image: "milanesa con pure", stock: 1000 },
