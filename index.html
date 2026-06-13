@@ -895,6 +895,77 @@ width: 100%;
 height: 100%;
 border: 0;
 }
+
+/* 🔹 NUEVO: Botón flotante del Mundial 2026 */
+.worldcup-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #000000 100%);
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+  z-index: 99;
+  text-decoration: none;
+  animation: worldcupPulse 2s infinite, worldcupFloat 3s ease-in-out infinite;
+  border: 3px solid #fff;
+}
+.worldcup-float:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+.worldcup-float i {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+@keyframes worldcupPulse {
+  0%, 100% { 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 0 rgba(0,0,0,0.4);
+  }
+  50% { 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 15px rgba(0,0,0,0);
+  }
+}
+@keyframes worldcupFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.worldcup-tooltip {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  font-size: 0.9rem;
+  max-width: 250px;
+  text-align: center;
+  z-index: 100;
+  animation: fadeIn 0.5s ease-out;
+  border-left: 4px solid #fff;
+}
+.worldcup-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 30px;
+  border-width: 8px 8px 0;
+  border-style: solid;
+  border-color: #1e3c72 transparent transparent;
+}
+.worldcup-tooltip strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
 </style>
 <script>
 // Cache Busting: Añade un parámetro único a los scripts para forzar la recarga.
@@ -1156,6 +1227,16 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <input type="password" id="adminPassword" placeholder="Clave de acceso">
 <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
 </div>
+</div>
+<!-- 🔹 BOTÓN FLOTANTE DEL MUNDIAL 2026 -->
+<a href="https://www.google.es/search?sca_esv=37e3ac4ce01ae360&sxsrf=ANbL-n4eD2-bX5GV7sxkHO-lHmV1JT6hOw:1781310157716&q=Copa+Mundial+de+la+FIFA+2026&oi=ddle&noiga=1&ct=460195266&hl=es-419&stick=H4sIAAAAAAAC_-NgVuLQz9U3MDYoNJ_AwriIVcY5vyBRwbc0LyUzMUchJVUhJ1HBzdPNUcHIwMgMAK446cQuAAAA&sa=X&ved=0ahUKEwiKxbu5-YKVAxV0ppUCHYn6EIkQPQgP&biw=1415&bih=681&dpr=1.35" target="_blank" class="worldcup-float" title="Copa Mundial FIFA 2026 - 11 de Junio al 19 de Julio" aria-label="Copa Mundial FIFA 2026">
+  <i class="fas fa-futbol" style="background: linear-gradient(45deg, #fff 50%, #000 50%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"></i>
+</a>
+<div class="worldcup-tooltip" id="worldcupTooltip">
+  <strong>⚽ Mundial 2026</strong>
+  🏆 11 de Junio - 19 de Julio<br>
+  🌎 48 equipos • 3 países<br>
+  📍 USA, México y Canadá
 </div>
 <!-- 🔹 BOTÓN FLOTANTE DEL ASISTENTE INTELIGENTE (NotebookLM) -->
 <a href="https://notebooklm.google.com/notebook/bdef646b-85d8-4601-b523-3ebec3768093?authuser=2" target="_blank" class="assistant-float" title="Asistente Inteligente Todo Casero - Pregúntale sobre el menú, precios, horarios y más" aria-label="Asistente Inteligente de Todo Casero">
@@ -2004,6 +2085,16 @@ tooltip.style.transition = 'opacity 0.5s';
 tooltip.style.opacity = '0';
 setTimeout(() => tooltip.style.display = 'none', 500);
 }, 10000);
+}
+// 🔹 Tooltip del Mundial 2026
+const worldcupTooltip = document.getElementById('worldcupTooltip');
+if (worldcupTooltip) {
+setTimeout(() => { worldcupTooltip.style.opacity = '1'; }, 5000);
+setTimeout(() => {
+worldcupTooltip.style.transition = 'opacity 0.5s';
+worldcupTooltip.style.opacity = '0';
+setTimeout(() => worldcupTooltip.style.display = 'none', 500);
+}, 12000);
 }
 // Prevenir comportamiento por defecto en enlaces de navegación
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
