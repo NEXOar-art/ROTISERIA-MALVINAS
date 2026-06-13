@@ -901,35 +901,39 @@ border: 0;
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #000000 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
   color: white;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: all 0.3s;
   z-index: 99;
   text-decoration: none;
   animation: worldcupPulse 2s infinite, worldcupFloat 3s ease-in-out infinite;
-  border: 3px solid #fff;
+  border: 3px solid #1e3c72;
+  padding: 8px;
+  overflow: hidden;
 }
 .worldcup-float:hover {
   transform: translateY(-8px) scale(1.1);
   box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
-.worldcup-float i {
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+.worldcup-float img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 @keyframes worldcupPulse {
   0%, 100% { 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 0 rgba(0,0,0,0.4);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 0 rgba(30, 60, 114, 0.4);
   }
   50% { 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 15px rgba(0,0,0,0);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 15px rgba(30, 60, 114, 0);
   }
 }
 @keyframes worldcupFloat {
@@ -938,7 +942,7 @@ border: 0;
 }
 .worldcup-tooltip {
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;
   left: 20px;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
@@ -1230,7 +1234,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </div>
 <!-- 🔹 BOTÓN FLOTANTE DEL MUNDIAL 2026 -->
 <a href="https://www.google.es/search?sca_esv=37e3ac4ce01ae360&sxsrf=ANbL-n4eD2-bX5GV7sxkHO-lHmV1JT6hOw:1781310157716&q=Copa+Mundial+de+la+FIFA+2026&oi=ddle&noiga=1&ct=460195266&hl=es-419&stick=H4sIAAAAAAAC_-NgVuLQz9U3MDYoNJ_AwriIVcY5vyBRwbc0LyUzMUchJVUhJ1HBzdPNUcHIwMgMAK446cQuAAAA&sa=X&ved=0ahUKEwiKxbu5-YKVAxV0ppUCHYn6EIkQPQgP&biw=1415&bih=681&dpr=1.35" target="_blank" class="worldcup-float" title="Copa Mundial FIFA 2026 - 11 de Junio al 19 de Julio" aria-label="Copa Mundial FIFA 2026">
-  <i class="fas fa-futbol" style="background: linear-gradient(45deg, #fff 50%, #000 50%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"></i>
+  <img src="LOGO-MUNDIAL.png" alt="Logo Copa Mundial FIFA 2026">
 </a>
 <div class="worldcup-tooltip" id="worldcupTooltip">
   <strong>⚽ Mundial 2026</strong>
