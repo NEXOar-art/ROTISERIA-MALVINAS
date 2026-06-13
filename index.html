@@ -915,17 +915,17 @@ border: 0;
   text-decoration: none;
   animation: worldcupPulse 2s infinite, worldcupFloat 3s ease-in-out infinite;
   border: 3px solid #1e3c72;
-  padding: 5px;
+  padding: 0;
   overflow: hidden;
 }
 .worldcup-float:hover {
   transform: translateY(-8px) scale(1.1);
   box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
-.worldcup-float img {
-  width: 85%;
-  height: 85%;
-  object-fit: contain;
+.worldcup-float video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
 }
 @keyframes worldcupPulse {
@@ -1234,7 +1234,9 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </div>
 <!-- 🔹 BOTÓN FLOTANTE DEL MUNDIAL 2026 -->
 <a href="https://www.google.es/search?sca_esv=37e3ac4ce01ae360&sxsrf=ANbL-n4eD2-bX5GV7sxkHO-lHmV1JT6hOw:1781310157716&q=Copa+Mundial+de+la+FIFA+2026&oi=ddle&noiga=1&ct=460195266&hl=es-419&stick=H4sIAAAAAAAC_-NgVuLQz9U3MDYoNJ_AwriIVcY5vyBRwbc0LyUzMUchJVUhJ1HBzdPNUcHIwMgMAK446cQuAAAA&sa=X&ved=0ahUKEwiKxbu5-YKVAxV0ppUCHYn6EIkQPQgP&biw=1415&bih=681&dpr=1.35" target="_blank" class="worldcup-float" title="Copa Mundial FIFA 2026 - 11 de Junio al 19 de Julio" aria-label="Copa Mundial FIFA 2026">
-  <img src="LOGO-MUNDIAL.png" alt="Logo Copa Mundial FIFA 2026">
+  <video autoplay loop muted playsinline poster="LOGO-MUNDIAL.png">
+    <source src="VIDEO-MUNDIAL.mp4" type="video/mp4">
+  </video>
 </a>
 <div class="worldcup-tooltip" id="worldcupTooltip">
   <strong>⚽ Mundial 2026</strong>
