@@ -1170,7 +1170,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </a>
 <script>
 // --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '7.3'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '7.4'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
 localStorage.setItem('appVersion', currentVersion);
@@ -1562,9 +1562,9 @@ doc.setFontSize(12);
 doc.text(`💳 Pago: ${payment}`, 20, y);
 if (payment === "Transferencia") {
 y += 10;
-doc.text("Alias: Adri.roti", 20, y);
+doc.text("Alias: CONFIRMAR CON EL EQUIPO", 20, y);
 y += 10;
-doc.text("Titular: Adriana Basilia Enrique", 20, y);
+doc.text("Titular: CONFIRMAR CON EL EQUIPO", 20, y);
 }
 y += 20;
 doc.text("📌 Nota: Retirar en local en el horario acordado.", 20, y);
@@ -1603,9 +1603,9 @@ const payment = document.querySelector('input[name="payment"]:checked').value;
 message += `💳 *Método de Pago*: ${payment}
 `;
 if (payment === "Transferencia") {
-message += `🏦 Alias: Adri.roti
+message += `🏦 Alias: CONFIRMAR CON EL EQUIPO
 `;
-message += `👤 Titular: Adriana Basilia Enrique
+message += `👤 Titular: CONFIRMAR CON EL EQUIPO
 `;
 }
 message += `
@@ -1647,7 +1647,7 @@ userName = nameMatch[1].charAt(0).toUpperCase() + nameMatch[1].slice(1).toLowerC
 }
 const greeting = userName ? `¡Hola ${userName}! 👋` : "¡Hola! 👋";
 const closing = "¿En qué más puedo ayudarte? 😊";
-const paymentInfo = "💳 Aceptamos: Efectivo 💵 o Transferencia 🏦 (Alias: Adri.roti)";
+const paymentInfo = "💳 Aceptamos: Efectivo 💵 o Transferencia 🏦 (Alias:CONFIRMAR CON EL EQUIPO)";
 let response = `${greeting} Gracias por escribir a <strong>Todo Casero</strong>. `;
 const lowerMessage = message.toLowerCase();
 // 🔹 Lógica inteligente del asistente María
@@ -1701,8 +1701,8 @@ response += "¿Te ayudo a armar tu pedido? 🍔";
 response += `${paymentInfo}<br><br>`;
 response += "💵 <strong>Efectivo:</strong> Pagas al momento de retirar tu pedido.<br>";
 response += "🏦 <strong>Transferencia:</strong><br>";
-response += "• Alias: <strong>A CONFIRMAR CON EL EQUIPO</strong><br>";
-response += "• Titular: Adriana Basilia Enrique<br><br>";
+response += "• Alias: <strong> CONFIRMAR CON EL EQUIPO</strong><br>";
+response += "• Titular:CONFIRMAR CON EL EQUIPO<br><br>";
 response += "¿Con qué método prefieres pagar? 😊";
 } else if (lowerMessage.includes("oferta") || lowerMessage.includes("promoción") || lowerMessage.includes("descuento") || lowerMessage.includes("descuentos")) {
 const today = new Date().toLocaleString('es-AR', { weekday: 'long' }).toLowerCase();
