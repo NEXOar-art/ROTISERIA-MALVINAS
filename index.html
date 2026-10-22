@@ -71,6 +71,413 @@ color: var(--dark-color);
   font-size: 1.1rem;
 }
 
+/* 🔹 NUEVO: BANNER INFINITO MARQUEE SUPERIOR */
+.infinite-banner-wrapper {
+  background: linear-gradient(90deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 102;
+  border-bottom: 2px solid var(--secondary-color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.infinite-banner-wrapper::before,
+.infinite-banner-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.infinite-banner-wrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(26,26,46,1) 0%, rgba(26,26,46,0) 100%);
+}
+.infinite-banner-wrapper::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(26,26,46,1) 0%, rgba(26,26,46,0) 100%);
+}
+.infinite-banner-track {
+  display: flex;
+  width: max-content;
+  animation: scrollInfinite 45s linear infinite;
+  padding: 0.9rem 0;
+}
+.infinite-banner-wrapper:hover .infinite-banner-track {
+  animation-play-state: paused;
+}
+.infinite-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.infinite-banner-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.3s;
+}
+.infinite-banner-item:hover {
+  transform: scale(1.08);
+}
+.infinite-banner-item .emoji {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.3));
+  animation: emojiPulse 2s ease-in-out infinite;
+}
+.infinite-banner-item strong {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.infinite-banner-item a {
+  color: #ffd93d;
+  text-decoration: none;
+  border-bottom: 1px dashed #ffd93d;
+  transition: all 0.3s;
+}
+.infinite-banner-item a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+.infinite-banner-separator {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+@keyframes scrollInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes emojiPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(-5deg); }
+}
+/* FIN BANNER INFINITO */
+
+/* 🔹 NUEVO: REFLECTION EFFECT (EFECTO REFLEJO) EN TARJETAS Y CONTENEDORES */
+.reflection-effect {
+  position: relative;
+  overflow: visible;
+}
+.reflection-effect::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: 5%;
+  right: 5%;
+  height: 40%;
+  background: linear-gradient(
+    to bottom,
+    rgba(230, 126, 34, 0.25) 0%,
+    rgba(243, 156, 18, 0.15) 20%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  transform: scaleY(-1);
+  opacity: 0.4;
+  filter: blur(8px);
+  pointer-events: none;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+  z-index: -1;
+  border-radius: inherit;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+}
+.reflection-effect:hover::after {
+  opacity: 0.7;
+  filter: blur(12px);
+}
+
+/* 🔹 NUEVO: MICRO EFECTOS DE HOVER MEJORADOS */
+/* Efecto lift + brillo en tarjetas */
+.menu-section,
+.info-card,
+.payment-info,
+.category-header,
+.category,
+.product,
+.chat-widget,
+.chat-header,
+.cart-content,
+.dessert-content,
+.admin-panel,
+.modal-content,
+footer {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.menu-section:hover,
+.info-card:hover,
+.payment-info:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(230, 126, 34, 0.25),
+              0 5px 15px rgba(0,0,0,0.08);
+}
+
+.category-header:hover {
+  transform: translateX(4px);
+  box-shadow: -4px 0 12px rgba(211, 84, 0, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.product {
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+.product:hover {
+  background: linear-gradient(90deg, #fff9e6 0%, #fff3d9 50%, #fff9e6 100%);
+  transform: translateX(6px);
+  box-shadow: -6px 0 16px rgba(230, 126, 34, 0.25),
+              0 4px 12px rgba(0,0,0,0.08);
+  padding-left: 1.4rem;
+}
+
+/* Botones con efecto shine (brillo deslizante) */
+.btn,
+.add-to-cart,
+.quantity-btn,
+.dessert-btn,
+.chat-input button,
+.admin-form button,
+#sendOrder {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn::before,
+.add-to-cart::before,
+.quantity-btn::before,
+.dessert-btn::before,
+.chat-input button::before,
+.admin-form button::before,
+#sendOrder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: -1;
+}
+.btn:hover::before,
+.add-to-cart:hover::before,
+.quantity-btn:hover::before,
+.dessert-btn:hover::before,
+.chat-input button:hover::before,
+.admin-form button:hover::before,
+#sendOrder:hover::before {
+  left: 100%;
+}
+
+.btn:hover,
+.add-to-cart:hover,
+.dessert-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+}
+
+/* Efecto en logo del header */
+.logo {
+  transition: all 0.4s ease;
+  cursor: default;
+}
+.logo:hover {
+  text-shadow: 0 0 15px rgba(255,255,255,0.8),
+               0 0 30px rgba(255, 209, 61, 0.6),
+               2px 2px 4px rgba(0,0,0,0.2);
+  letter-spacing: 2px;
+}
+
+/* Efecto en enlaces del nav */
+nav a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffd93d;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+nav a:hover::after {
+  width: 90%;
+}
+nav a:hover {
+  transform: translateY(-2px);
+}
+
+/* Botones flotantes con efecto glow pulsante */
+.whatsapp-float,
+.assistant-float {
+  position: relative;
+}
+.whatsapp-float::before,
+.assistant-float::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: -1;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.15); }
+}
+.whatsapp-float:hover,
+.assistant-float:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* Efecto en product image hover */
+.product-image {
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.product:hover .product-image {
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+}
+
+/* Cards de combos con efecto reflejo y hover premium */
+#combosContainer > div {
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+#combosContainer > div::after {
+  content: '';
+  position: absolute;
+  bottom: -35%;
+  left: 8%;
+  right: 8%;
+  height: 35%;
+  background: linear-gradient(
+    to bottom,
+    rgba(230, 126, 34, 0.3) 0%,
+    transparent 100%
+  );
+  transform: scaleY(-1);
+  opacity: 0.35;
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.5s;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+}
+#combosContainer > div:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(230, 126, 34, 0.35),
+              0 10px 20px rgba(0,0,0,0.12);
+}
+#combosContainer > div:hover::after {
+  opacity: 0.6;
+}
+
+/* Efecto shine en tarjetas de info */
+.info-card {
+  position: relative;
+  overflow: hidden;
+}
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(243, 156, 18, 0.08) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) translateY(-100%);
+  transition: transform 0.8s;
+  pointer-events: none;
+}
+.info-card:hover::before {
+  transform: translateX(100%) translateY(100%);
+}
+
+/* Efecto en offer banner */
+.offer-banner {
+  position: relative;
+  overflow: hidden;
+}
+.offer-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shineSweep 3s ease-in-out infinite;
+}
+@keyframes shineSweep {
+  0% { left: -100%; }
+  50%, 100% { left: 150%; }
+}
+
+/* Footer hover */
+footer:hover {
+  box-shadow: 0 -8px 30px rgba(243, 156, 18, 0.3);
+}
+.footer-section ul li a {
+  display: inline-block;
+  transition: all 0.3s;
+}
+.footer-section ul li a:hover {
+  transform: translateX(6px);
+  padding-left: 4px;
+}
+
+/* Hero content hover */
+.hero-content {
+  transition: all 0.5s ease;
+}
+.hero-content:hover {
+  transform: scale(1.02);
+}
+
+/* Badges con efecto */
+.availability-badge {
+  transition: all 0.3s ease;
+}
+.availability-badge:hover {
+  transform: scale(1.15) rotate(-2deg);
+}
+
 header {
 background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 padding: 1.5rem;
@@ -260,11 +667,17 @@ margin-left: 1rem;
 white-space: nowrap;
 }
 .product-image {
-width: 80px;
-height: 80px;
+width: 130px;
+height: 130px;
 object-fit: cover;
-border-radius: 4px;
+border-radius: 8px;
 margin-left: 1rem;
+flex-shrink: 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+.product-image:hover {
+transform: scale(1.05);
 }
 .add-to-cart {
 background-color: var(--secondary-color);
@@ -701,6 +1114,16 @@ border-top: 1px solid #eee;
 padding-top: 1rem;
 }
 @media (max-width: 768px) {
+.infinite-banner-content {
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+.infinite-banner-item {
+  font-size: 0.85rem;
+}
+.infinite-banner-item .emoji {
+  font-size: 1.1rem;
+}
 .instagram-top-banner {
   flex-direction: column;
   padding: 0.6rem;
@@ -730,12 +1153,18 @@ margin-left: 0;
 margin-top: 0.5rem;
 }
 .product-image {
+width: 180px;
+height: 180px;
 margin-left: 0;
 margin-top: 1rem;
+align-self: center;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .add-to-cart {
 margin-left: 0;
 margin-top: 0.5rem;
+align-self: center;
 }
 .chat-widget {
 width: 90%;
@@ -801,7 +1230,6 @@ opacity: 1;
 transform: translateY(0);
 }
 }
-/* Estilos adicionales para el modal de postre */
 .dessert-modal {
 display: none;
 position: fixed;
@@ -849,13 +1277,11 @@ margin-top: 1rem;
 .no-thanks:hover {
 background-color: #aaa;
 }
-/* Indicador de stock bajo */
 .stock-low {
 color: #e74c3c;
 font-size: 0.8rem;
 font-weight: bold;
 }
-/* Badge de disponibilidad */
 .availability-badge {
 display: inline-block;
 padding: 0.2rem 0.5rem;
@@ -876,10 +1302,9 @@ color: white;
 background-color: #f39c12;
 color: white;
 }
-/* Video container styles */
 .video-container {
 position: relative;
-padding-bottom: 56.25%; /* 16:9 aspect ratio */
+padding-bottom: 56.25%;
 height: 0;
 overflow: hidden;
 max-width: 100%;
@@ -898,7 +1323,6 @@ border: 0;
 }
 </style>
 <script>
-// Cache Busting: Añade un parámetro único a los scripts para forzar la recarga.
 const cacheBuster = `?v=${new Date().getTime()}`;
 const scripts = [
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js",
@@ -910,7 +1334,59 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </head>
 <body>
 
-<!-- 🔹 NUEVO: Banner superior persuasivo de Instagram con microefecto -->
+<!-- 🔹 NUEVO: BANNER INFINITO MARQUEE SUPERIOR (movimiento continuo) -->
+<div class="infinite-banner-wrapper" role="marquee" aria-label="Información destacada de Todo Casero">
+  <div class="infinite-banner-track">
+    <!-- Primera copia del contenido -->
+    <div class="infinite-banner-content">
+      <span class="infinite-banner-item"><span class="emoji">🔥</span><strong>¡LO MÁS PEDIDO DE TODO CASERO!</strong></span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🥖</span><strong>Sándwich Tucumano:</strong> 30 cm de milanesa con papas fritas dobles</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🍕</span><strong>Pizzas Caseras:</strong> Muzzarella, Especial, Napolitana y más</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🍽️</span><strong>Milanesas al Plato:</strong> Napolitana, A Caballo o con Puré</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🍔</span><strong>Combos Económicos:</strong> Opciones para compartir</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">⏰</span><strong>Horario:</strong> Lunes a Domingo de 19:30 a 23:45 hs</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">📲</span>WhatsApp: <strong>3489358998</strong></span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🌐</span>Web: <a href="https://rotiseria-malvinas.vercel.app" target="_blank" rel="noopener">rotiseria-malvinas.vercel.app</a></span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🛒</span>Armá tu pedido en la web o tocá <strong>"Chatear con María"</strong> para confirmar</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">📍</span>Todos los pedidos se retiran en <strong>Malvinas 3</strong></span>
+      <span class="infinite-banner-separator">★</span>
+    </div>
+    <!-- Segunda copia idéntica para loop infinito sin cortes -->
+    <div class="infinite-banner-content" aria-hidden="true">
+      <span class="infinite-banner-item"><span class="emoji">🔥</span><strong>¡LO MÁS PEDIDO DE TODO CASERO!</strong></span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🥖</span><strong>Sándwich Tucumano:</strong> 30 cm de milanesa con papas fritas dobles</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🍕</span><strong>Pizzas Caseras:</strong> Muzzarella, Especial, Napolitana y más</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🍽️</span><strong>Milanesas al Plato:</strong> Napolitana, A Caballo o con Puré</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🍔</span><strong>Combos Económicos:</strong> Opciones para compartir</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">⏰</span><strong>Horario:</strong> Lunes a Domingo de 19:30 a 23:45 hs</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">📲</span>WhatsApp: <strong>3489358998</strong></span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🌐</span>Web: <a href="https://rotiseria-malvinas.vercel.app" target="_blank" rel="noopener">rotiseria-malvinas.vercel.app</a></span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">🛒</span>Armá tu pedido en la web o tocá <strong>"Chatear con María"</strong> para confirmar</span>
+      <span class="infinite-banner-separator">•</span>
+      <span class="infinite-banner-item"><span class="emoji">📍</span>Todos los pedidos se retiran en <strong>Malvinas 3</strong></span>
+      <span class="infinite-banner-separator">★</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 Banner superior persuasivo de Instagram con microefecto -->
 <div class="instagram-top-banner">
   <span>📸 ¡Síguenos en Instagram para ver nuestras delicias caseras y promociones exclusivas! ✨</span>
   <a href="https://www.instagram.com/todocasero.rotiseria_/" target="_blank" class="btn-instagram-micro" aria-label="Seguir en Instagram">
@@ -948,10 +1424,9 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <section id="combos" class="mb-12 bg-gradient-to-b from-gray-50 to-white relative before:absolute before:inset-0 before:bg-[url('image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIxMCIgY3k9IjEwIiByPSIxIi8+PC9zdmc+')] before:bg-[length:10px_10px] before:opacity-5">
 <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center">🍔🍕Combos Deliciosos para 2 a 6 personas🍔🍕</h2>
 <div id="combosContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Los combos se generarán aquí por JavaScript -->
 </div>
 </section>
-<div class="menu-section">
+<div class="menu-section reflection-effect">
 <div id="categoriesContainer"></div>
 </div>
 </section>
@@ -959,17 +1434,17 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <h2 class="section-title text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>Cómo Hacer tu Pedido</h2>
 <div class="relative overflow-hidden mb-8">
 <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.1s">
+<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10 reflection-effect" data-scroll-reveal data-delay="0.1s">
 <i class="fas fa-utensils text-4xl text-orange-500 mb-4"></i>
 <h3 class="text-xl font-bold text-gray-800 mb-2">1. Elige tu comida</h3>
 <p class="text-gray-600 mb-4">Selecciona entre nuestra variedad de sándwiches, pizzas, pastas y más.</p>
 </div>
-<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.2s">
+<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10 reflection-effect" data-scroll-reveal data-delay="0.2s">
 <i class="fas fa-comment text-4xl text-orange-500 mb-4"></i>
 <h3 class="text-xl font-bold text-gray-800 mb-2">2. Haz tu pedido</h3>
 <p class="text-gray-600 mb-4">Chatea con nuestra asistente María por WhatsApp al +54 348 9358998.</p>
 </div>
-<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.3s">
+<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10 reflection-effect" data-scroll-reveal data-delay="0.3s">
 <i class="fas fa-store text-4xl text-orange-500 mb-4"></i>
 <h3 class="text-xl font-bold text-gray-800 mb-2">3. Recoge en local</h3>
 <p class="text-gray-600 mb-4">Retira tu pedido en nuestro local en el horario acordado.</p>
@@ -980,7 +1455,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </div>
 
 <!-- VIDEO TUTORIAL DE YOUTUBE -->
-<div class="bg-white p-6 rounded-xl shadow-md border border-orange-100 animate-fade-in-up">
+<div class="bg-white p-6 rounded-xl shadow-md border border-orange-100 animate-fade-in-up reflection-effect">
     <h3 class="text-2xl font-bold text-center text-gray-800 mb-2">
         🎬 ¿Prefieres ver cómo funciona?
     </h3>
@@ -1001,24 +1476,22 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
         Aprende a usar el carrito, chatear con María y retirar tu pedido.
     </p>
 </div>
-<!-- FIN VIDEO TUTORIAL -->
-
 </section>
 <section class="section" id="contacto">
 <h2 class="section-title text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center opacity-0 transition-opacity duration-500" data-scroll-reveal>Contacto</h2>
 <div class="relative overflow-hidden">
 <div class="flex transition-transform duration-500 ease-in-out" id="contactCarousel">
-<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.1s">
+<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10 reflection-effect" data-scroll-reveal data-delay="0.1s">
 <i class="fas fa-map-marker-alt text-4xl text-orange-500 mb-4"></i>
 <h3 class="text-xl font-bold text-gray-800 mb-2">Ubicación</h3>
 <p class="text-gray-600 mb-4">Campana, Buenos Aires</p>
 </div>
-<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.2s">
+<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10 reflection-effect" data-scroll-reveal data-delay="0.2s">
 <i class="fas fa-clock text-4xl text-orange-500 mb-4"></i>
 <h3 class="text-xl font-bold text-gray-800 mb-2">Horario</h3>
 <p class="text-gray-600 mb-4">Lunes a Domingo<br>19:30 - 23:45</p>
 </div>
-<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10" data-scroll-reveal data-delay="0.3s">
+<div class="min-w-full flex-shrink-0 bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-orange-400 border-2 border-transparent text-center opacity-0 translate-y-10 reflection-effect" data-scroll-reveal data-delay="0.3s">
 <i class="fab fa-whatsapp text-4xl text-orange-500 mb-4"></i>
 <h3 class="text-xl font-bold text-gray-800 mb-2">Teléfono</h3>
 <p class="text-gray-600 mb-4">+54 348 9358998</p>
@@ -1095,13 +1568,11 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </div>
 </div>
 </div>
-<!-- Nuevo modal para sugerir postre -->
 <div id="dessertModal" class="dessert-modal">
 <div class="dessert-content">
 <h3 class="text-2xl font-bold text-var(--primary-color) mb-4">¡Termina tu pedido con un dulce!</h3>
 <p class="mb-6">¿Quieres agregar un postre casero?</p>
 <div class="dessert-options" id="dessertOptions">
-<!-- Se llenan dinámicamente -->
 </div>
 <button class="dessert-btn no-thanks mt-4" onclick="skipDessert()">No, gracias</button>
 </div>
@@ -1158,26 +1629,22 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <button class="btn" onclick="checkAdminPassword()">Ingresar</button>
 </div>
 </div>
-<!-- 🔹 BOTÓN FLOTANTE DEL ASISTENTE INTELIGENTE (NotebookLM) -->
 <a href="https://notebooklm.google.com/notebook/bdef646b-85d8-4601-b523-3ebec3768093?authuser=2" target="_blank" class="assistant-float" title="Asistente Inteligente Todo Casero - Pregúntale sobre el menú, precios, horarios y más" aria-label="Asistente Inteligente de Todo Casero">
 <i class="fas fa-robot"></i>
 </a>
 <div class="assistant-tooltip" id="assistantTooltip">
 💡 ¿Tienes dudas? Pregúntale a nuestro Asistente Inteligente sobre menú, precios, horarios y promociones.
 </div>
-<!-- 🔹 Botón flotante de WhatsApp (ya existente) -->
 <a href="https://api.whatsapp.com/send?phone=+543489358998&text=Hola%20Todo%20Casero!!!" target="_blank" class="whatsapp-float" title="Chatear con María por WhatsApp" aria-label="WhatsApp">
 <i class="fab fa-whatsapp"></i>
 </a>
 <script>
-// --- GESTIÓN DE VERSIÓN PARA ACTUALIZACIONES ---
-const currentVersion = '8.1'; // ¡Importante! Actualiza este número con cada cambio de precios o funcionalidad.
+const currentVersion = '8.3';
 if (localStorage.getItem('appVersion') !== currentVersion) {
-localStorage.clear(); // Limpia datos viejos (productos, precios, etc.)
+localStorage.clear();
 localStorage.setItem('appVersion', currentVersion);
 console.log(`Cache local limpiada. Nueva versión: ${currentVersion}`);
 }
-// 🔹 Imágenes por defecto (placeholders de Unsplash) para productos sin imagen
 const defaultImages = {
 "bondiola": "bondiola.jpeg",
 "milanesa": "milanesa especial.jpeg",
@@ -1217,7 +1684,6 @@ const defaultImages = {
 "Combo6": "COMBO6.png", 
 "default": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=400&fit=crop"
 };
-// 🔹 Función para obtener URL de imagen válida
 function getImageUrl(productName, customImage) {
 if (customImage && customImage.startsWith('http')) return customImage;
 if (customImage && customImage in defaultImages) return defaultImages[customImage];
@@ -1332,7 +1798,7 @@ specialBadge = `<div class="absolute -top-3 -right-3 bg-red-500 text-white text-
 }
 comboDiv.innerHTML = `
 ${specialBadge}
-<img src="${getImageUrl(product.name, product.image)}" alt="${product.name}" class="w-full h-40 object-cover rounded-lg mb-3" loading="lazy" onerror="this.src='${defaultImages.default}'">
+<img src="${getImageUrl(product.name, product.image)}" alt="${product.name}" class="w-full h-56 object-cover rounded-lg mb-3 shadow-lg" loading="lazy" onerror="this.src='${defaultImages.default}'">
 <h3 class="text-xl font-bold text-gray-800 mb-2">${product.name}</h3>
 <p class="text-gray-600 mb-2">${product.description}</p>
 <div class="flex justify-between items-center">
@@ -1376,7 +1842,6 @@ const filteredProducts = products.filter(p => p.category === category);
 filteredProducts.forEach(product => {
 const productDiv = document.createElement("div");
 productDiv.className = "product";
-// Badge de disponibilidad
 let stockBadge = '';
 if (product.stock === 0) {
 stockBadge = '<span class="availability-badge out-stock">Agotado</span>';
@@ -1402,13 +1867,11 @@ content.appendChild(productDiv);
 });
 categoriesContainer.appendChild(div);
 });
-// Abrir primera categoría por defecto
 const firstCategory = categoriesContainer.querySelector(".category");
 if (firstCategory) {
 firstCategory.querySelector(".products").style.display = "block";
 firstCategory.querySelector(".category-header").classList.add("active");
 }
-// Event listeners para botones de añadir al carrito
 document.querySelectorAll("#menu .add-to-cart:not([disabled])").forEach(button => {
 button.addEventListener("click", () => {
 const id = button.getAttribute("data-id");
@@ -1417,7 +1880,6 @@ const price = parseInt(button.getAttribute("data-price"));
 addToCart(id, name, price);
 });
 });
-// Scroll reveal animations
 const scrollRevealElements = document.querySelectorAll('[data-scroll-reveal]');
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
@@ -1431,7 +1893,6 @@ scrollRevealElements.forEach(el => {
 el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500');
 observer.observe(el);
 });
-// Mostrar oferta del día
 const today = new Date().toLocaleString('es-AR', { weekday: 'long' }).toLowerCase();
 const todayOffer = offers.find(offer => offer.day === today);
 document.getElementById('offerText').textContent = todayOffer ? todayOffer.description : '¡Consulta nuestras ofertas semanales en el menú!';
@@ -1461,7 +1922,6 @@ cart.push({ id, name, price, quantity: 1 });
 updateCartDisplay();
 document.getElementById("cartModal").style.display = "flex";
 window.scrollTo({ top: 0, behavior: 'smooth' });
-// Feedback visual
 const btn = event?.target;
 if (btn) {
 btn.textContent = "✓ Añadido";
@@ -1636,12 +2096,10 @@ const input = document.getElementById("chatInput");
 const message = input.value.trim();
 if (!message) return;
 const chatBody = document.getElementById("chatBody");
-// Mensaje del usuario
 const userMessage = document.createElement("div");
 userMessage.className = "chat-message user";
 userMessage.textContent = message;
 chatBody.appendChild(userMessage);
-// Detectar nombre del usuario
 const nameMatch = message.match(/mi nombre es (\w+)/i) || message.match(/me llamo (\w+)/i);
 if (nameMatch) {
 userName = nameMatch[1].charAt(0).toUpperCase() + nameMatch[1].slice(1).toLowerCase();
@@ -1651,7 +2109,6 @@ const closing = "¿En qué más puedo ayudarte? 😊";
 const paymentInfo = "💳 Aceptamos: Efectivo 💵 o Transferencia 🏦 (Alias:CONFIRMAR CON EL EQUIPO)";
 let response = `${greeting} Gracias por escribir a <strong>Todo Casero</strong>. `;
 const lowerMessage = message.toLowerCase();
-// 🔹 Lógica inteligente del asistente María
 if (lowerMessage.includes("menú") || lowerMessage.includes("menu") || lowerMessage.includes("carta") || lowerMessage.includes("que tienen")) {
 response += "🍽️ Nuestro menú incluye:<br><br>";
 response += "🥪 <strong>Sándwiches:</strong> Bondiola, Milanesa, Lomito, Tucumano<br>";
@@ -1747,7 +2204,6 @@ response += "• 🛒 Hacer un pedido<br>";
 response += "• 🕐 Consultar horarios<br>";
 response += "• 💳 Información de pagos";
 } else if (/\d+\s*[x×]\s*.+/i.test(lowerMessage) || /\d+\s+.+/.test(lowerMessage)) {
-// Detectar pedido con cantidad: "2 bondiolas", "1 pizza", etc.
 const orderRegex = /(\d+)\s*[x×]?\s*([a-záéíóúñ\s]+)/gi;
 const matches = [...lowerMessage.matchAll(orderRegex)];
 if (matches.length > 0) {
@@ -1796,7 +2252,6 @@ response += "• 💳 Explicarte métodos de pago<br><br>";
 response += "¿Qué necesitas? También puedes escribirme directamente al <strong>+54 348 9358998</strong>. 📲";
 }
 response += `<br><br><em>${closing}</em>`;
-// Respuesta del bot
 const botMessage = document.createElement("div");
 botMessage.className = "chat-message bot";
 botMessage.innerHTML = response;
@@ -1858,7 +2313,6 @@ renderCategories();
 alert("✅ Producto eliminado correctamente.");
 }
 }
-// Event Listeners principales
 document.getElementById("viewCart").addEventListener("click", (e) => {
 e.preventDefault();
 updateCartDisplay();
@@ -1867,7 +2321,6 @@ document.getElementById("cartModal").style.display = "flex";
 function closeCart() {
 document.getElementById("cartModal").style.display = "none";
 }
-// Modal de postre inteligente
 function showDessertModal() {
 const dessertOptionsDiv = document.getElementById("dessertOptions");
 dessertOptionsDiv.innerHTML = '';
@@ -1904,7 +2357,6 @@ if (!customerName || !customerPhone) {
 alert("📝 Por favor completa tu nombre y celular.");
 return;
 }
-// Actualizar stock
 cart.forEach(item => {
 const product = products.find(p => p.id === parseInt(item.id));
 if (product) product.stock = Math.max(0, product.stock - item.quantity);
@@ -1912,7 +2364,6 @@ if (product) product.stock = Math.max(0, product.stock - item.quantity);
 const phoneNumber = "543489358998";
 const whatsappMessage = generateWhatsAppMessage(customerName, customerPhone);
 window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${whatsappMessage}`, '_blank');
-// Generar PDF y limpiar
 generatePDF();
 cart = [];
 updateCartDisplay();
@@ -1962,10 +2413,8 @@ document.getElementById("saveChanges").addEventListener("click", function() {
 saveData();
 alert("💾 ¡Todos los cambios han sido guardados exitosamente!");
 });
-// Inicialización al cargar la página
 document.addEventListener("DOMContentLoaded", function() {
 renderCategories();
-// Cerrar modals al hacer clic fuera
 ["cartModal", "adminModal", "dessertModal"].forEach(id => {
 const modal = document.getElementById(id);
 if (modal) {
@@ -1977,11 +2426,9 @@ else this.style.display = "none";
 });
 }
 });
-// Animaciones de texto
 document.querySelectorAll('.animate-text').forEach((el, i) => {
 el.style.animationDelay = `${i * 0.2}s`;
 });
-// Carrusel de pasos
 const setupCarousel = (carouselId, prevBtnId, nextBtnId) => {
 const carousel = document.getElementById(carouselId);
 const prevBtn = document.getElementById(prevBtnId);
@@ -1996,7 +2443,6 @@ setInterval(() => nextBtn.click(), 6000);
 };
 setupCarousel('carousel', 'prevBtn', 'nextBtn');
 setupCarousel('contactCarousel', 'prevBtnContact', 'nextBtnContact');
-// 🔹 Tooltip inteligente del asistente
 const tooltip = document.getElementById('assistantTooltip');
 if (tooltip) {
 setTimeout(() => { tooltip.style.opacity = '1'; }, 4000);
@@ -2006,7 +2452,6 @@ tooltip.style.opacity = '0';
 setTimeout(() => tooltip.style.display = 'none', 500);
 }, 10000);
 }
-// Prevenir comportamiento por defecto en enlaces de navegación
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
 link.addEventListener('click', function(e) {
 const target = document.querySelector(this.getAttribute('href'));
@@ -2021,7 +2466,6 @@ console.log("✅ Todo Casero - Página cargada correctamente. Versión: " + curr
 </script>
 </body>
 </html>
-
 
 
 
