@@ -1639,7 +1639,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <i class="fab fa-whatsapp"></i>
 </a>
 <script>
-const currentVersion = '8.5';
+const currentVersion = '8.6';
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear();
 localStorage.setItem('appVersion', currentVersion);
@@ -1721,7 +1721,7 @@ const defaultProducts = [
 { id: 19, category: "Pizzas", name: "Napolitana", price: 16500, description: "Pizza napolitana con tomate, ajo y oregano.", image: "pizza napolitana", stock: 1000 },
 { id: 20, category: "Pizzas", name: "Especial", price: 17500, description: "Pizza especial con jamon, morrones y aceitunas.", image: "pizza especial", stock: 1000 },
 { id: 21, category: "Pizzas", name: "Huevo", price: 16000, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza huevo", stock: 1000 },
-{ id: 22, category: "Pizzas", name: "Palmitos", price: 21500, description: "Pizza de Palmitos,jamon,morron, salsa golf y aceitunas.", image: "pizza palmitos", stock: 1000 },
+{ id: 22, category: "Pizzas", name: "Palmitos", price: 21500, description: "Pizza de Palmitos,jamon,morron, salsa golf y aceitunas.", image: "pizza palmitos", stock: 0 },
 { id: 23, category: "Pizzas", name: "Salchichas", price: 17000, description: "Pizza de Salchichas y aceitunas.", image: "pizza salchichas", stock: 1000 },
 { id: 24, category: "Pizzas", name: "Choclo", price: 16000, description: "Choclo y aceitunas.", image: "pizza choclo", stock: 0 },
 { id: 25, category: "Pizzas", name: "Americana", price: 21000, description: "Pizza de Huevo frito papas fritas y aceitunas.", image: "pizza americana", stock: 100 },
@@ -1730,7 +1730,7 @@ const defaultProducts = [
 { id: 28, category: "Pizzas Individuales", name: "Napolitana Individual", price: 9500, description: "Individual napolitana con tomate y ajo.", image: "napolitana individual", stock: 1000 },
 { id: 29, category: "Pizzas Individuales", name: "Especial Individual", price: 10000, description: "Individual especial con jamon y morrones.", image: "piz", stock: 1000 },
 { id: 30, category: "Pastas", name: "Tallarines con Bolognesa", price: 15000, description: "Pasta fresca con salsa bolognesa casera.", image: "pasta", stock: 1000},
-{ id: 31, category: "Pastas", name: "Ñoquis con Bolognesa", price: 15500, description: "Ñoquis frescos con salsa bolognesa.", image: "ñoquis con bolognesa", stock: 1000 },
+{ id: 31, category: "Pastas", name: "Ñoquis con Bolognesa", price: 15500, description: "Ñoquis frescos con salsa bolognesa.", image: "ñoquis con bolognesa", stock: 0 },
 { id: 32, category: "Pastas", name: "Ravioles con Bolognesa", price: 16000, description: "Ravioles de verdura con salsa bolognesa.", image: "ravioles con bolognesa", stock: 0 },
 { id: 33, category: "Acompañamientos", name: "Porción de Fritas", price: 9000, description: "Porción grande de papas fritas.", image: "porcion de fritas", stock: 10000 },
 { id: 34, category: "Acompañamientos", name: "Salchipapas", price: 15000, description: "Porción grande de Salchipapas.", image: "salchipapa", stock: 0},
