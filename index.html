@@ -29,7 +29,7 @@ background-color: var(--light-color);
 color: var(--dark-color);
 }
 
-/* 🔹 NUEVO: Banner superior persuasivo de Instagram */
+/* 🔹 Banner superior persuasivo de Instagram */
 .instagram-top-banner {
   background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   color: white;
@@ -71,7 +71,7 @@ color: var(--dark-color);
   font-size: 1.1rem;
 }
 
-/* 🔹 NUEVO: BANNER INFINITO MARQUEE SUPERIOR */
+/* 🔹 BANNER INFINITO MARQUEE SUPERIOR */
 .infinite-banner-wrapper {
   background: linear-gradient(90deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: #fff;
@@ -160,9 +160,8 @@ color: var(--dark-color);
   0%, 100% { transform: scale(1) rotate(0deg); }
   50% { transform: scale(1.15) rotate(-5deg); }
 }
-/* FIN BANNER INFINITO */
 
-/* 🔹 NUEVO: REFLECTION EFFECT (EFECTO REFLEJO) EN TARJETAS Y CONTENEDORES */
+/* 🔹 REFLECTION EFFECT (EFECTO REFLEJO) EN TARJETAS Y CONTENEDORES */
 .reflection-effect {
   position: relative;
   overflow: visible;
@@ -196,8 +195,7 @@ color: var(--dark-color);
   filter: blur(12px);
 }
 
-/* 🔹 NUEVO: MICRO EFECTOS DE HOVER MEJORADOS */
-/* Efecto lift + brillo en tarjetas */
+/* 🔹 MICRO EFECTOS DE HOVER MEJORADOS */
 .menu-section,
 .info-card,
 .payment-info,
@@ -241,7 +239,6 @@ footer {
   padding-left: 1.4rem;
 }
 
-/* Botones con efecto shine (brillo deslizante) */
 .btn,
 .add-to-cart,
 .quantity-btn,
@@ -292,7 +289,6 @@ footer {
   box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
 }
 
-/* Efecto en logo del header */
 .logo {
   transition: all 0.4s ease;
   cursor: default;
@@ -304,7 +300,6 @@ footer {
   letter-spacing: 2px;
 }
 
-/* Efecto en enlaces del nav */
 nav a {
   position: relative;
   transition: all 0.3s ease;
@@ -327,7 +322,6 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* Botones flotantes con efecto glow pulsante */
 .whatsapp-float,
 .assistant-float {
   position: relative;
@@ -354,7 +348,6 @@ nav a:hover {
   box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
 
-/* Efecto en product image hover */
 .product-image {
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -363,7 +356,6 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
 }
 
-/* Cards de combos con efecto reflejo y hover premium */
 #combosContainer > div {
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
@@ -398,7 +390,6 @@ nav a:hover {
   opacity: 0.6;
 }
 
-/* Efecto shine en tarjetas de info */
 .info-card {
   position: relative;
   overflow: hidden;
@@ -424,7 +415,6 @@ nav a:hover {
   transform: translateX(100%) translateY(100%);
 }
 
-/* Efecto en offer banner */
 .offer-banner {
   position: relative;
   overflow: hidden;
@@ -449,7 +439,6 @@ nav a:hover {
   50%, 100% { left: 150%; }
 }
 
-/* Footer hover */
 footer:hover {
   box-shadow: 0 -8px 30px rgba(243, 156, 18, 0.3);
 }
@@ -462,7 +451,6 @@ footer:hover {
   padding-left: 4px;
 }
 
-/* Hero content hover */
 .hero-content {
   transition: all 0.5s ease;
 }
@@ -470,7 +458,6 @@ footer:hover {
   transform: scale(1.02);
 }
 
-/* Badges con efecto */
 .availability-badge {
   transition: all 0.3s ease;
 }
@@ -1334,10 +1321,9 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 </head>
 <body>
 
-<!-- 🔹 NUEVO: BANNER INFINITO MARQUEE SUPERIOR (movimiento continuo) -->
+<!-- 🔹 BANNER INFINITO MARQUEE SUPERIOR -->
 <div class="infinite-banner-wrapper" role="marquee" aria-label="Información destacada de Todo Casero">
   <div class="infinite-banner-track">
-    <!-- Primera copia del contenido -->
     <div class="infinite-banner-content">
       <span class="infinite-banner-item"><span class="emoji">🔥</span><strong>¡LO MÁS PEDIDO DE TODO CASERO!</strong></span>
       <span class="infinite-banner-separator">•</span>
@@ -1360,7 +1346,6 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
       <span class="infinite-banner-item"><span class="emoji">📍</span>Todos los pedidos se retiran en <strong>Malvinas 3</strong></span>
       <span class="infinite-banner-separator">★</span>
     </div>
-    <!-- Segunda copia idéntica para loop infinito sin cortes -->
     <div class="infinite-banner-content" aria-hidden="true">
       <span class="infinite-banner-item"><span class="emoji">🔥</span><strong>¡LO MÁS PEDIDO DE TODO CASERO!</strong></span>
       <span class="infinite-banner-separator">•</span>
@@ -1386,7 +1371,6 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
   </div>
 </div>
 
-<!-- 🔹 Banner superior persuasivo de Instagram con microefecto -->
 <div class="instagram-top-banner">
   <span>📸 ¡Síguenos en Instagram para ver nuestras delicias caseras y promociones exclusivas! ✨</span>
   <a href="https://www.instagram.com/todocasero.rotiseria_/" target="_blank" class="btn-instagram-micro" aria-label="Seguir en Instagram">
@@ -1420,7 +1404,6 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <h3>¡Ofertas Especiales!</h3>
 <p id="offerText"></p>
 </div>
-<!-- Combos Section -->
 <section id="combos" class="mb-12 bg-gradient-to-b from-gray-50 to-white relative before:absolute before:inset-0 before:bg-[url('image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIxMCIgY3k9IjEwIiByPSIxIi8+PC9zdmc+')] before:bg-[length:10px_10px] before:opacity-5">
 <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 mb-6 text-center">🍔🍕Combos Deliciosos para 2 a 6 personas🍔🍕</h2>
 <div id="combosContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1454,7 +1437,6 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-all" id="nextBtn">›</button>
 </div>
 
-<!-- VIDEO TUTORIAL DE YOUTUBE -->
 <div class="bg-white p-6 rounded-xl shadow-md border border-orange-100 animate-fade-in-up reflection-effect">
     <h3 class="text-2xl font-bold text-center text-gray-800 mb-2">
         🎬 ¿Prefieres ver cómo funciona?
@@ -1639,7 +1621,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <i class="fab fa-whatsapp"></i>
 </a>
 <script>
-const currentVersion = '8.6';
+const currentVersion = '8.4';
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear();
 localStorage.setItem('appVersion', currentVersion);
@@ -1721,7 +1703,7 @@ const defaultProducts = [
 { id: 19, category: "Pizzas", name: "Napolitana", price: 16500, description: "Pizza napolitana con tomate, ajo y oregano.", image: "pizza napolitana", stock: 1000 },
 { id: 20, category: "Pizzas", name: "Especial", price: 17500, description: "Pizza especial con jamon, morrones y aceitunas.", image: "pizza especial", stock: 1000 },
 { id: 21, category: "Pizzas", name: "Huevo", price: 16000, description: "Pizza de Huevo y especias y aceitunas.", image: "pizza huevo", stock: 1000 },
-{ id: 22, category: "Pizzas", name: "Palmitos", price: 21500, description: "Pizza de Palmitos,jamon,morron, salsa golf y aceitunas.", image: "pizza palmitos", stock: 0 },
+{ id: 22, category: "Pizzas", name: "Palmitos", price: 21500, description: "Pizza de Palmitos,jamon,morron, salsa golf y aceitunas.", image: "pizza palmitos", stock: 1000 },
 { id: 23, category: "Pizzas", name: "Salchichas", price: 17000, description: "Pizza de Salchichas y aceitunas.", image: "pizza salchichas", stock: 1000 },
 { id: 24, category: "Pizzas", name: "Choclo", price: 16000, description: "Choclo y aceitunas.", image: "pizza choclo", stock: 0 },
 { id: 25, category: "Pizzas", name: "Americana", price: 21000, description: "Pizza de Huevo frito papas fritas y aceitunas.", image: "pizza americana", stock: 100 },
@@ -1730,7 +1712,7 @@ const defaultProducts = [
 { id: 28, category: "Pizzas Individuales", name: "Napolitana Individual", price: 9500, description: "Individual napolitana con tomate y ajo.", image: "napolitana individual", stock: 1000 },
 { id: 29, category: "Pizzas Individuales", name: "Especial Individual", price: 10000, description: "Individual especial con jamon y morrones.", image: "piz", stock: 1000 },
 { id: 30, category: "Pastas", name: "Tallarines con Bolognesa", price: 15000, description: "Pasta fresca con salsa bolognesa casera.", image: "pasta", stock: 1000},
-{ id: 31, category: "Pastas", name: "Ñoquis con Bolognesa", price: 15500, description: "Ñoquis frescos con salsa bolognesa.", image: "ñoquis con bolognesa", stock: 0 },
+{ id: 31, category: "Pastas", name: "Ñoquis con Bolognesa", price: 15500, description: "Ñoquis frescos con salsa bolognesa.", image: "ñoquis con bolognesa", stock: 1000 },
 { id: 32, category: "Pastas", name: "Ravioles con Bolognesa", price: 16000, description: "Ravioles de verdura con salsa bolognesa.", image: "ravioles con bolognesa", stock: 0 },
 { id: 33, category: "Acompañamientos", name: "Porción de Fritas", price: 9000, description: "Porción grande de papas fritas.", image: "porcion de fritas", stock: 10000 },
 { id: 34, category: "Acompañamientos", name: "Salchipapas", price: 15000, description: "Porción grande de Salchipapas.", image: "salchipapa", stock: 0},
@@ -2452,503 +2434,47 @@ tooltip.style.opacity = '0';
 setTimeout(() => tooltip.style.display = 'none', 500);
 }, 10000);
 }
+// 🔹 MODIFICADO: Navegación mejorada - expande categorías al hacer clic en "Menú"
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-link.addEventListener('click', function(e) {
-const target = document.querySelector(this.getAttribute('href'));
-if (target) {
-e.preventDefault();
-target.scrollIntoView({ behavior: 'smooth' });
-}
-});
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+            
+            // Si el enlace es "Menú", expandir la primera categoría después del scroll
+            if (href === '#menu') {
+                setTimeout(() => {
+                    const categoriesContainer = document.getElementById('categoriesContainer');
+                    if (categoriesContainer) {
+                        // Colapsar todas las categorías primero
+                        document.querySelectorAll('.products').forEach(p => {
+                            p.style.display = 'none';
+                        });
+                        document.querySelectorAll('.category-header').forEach(h => {
+                            h.classList.remove('active');
+                        });
+                        
+                        // Expandir la primera categoría (que no sea Combos)
+                        const firstCategory = categoriesContainer.querySelector('.category');
+                        if (firstCategory) {
+                            const products = firstCategory.querySelector('.products');
+                            const header = firstCategory.querySelector('.category-header');
+                            if (products && header) {
+                                products.style.display = 'block';
+                                header.classList.add('active');
+                            }
+                        }
+                    }
+                }, 600); // Delay para que el scroll termine primero
+            }
+        }
+    });
 });
 console.log("✅ Todo Casero - Página cargada correctamente. Versión: " + currentVersion);
 });
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
