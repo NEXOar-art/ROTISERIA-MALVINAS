@@ -1638,7 +1638,7 @@ scripts.forEach(src => document.write(`<script src="${src}${cacheBuster}"><\/scr
 <i class="fab fa-whatsapp"></i>
 </a>
 <script>
-const currentVersion = '8.6';
+const currentVersion = '8.7';
 if (localStorage.getItem('appVersion') !== currentVersion) {
 localStorage.clear();
 localStorage.setItem('appVersion', currentVersion);
@@ -1713,7 +1713,7 @@ const defaultProducts = [
 { id: 12, category: "Sándwiches", name: "Tucumano", price: 27000, description: "Sándwich de  Milanesa de 30 cm tucumano  c/Fritas Doble.", image: "tucumano", stock: 1000 },
 { id: 13, category: "Sándwiches", name: "Lomito Simple", price: 16000, description: "Sandwich de Lomito jugoso con tomate y lechuga c/Fritas.", image: "lomito", stock: 0 },
 { id: 14, category: "Sándwiches", name: "Lomito Especial", price: 16500, description: "Sandwich de Lomito con jamon, queso, huevo c/Fritas.", image: "lomito", stock: 0 },
-{ id: 15, category: "Sándwiches", name: "Lomito Premium", price: 17000, description: "Sandwich de Lomito premium con lechuga, tomate, huevo frito, jamon , queso c/Fritas.", image: "lomito", stock: 1000 },
+{ id: 15, category: "Sándwiches", name: "Lomito Premium", price: 17000, description: "Sandwich de Lomito premium con lechuga, tomate, huevo frito, jamon , queso c/Fritas.", image: "lomito", stock: 0 },
 { id: 16, category: "Hamburguesas", name: "Hamburguesa c/Cheddar", price: 14000, description: "Medallon de Carne Con Cheddar, c/Fritas.", image: "hamburguesa completa", stock: 1000 },
 { id: 17, category: "Hamburguesas", name: "Hamburguesa Completa", price: 15000, description: "Medallon de Carne Con lechuga, tomate, huevo frito c/Fritas.", image: "hamburguesa completa", stock: 1000 },
 { id: 18, category: "Hamburguesas", name: "Hamburguesa Vegetariana", price: 15000, description: "Medallon (Lenteja,zanahoria,cebolla), lechuga, tomate, huevo frito c/Fritas.", image: "hamburguesa vegetariana", stock: 10000 },
@@ -1740,7 +1740,7 @@ const defaultProducts = [
 { id: 39, category: "Acompañamientos", name: "Cono de Fritas", price: 5000, description: "Cono mediano de papas fritas.", image: "cono de fritas", stock: 10000 },
 { id: 40, category: "Empanadas", name: "Empanadas", price: 32000, description: "Empanadas de Carne caseras x 12 unidades.", image: "empanadas", stock: 0 },
 { id: 41, category: "Empanadas", name: "Empanadas", price: 16000, description: "Empanadas de Carne caseras x 6 unidades.", image: "empanadas", stock: 0 },
-{ id: 42, category: "Postres", name: "Flan", price: 8500, description: "C/Crema).", image: "flan", stock: 1000 },
+{ id: 42, category: "Postres", name: "Flan", price: 8500, description: "C/Crema).", image: "flan", stock: 0 },
 { id: 43, category: "Postres", name: "Torta Helada", price: 0, description: "Crema Americana con Dulce de Leche.", image: "torta helada", stock: 0},
 { id: 44, category: "Postres", name: "Ensalada de Frutas", price: 0, description: "Variedades de Frutas Deliciosas.", image: "ensalada de fruta", stock: 0 },
 { id: 45, category: "Al Plato", name: "Milanesa con Puré al Plato", price: 16500, description: "Milanesa acompañada de puré de papas + pan casero.", image: "milanesa con pure", stock: 1000 },
